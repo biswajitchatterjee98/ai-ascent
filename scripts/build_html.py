@@ -348,6 +348,14 @@ header.hero p{margin:0;max-width:58ch;opacity:.95;font-size:1.05rem;line-height:
 .toc-contact{margin-top:.9rem;padding-top:.8rem;border-top:1px solid var(--line)}
 .toc-contact .toc-link{font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-deep));text-align:center}
 .toc-contact .toc-link:hover{filter:brightness(1.05);color:#fff}
+.toc-user{margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--line)}
+.toc-user-label{display:block;margin:0 .35rem .35rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700}
+.toc-user-name{display:block;margin:0 .35rem .55rem;font-size:.9rem;font-weight:600;color:var(--navy)}
+.toc-logout{
+  display:block;width:100%;border:1px solid var(--line);background:#fff;color:var(--navy);
+  border-radius:11px;padding:.55rem .6rem;font:600 .88rem "Source Sans 3",sans-serif;cursor:pointer;text-align:center;
+}
+.toc-logout:hover{background:var(--navy-soft)}
 main{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.7rem 1.6rem 2.3rem;box-shadow:var(--shadow);min-height:68vh;position:relative;overflow:hidden}
 main::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--navy),var(--accent))}
 .topic-panel{display:block;animation:panelIn .35s ease both}
@@ -569,6 +577,13 @@ def main() -> None:
     toc_items.append(
         '<li class="toc-topic toc-contact"><a class="toc-link" href="register.html">Register · Practitioner Program</a></li>'
     )
+    toc_items.append(
+        '<li class="toc-topic toc-user">'
+        '<span class="toc-user-label">Signed in</span>'
+        '<span class="toc-user-name" data-auth-name>Learner</span>'
+        '<button type="button" class="toc-logout" id="logout-btn">Log out</button>'
+        '</li>'
+    )
 
     doc = f"""<!DOCTYPE html>
 <html lang="en">
@@ -577,6 +592,8 @@ def main() -> None:
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI Ascent</title>
 <meta name="description" content="AI Ascent: foundations, generative AI, tools, automation, ethics, and practitioner program registration." />
+<script src="auth.js"></script>
+<script>AscentAuth.requireAuth();</script>
 <style>
 {CSS}
 </style>
@@ -597,6 +614,9 @@ def main() -> None:
 </div>
 <script>
 {JS}
+AscentAuth.fillUserChrome();
+var logoutBtn = document.getElementById('logout-btn');
+if (logoutBtn) logoutBtn.addEventListener('click', function () {{ AscentAuth.logout(); }});
 </script>
 </body>
 </html>

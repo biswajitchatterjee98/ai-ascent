@@ -10,9 +10,10 @@
 2. Core concepts (step-by-step) 
 3. Frameworks, comparisons, or deep dive 
 4. Worked examples / scenarios 
-5. Apply today (checklist or workflow) 
-6. Key takeaways 
-7. Media (topic image + 1-2 videos)
+5. STAR or CREATE method (one per topic, never both)
+6. Apply today (checklist or workflow) 
+7. Key takeaways 
+8. Media (topic image + 1-2 videos)
 
 ---
 

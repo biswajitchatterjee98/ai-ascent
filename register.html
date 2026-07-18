@@ -4,6 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Register · AI Ascent</title>
+<script src="auth.js"></script>
+<script>AscentAuth.requireAuth();</script>
 <meta name="description" content="Register for the Traininglobe AI Practitioner program." />
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
@@ -42,6 +44,11 @@ header.hero p{margin:0;max-width:58ch;opacity:.95;font-size:1.05rem}
 .toc-contact{margin-top:.85rem;padding-top:.75rem;border-top:1px solid var(--line)}
 .toc-contact .toc-link{font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-deep));text-align:center}
 .toc-contact .toc-link:hover{color:#fff;filter:brightness(1.05)}
+.toc-user{margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--line)}
+.toc-user-label{display:block;margin:0 0 .35rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700}
+.toc-user-name{display:block;margin:0 0 .55rem;font-size:.9rem;font-weight:600;color:var(--navy)}
+.toc-logout{display:block;width:100%;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:11px;padding:.55rem .6rem;font:600 .88rem "Source Sans 3",sans-serif;cursor:pointer}
+.toc-logout:hover{background:#e8eef3}
 main{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.6rem;box-shadow:var(--shadow);position:relative;overflow:hidden}
 main::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--navy),var(--accent))}
 .contact{background:linear-gradient(145deg,#fff,#f3faf7);border:1px solid var(--line);border-radius:18px;padding:1.5rem;box-shadow:0 8px 24px rgba(18,50,74,.05)}
@@ -93,6 +100,11 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:.88rem;ma
 <ul class="toc-topics">
 <li class="toc-topic"><a class="toc-link" href="index.html">Back to AI Ascent</a></li>
 <li class="toc-topic toc-contact"><a class="toc-link" href="register.html">Register · Practitioner Program</a></li>
+<li class="toc-topic toc-user">
+<span class="toc-user-label">Signed in</span>
+<span class="toc-user-name" data-auth-name>Learner</span>
+<button type="button" class="toc-logout" id="logout-btn">Log out</button>
+</li>
 </ul>
 </nav>
 <main>
@@ -157,6 +169,9 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:.88rem;ma
 <footer>Traininglobe · AI Ascent</footer>
 </div>
 <script>
+AscentAuth.fillUserChrome();
+var logoutBtn = document.getElementById('logout-btn');
+if (logoutBtn) logoutBtn.addEventListener('click', function () { AscentAuth.logout(); });
 if (new URLSearchParams(window.location.search).get('registered') === 'true') {
   var status = document.getElementById('reg-status');
   if (status) status.hidden = false;

@@ -7,6 +7,8 @@
 | `TOPIC-OUTLINE.md` | Topic/subtopic analysis |
 | `AI-Ascent.md` | Full source content |
 | `index.html` | Interactive handbook (open in a browser) |
+| `login.html` | Sign-in gate (required before handbook access) |
+| `auth.js` | Demo usernames/passwords + session helpers |
 | `register.html` | AI Practitioner program registration form |
 | `images/` | Topic photos + YouTube thumbnails |
 | `scripts/build_html.py` | Rebuild `index.html` from the Markdown |
@@ -34,3 +36,8 @@ python3 scripts/build_html.py
 ## Registration
 
 Open **`register.html`** (sidebar: Register · Practitioner Program). Submissions go to `atharv.kumar@webisdom.com` via FormSubmit.
+
+
+## Login
+
+Open `login.html` first. Ten demo accounts are listed on the page (for example `demo` / `Demo@2026`). Session lasts until logout or the tab is closed.

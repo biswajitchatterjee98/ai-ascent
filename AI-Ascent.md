@@ -14,9 +14,14 @@ Each topic follows the same rhythm:
 2. **Core concepts**: step-by-step foundations 
 3. **Deep dive / frameworks**: models you can reuse 
 4. **Worked examples**: concrete scenarios 
-5. **Apply today**: a short action path 
-6. **Key takeaways**: portable principles 
-7. **Media**: topic image plus curated videos 
+5. **STAR or CREATE method**: one prompting framework per topic (never both)
+6. **Apply today**: a short action path 
+7. **Key takeaways**: portable principles 
+8. **Media**: topic image plus curated videos
+
+**STAR** = Situation, Task, Action, Result. Use it when you already know the outcome and need a complete brief.
+
+**CREATE** = Context, Role, Expectation, Audience, Task, Examples. Use it when you need a teaching, selection, or design brief with clear expectations. 
 
 Use the side panel to open one topic at a time. Finish a chapter with one real work experiment before jumping ahead.
 
@@ -76,7 +81,43 @@ Do not jump to transformation without proving a narrow use case. An Indian insur
 
 **Factory quality inspection.** A human inspector may catch defects reliably but cannot inspect every item at high speed. A camera model can flag surface anomalies continuously. Its practical role is triage: route likely defects for inspection, retain images for audit, and monitor false positives by product line and lighting condition. If conditions change, retraining or recalibration is required.
 
-## 1.5 Apply today
+## 1.5 CREATE method for an industry before/after brief
+
+Use **CREATE** when you want a clear teaching or analysis brief: **Context**, **Role**, **Expectation**, **Audience**, **Task**, **Examples**.
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Industry, process, and current friction |
+| **R** | Role | Who the AI (or analyst) should act as |
+| **E** | Expectation | Quality bar, length, and what must not be invented |
+| **A** | Audience | Who will use the brief |
+| **T** | Task | Exact deliverable |
+| **E** | Examples | One real before/after pair or sample metric |
+
+**Copy-paste CREATE template:**
+
+> **Context:** [industry + workflow] currently runs with [manual/batch pain].  
+> **Role:** Act as an operations analyst who knows AI augmentation limits.  
+> **Expectation:** Be specific, measurable, and honest about human controls. Do not invent ROI numbers.  
+> **Audience:** [ops lead / L&D / executive].  
+> **Task:** Produce a one-page before/after map with metrics and ownership.  
+> **Examples:** Include one real process step from [paste notes].
+
+**Worked CREATE example:**
+
+> **Context:** Mid-size Indian e-commerce support team, 400 tickets/day, slow returns replies.  
+> **Role:** AI-aware process designer.  
+> **Expectation:** 1 page, plain language, no fake CSAT gains.  
+> **Audience:** Head of Support.  
+> **Task:** Before/after map for returns triage with AI draft + human approval.  
+> **Examples:** Current average first reply 4 hours, top issue is “where is my refund.”
+
+**Weak vs CREATE:**
+
+- Weak: “Explain AI in retail.”
+- CREATE: the brief above with a real process and a metric to improve.
+
+## 1.6 Apply today
 
 Choose one workflow that is high-volume, repetitive, painful, and measurable. Interview the people doing it, they know exceptions that a process diagram misses. Establish a baseline for time, quality, and cost. Define one bounded AI role, such as “draft a response using only this knowledge base”, and explicitly list prohibited actions. Run a short pilot with reviewed outputs, capture failure examples, and decide whether the improvement is material enough to standardize.
 
@@ -88,7 +129,7 @@ Ask five questions before scaling:
 4. What happens when the model is wrong or unavailable?
 5. Which metric will prove value without hiding harm?
 
-## 1.6 Key takeaways
+## 1.7 Key takeaways
 
 - AI creates value when it improves a workflow and a business measure, not when it is merely demonstrated.
 - Most near-term gains come from augmentation: faster preparation, better routing, and stronger decision support.
@@ -96,7 +137,7 @@ Ask five questions before scaling:
 - Human accountability becomes more important in high-impact decisions.
 - The durable advantage is process redesign, quality data, and operational learning, not a single model.
 
-## 1.7 Media
+## 1.8 Media
 
 **Videos:**
 - [How AI could empower any business: World Economic Forum](https://www.youtube.com/watch?v=2ePf9rue1Ao)
@@ -153,7 +194,37 @@ Avoid the “automation cliff.” A company may see good results from AI-generat
 
 **Logistics exception handling.** A transport team first tracks shipment delays. It then predicts likely late arrivals using traffic and carrier signals. A copilot drafts customer updates and suggests alternate routes. A constrained agent may send an approved template and create an internal task for delays that meet explicit conditions. It should escalate, not improvise, when the shipment is regulated, high value, or tied to a contractual penalty.
 
-## 2.5 Apply today
+## 2.5 STAR method for climbing one rung
+
+Use **STAR** so a ladder plan is complete: **Situation**, **Task**, **Action**, **Result**.
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Current rung and why it hurts |
+| **T** | Task | Next rung to reach |
+| **A** | Action | Steps, owners, and guardrails |
+| **R** | Result | Definition of done and metrics |
+
+**Copy-paste STAR template:**
+
+> **Situation:** We are at [rung]. Pain: [time/errors/delays].  
+> **Task:** Move only to [next rung].  
+> **Action:** [data/process/tool steps]. Humans still [review/approve].  
+> **Result:** In [N] weeks, [metric] improves without increasing [risk].
+
+**Worked STAR example:**
+
+> **Situation:** Finance team has clean invoice Sheets (descriptive) but forecasts late stock purchases.  
+> **Task:** Add a simple predictive demand view for 20 SKUs.  
+> **Action:** Export 12 months of sales, train/use a basic forecast, weekly review by category owner. No auto-purchase.  
+> **Result:** Forecast vs actual tracked weekly, stockout rate for those SKUs drops within one quarter.
+
+**Weak vs STAR:**
+
+- Weak: “We need AI agents.”
+- STAR: one rung, one metric, one human control.
+
+## 2.6 Apply today
 
 Draw your current workflow as a ladder. For one candidate process, write the present rung and the next useful rung, and do not start from “autonomous.” Define a stopping condition: “The agent may create a draft but cannot send it,” or “The system may reorder only below ₹25,000 and only from approved suppliers.”
 
@@ -166,7 +237,7 @@ Create a rung-transition checklist:
 - Logs capture input source, action, approver, and outcome.
 - The team reviews failures on a regular cadence.
 
-## 2.6 Key takeaways
+## 2.7 Key takeaways
 
 - Intelligence is incremental: capture, understand, predict, generate, recommend, then act.
 - Higher rungs need stronger data, decision clarity, safeguards, and feedback loops.
@@ -176,7 +247,7 @@ Create a rung-transition checklist:
 
 An intelligent organization is also comfortable stopping. If the next rung cannot yet be governed, measured, or recovered safely, preserve the useful lower-rung assistant and strengthen the foundations first.
 
-## 2.7 Media
+## 2.8 Media
 
 **Videos:**
 - [How machines learn: Google](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
@@ -234,13 +305,44 @@ This distinction is especially useful during procurement. Ask whether a proposed
 
 **Marketing content workflow.** A foundation model can create campaign variants, but it should use an approved brand brief, product facts, and audience guidance. A marketer chooses the claim, checks legal and cultural suitability, and runs controlled experiments. The organization learns from conversion and complaint data. The hierarchy avoids both extremes: manually writing every variant and letting a model publish unsupported claims.
 
-## 3.5 Apply today
+## 3.5 CREATE method for hierarchy design
+
+Use **CREATE** to assign the right layer of intelligence.
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Process and systems involved |
+| **R** | Role | Designer / product owner perspective |
+| **E** | Expectation | Clear layer map, no tool-name soup |
+| **A** | Audience | Tech + business stakeholders |
+| **T** | Task | Map layers and decision rights |
+| **E** | Examples | One failure from skipping a layer |
+
+**Copy-paste CREATE template:**
+
+> **Context:** [process] uses [tools/data].  
+> **Role:** Act as an AI systems designer.  
+> **Expectation:** Separate rules, ML, generative, and agent layers. Name owners.  
+> **Audience:** [CTO + ops].  
+> **Task:** One-page hierarchy with what each layer may and may not do.  
+> **Examples:** Include where tool sprawl already happened.
+
+**Worked CREATE example:**
+
+> **Context:** Support stack: Zendesk, Notion FAQ, ChatGPT side chats, no shared rules.  
+> **Role:** AI operating-model lead.  
+> **Expectation:** End shadow AI for refunds.  
+> **Audience:** Support + IT security.  
+> **Task:** Hierarchy: rules for refund caps → classifier for intent → LLM draft → human send.  
+> **Examples:** Last month an agent pasted a customer PAN into a public chatbot.
+
+## 3.6 Apply today
 
 Audit one AI use case with this sentence: “Our system uses **[technical capability]** to help **[person/team]** make or execute **[specific decision/action]**, using **[approved data]**, measured by **[outcome]**, with **[owner and control].**” If you cannot complete the sentence, the work is not ready to scale.
 
 Then identify the weakest layer. Is the data unreliable? Is the user experience unclear? Are exception rules absent? Is nobody accountable for monitoring? Improve that layer before adding another model or agent. Often the highest-value change is a better knowledge base, cleaner intake form, or clearer approval policy.
 
-## 3.6 Key takeaways
+## 3.7 Key takeaways
 
 - AI capability exists in layers, rules, models, foundation models, and agents solve different problems.
 - A technical model becomes valuable only through a product, workflow, governance, and learning loop.
@@ -250,7 +352,7 @@ Then identify the weakest layer. Is the data unreliable? Is the user experience 
 
 When a system fails, diagnose the layer before assigning blame: source data may be stale, a model may be misapplied, an interface may encourage misuse, or a process may lack an escalation path. Layered diagnosis leads to durable fixes.
 
-## 3.7 Media
+## 3.8 Media
 
 **Videos:**
 - [But what is a neural network?: 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
@@ -306,7 +408,36 @@ Cost is more than a cloud bill. Include data preparation, labeling, evaluation, 
 
 **Product image search.** A shopper uploads a picture of a kurta and wants similar items. Rules cannot recognize visual similarity. A deep vision model converts images into embeddings: numeric representations where visually related items are near one another. A search system combines that similarity with price, availability, size, and business rules. This is a strong fit for deep learning because the primary signal is visual and unstructured.
 
-## 4.5 Apply today
+## 4.5 CREATE method for choosing AI, ML, or DL
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Data type, volume, and decision |
+| **R** | Role | Practical ML advisor |
+| **E** | Expectation | Recommend the simplest fit |
+| **A** | Audience | Non-specialist manager |
+| **T** | Task | Choose AI / ML / DL and justify |
+| **E** | Examples | One tabular and one unstructured case |
+
+**Copy-paste CREATE template:**
+
+> **Context:** We have [data]. Decision: [what]. Constraints: [cost/explainability].  
+> **Role:** Act as a pragmatic ML advisor.  
+> **Expectation:** Prefer classical ML when enough, deep learning only if needed.  
+> **Audience:** [product/ops].  
+> **Task:** Recommend approach + why + what to measure.  
+> **Examples:** Paste 5 sample fields or describe the input.
+
+**Worked CREATE example:**
+
+> **Context:** Loan pre-screen with age, income, bureau score, product type. Need explainable decline reasons.  
+> **Role:** Risk analytics advisor.  
+> **Expectation:** No black-box-only recommendation.  
+> **Audience:** Credit policy head.  
+> **Task:** Choose classical ML vs DL and list required controls.  
+> **Examples:** Current rule engine already blocks banned pincodes.
+
+## 4.6 Apply today
 
 For a proposed AI project, write the input, desired output, available examples, error cost, and required explanation. Start with the simplest viable method:
 
@@ -318,7 +449,7 @@ For a proposed AI project, write the input, desired output, available examples, 
 
 Run a baseline. If a simple rule achieves 90% of the needed outcome, a complex model must prove that its additional gain is worth the operational burden. Compare accuracy, speed, cost, interpretability, and failure mode, not only a benchmark score.
 
-## 4.6 Key takeaways
+## 4.7 Key takeaways
 
 - AI is the broad field, ML learns from data, DL uses multi-layer neural networks.
 - Not every AI system uses ML, and not every ML problem needs deep learning.
@@ -328,7 +459,7 @@ Run a baseline. If a simple rule achieves 90% of the needed outcome, a complex m
 
 Model selection is reversible when interfaces, data contracts, and evaluations are documented. Keep a simple test set of representative cases so that a replacement model can be compared against the existing baseline instead of being adopted on a compelling demonstration.
 
-## 4.7 Media
+## 4.8 Media
 
 **Videos:**
 - [AI vs Machine Learning vs Deep Learning](https://www.youtube.com/watch?v=ukzFI9rgwfU)
@@ -380,7 +511,36 @@ The terminology also has a time dimension. A capability that feels general in a 
 
 **AGI thought experiment.** Imagine a system that can learn a new business domain from a modest briefing, identify missing information, formulate and test plans, collaborate reliably, recognize uncertainty, and transfer learning to a different unfamiliar task with human-level robustness. Researchers disagree about whether current systems meet any sufficient version of this bar. For a manager, the proper response is to test a specific system against a specific workflow, not to make policy from a label.
 
-## 5.5 Apply today
+## 5.5 CREATE method for explaining ANI vs AGI vs ASI
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Why the audience confuses the terms |
+| **R** | Role | Clear educator |
+| **E** | Expectation | No hype, use today’s product examples |
+| **A** | Audience | Executives or students |
+| **T** | Task | One-page spectrum with examples |
+| **E** | Examples | Three ANI products they already use |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Stakeholders call our chatbot “AGI.”  
+> **Role:** Act as a plain-language AI educator.  
+> **Expectation:** Correct gently, stay practical.  
+> **Audience:** [leadership workshop].  
+> **Task:** Explain ANI/AGI/ASI with examples and a “what to build now” close.  
+> **Examples:** Spam filter, maps routing, ChatGPT support drafts.
+
+**Worked CREATE example:**
+
+> **Context:** Board asks if we are “behind on AGI.”  
+> **Role:** CIO briefing writer.  
+> **Expectation:** 1 page, calm tone.  
+> **Audience:** Board risk committee.  
+> **Task:** Show we excel at ANI use cases and watch AGI signals without pausing delivery.  
+> **Examples:** Invoice extraction pilot, support draft pilot.
+
+## 5.6 Apply today
 
 Inventory the AI tools your team uses and describe them as ANI systems with a defined operating boundary. For each, record:
 
@@ -393,7 +553,7 @@ Inventory the AI tools your team uses and describe them as ANI systems with a de
 
 When someone claims a tool is “AGI-like,” ask for a task demonstration under realistic constraints: incomplete information, conflicting instructions, unfamiliar cases, time pressure, and verification requirements. This keeps the conversation empirical and prevents both hype and fear from driving adoption.
 
-## 5.6 Key takeaways
+## 5.7 Key takeaways
 
 - Nearly all deployed AI systems today are ANI: powerful but bounded tools.
 - General-purpose models are not automatically generally reliable or autonomous.
@@ -403,7 +563,7 @@ When someone claims a tool is “AGI-like,” ask for a task demonstration under
 
 The most productive stance is neither dismissal nor prediction. Learn what a tool can demonstrably do, identify its operating boundary, and design governance proportional to its effect on people and decisions.
 
-## 5.7 Media
+## 5.8 Media
 
 **Videos:**
 - [Artificial General Intelligence: the future of AI](https://www.youtube.com/watch?v=Gfr50f6ZBvo)
@@ -462,7 +622,37 @@ Temperature should be chosen by the task. For a policy summary, an extraction, o
 
 **Customer reply.** A support agent gives the model a customer message and the relevant policy excerpt. The model drafts an empathetic response that quotes the applicable policy and proposes the next step. The agent verifies account-specific facts and decides whether an exception is appropriate. Never paste unnecessary personal, financial, or health data into an unapproved tool.
 
-## 6.5 Apply today
+## 6.5 STAR method for a strong text-generation prompt
+
+Use **STAR**: **Situation**, **Task**, **Action**, **Result**.
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Why this text is needed now |
+| **T** | Task | Exact writing job |
+| **A** | Action | Role, tone, rules, process |
+| **R** | Result | Format and definition of done |
+
+**Copy-paste STAR template:**
+
+> **Situation:** I need [deliverable] for [audience] by [when].  
+> **Task:** Draft [text type].  
+> **Action:** Act as [role]. Use only [sources]. Tone [x]. Do not invent facts.  
+> **Result:** [structure]. End with Assumptions + What to verify.
+
+**Worked STAR example:**
+
+> **Situation:** Product manager updating a skeptical sales team after a delayed release.  
+> **Task:** 180-word note that explains delay and next date.  
+> **Action:** Calm, no blame, no invented dates. Paste approved release notes only.  
+> **Result:** Email body + subject line + 3 FAQ bullets.
+
+**Weak vs STAR:**
+
+- Weak: “Write a status update.”
+- STAR: audience, length, source of truth, and verification list.
+
+## 6.6 Apply today
 
 Use this quality checklist before sending AI-assisted writing:
 
@@ -475,7 +665,7 @@ Use this quality checklist before sending AI-assisted writing:
 
 Practice with low-risk work: turn your own notes into an outline, rewrite a draft for a specified audience, or create alternative subject lines. Keep the source visible while reviewing. The goal is not to make the model sound clever, it is to produce a clearer, accurate, accountable artifact faster.
 
-## 6.6 Key takeaways
+## 6.7 Key takeaways
 
 - Language models generate text one token at a time from probability and context.
 - Fluent output is not proof of factual accuracy.
@@ -485,7 +675,7 @@ Practice with low-risk work: turn your own notes into an outline, rewrite a draf
 
 Use the model’s strengths deliberately: compression, reformatting, translation, alternative phrasing, and pattern-based drafting. Keep source verification, stakeholder commitments, and publication approval with the person who can inspect the evidence and carry the consequence.
 
-## 6.7 Media
+## 6.8 Media
 
 **Videos:**
 - [Let's build GPT: from scratch, in code, spelled out: Andrej Karpathy](https://www.youtube.com/watch?v=wjZofJX0v4M)
@@ -540,7 +730,36 @@ Training is an optimization process, not a guarantee of understanding. The same 
 
 **Handwritten digit example.** Each pixel enters the network as a number. The network’s layers transform the pixel pattern into ten output probabilities, one per digit. If the target is 7 but the model assigns high probability to 1, the loss is high. Backpropagation changes weights slightly so examples resembling 7 are more likely to activate the 7 output in future. Repeating this over many examples creates a useful classifier.
 
-## 7.5 Apply today
+## 7.5 CREATE method for teaching neural networks
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Learner level and timebox |
+| **R** | Role | Patient teacher |
+| **E** | Expectation | Intuition first, light math |
+| **A** | Audience | Non-engineers |
+| **T** | Task | Explain forward pass + learning |
+| **E** | Examples | One image or spam analogy |
+
+**Copy-paste CREATE template:**
+
+> **Context:** 20-minute intro for [team].  
+> **Role:** Act as a patient AI teacher.  
+> **Expectation:** No heavy equations, end with one practice question.  
+> **Audience:** [ops/marketing].  
+> **Task:** Explain neurons, layers, loss, and overfitting simply.  
+> **Examples:** Use spam detection or photo tagging.
+
+**Worked CREATE example:**
+
+> **Context:** HR L&D session before an AI tools workshop.  
+> **Role:** Friendly instructor.  
+> **Expectation:** One analogy + one caution about overfitting.  
+> **Audience:** People managers.  
+> **Task:** 8-bullet teaching outline + quiz question.  
+> **Examples:** Resume screening model that overfits to one campus.
+
+## 7.6 Apply today
 
 When reviewing a neural-network proposal, ask:
 
@@ -552,7 +771,7 @@ When reviewing a neural-network proposal, ask:
 
 For hands-on learning, use a small notebook or visual tool to train a classifier and inspect its confusion matrix. Change the train/test split or hide a class to see why data coverage matters. This is more valuable than memorizing equations because it develops intuition for failure modes.
 
-## 7.6 Key takeaways
+## 7.7 Key takeaways
 
 - Neural networks learn numerical transformations by adjusting weights to reduce a loss.
 - Training uses forward passes, error measurement, backpropagation, and repeated updates.
@@ -562,7 +781,7 @@ For hands-on learning, use a small notebook or visual tool to train a classifier
 
 A good evaluation report shows examples, not only averages. Review false positives and false negatives with the people affected by the system, then decide whether a threshold, data collection process, or the use case itself should change.
 
-## 7.7 Media
+## 7.8 Media
 
 **Videos:**
 - [But what is a neural network?: 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
@@ -617,7 +836,36 @@ Attention has computational cost because relationships among tokens can grow rap
 
 **Meeting transcript summary.** The model attends across a long conversation to identify decisions and dependencies. But transcripts contain errors and participants may revise a decision later. Ask for a structured output with direct supporting quotes, then have the meeting owner confirm assignments. The transformer accelerates synthesis, it does not become the authority on what was agreed.
 
-## 8.5 Apply today
+## 8.5 CREATE method for explaining transformers
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Why the audience cares about transformers |
+| **R** | Role | Systems explainer |
+| **E** | Expectation | Attention intuition, not research paper |
+| **A** | Audience | Practitioners |
+| **T** | Task | Explain self-attention + context limits |
+| **E** | Examples | Long contract Q&A failure without retrieval |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Team uses LLMs but does not know why long chats degrade.  
+> **Role:** Act as an LLM literacy coach.  
+> **Expectation:** Focus on attention and context window practicality.  
+> **Audience:** [analysts].  
+> **Task:** One-page explainer + 3 usage habits.  
+> **Examples:** Paste a bad long-chat experience.
+
+**Worked CREATE example:**
+
+> **Context:** Legal assistants paste 80-page PDFs into one chat.  
+> **Role:** AI literacy lead.  
+> **Expectation:** Push retrieval + chunking habits.  
+> **Audience:** Legal ops.  
+> **Task:** Explain why attention needs the right context and how to structure asks.  
+> **Examples:** Missed indemnity clause because it was never in the prompt window.
+
+## 8.6 Apply today
 
 Improve transformer-based results with a context discipline:
 
@@ -630,7 +878,7 @@ Improve transformer-based results with a context discipline:
 
 When a model gives a poor answer, diagnose the layer before changing models. Was the question ambiguous? Was the needed source absent or outdated? Did retrieval return irrelevant passages? Was the required format unclear? This approach is faster and safer than endlessly rewriting prompts.
 
-## 8.6 Key takeaways
+## 8.7 Key takeaways
 
 - Transformers use attention to model relationships among tokens in a sequence.
 - Position information, multiple attention heads, and stacked layers create rich contextual representations.
@@ -640,7 +888,7 @@ When a model gives a poor answer, diagnose the layer before changing models. Was
 
 For important workflows, save the prompt template, source version, model version, output, and reviewer decision. This creates traceability when a result is questioned and provides a concrete feedback set for improvement.
 
-## 8.7 Media
+## 8.8 Media
 
 **Videos:**
 - [Let's build GPT: from scratch, in code, spelled out: Andrej Karpathy](https://www.youtube.com/watch?v=wjZofJX0v4M)
@@ -694,7 +942,35 @@ Stable Diffusion versus closed tools is a trade-off. A hosted closed service may
 
 **Training illustration.** An L&D team needs a neutral illustration of a warehouse safety procedure. It uses a controlled prompt and reference layout, then checks that PPE, signage, machinery, and body positioning are correct. If the image is instructional or safety-critical, a domain expert validates it. A visually plausible mistake can teach an unsafe action.
 
-## 9.5 Apply today
+## 9.5 STAR method for a Stable Diffusion brief
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Where the image will be used |
+| **T** | Task | What to generate |
+| **A** | Action | Style, lighting, constraints, negatives |
+| **R** | Result | Count, aspect ratio, selection criteria |
+
+**Copy-paste STAR template:**
+
+> **Situation:** Need visuals for [channel]. Brand mood: [words].  
+> **Task:** Generate [N] image options of [subject].  
+> **Action:** Style [photo/illustration]. Lighting [x]. Avoid [text/logos/faces].  
+> **Result:** Shortlist [N] images at [aspect ratio] ready for design polish.
+
+**Worked STAR example:**
+
+> **Situation:** Warehouse-safety training banner, hopeful and professional.  
+> **Task:** 6 options of safe PPE use without a real client site.  
+> **Action:** Photoreal, soft daylight, no readable logos, no injured people.  
+> **Result:** 3 finals in 16:9 with prompts saved beside files.
+
+**Weak vs STAR:**
+
+- Weak: “Make a warehouse image.”
+- STAR: channel, mood, avoid-list, and aspect ratio.
+
+## 9.6 Apply today
 
 Start with a low-risk creative exercise and retain a simple production record: prompt, source references, model/version, seed where relevant, editor, and final approval. Use a prompt template:
 
@@ -710,7 +986,7 @@ Before publishing, verify:
 - The model and service license permits the planned commercial or internal use.
 - The image is labelled or disclosed as synthetic when context, policy, or audience expectations require it.
 
-## 9.6 Key takeaways
+## 9.7 Key takeaways
 
 - Stable Diffusion generates images by iteratively denoising random latent representations under text guidance.
 - Prompts, seeds, guidance, samplers, image references, and structural controls affect different aspects of output.
@@ -718,7 +994,7 @@ Before publishing, verify:
 - Generated images are valuable for ideation and controlled production support, not an exemption from creative review.
 - Verify accuracy, rights, consent, and brand suitability before use.
 
-## 9.7 Media
+## 9.8 Media
 
 **Videos:**
 - [Stable Diffusion explained](https://www.youtube.com/watch?v=1CIpzeNxIhU)
@@ -780,7 +1056,36 @@ Treat image models as weak at exact symbols, small text, counts, maps, medical i
 
 **Example: building a product concept board.** A team needs six consistent images showing an app used in different contexts. Create one approved visual direction: palette, lens/framing, people, and lighting. Use the same base prompt and reference board for each scene. Label every result “concept visualization” because the screens, interactions, and environments are illustrative. This provides alignment without falsely representing an existing product.
 
-## 10.5 Apply today
+## 10.5 CREATE method for explaining how AI learns images
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Why stakeholders ask “how does it learn?” |
+| **R** | Role | Visual AI educator |
+| **E** | Expectation | Dataset → training → prompt alignment |
+| **A** | Audience | Design + product |
+| **T** | Task | End-to-end learning story |
+| **E** | Examples | Caption mismatch creating wrong outputs |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Creative team trusts outputs too quickly.  
+> **Role:** Act as a responsible image-AI educator.  
+> **Expectation:** Cover data, training objective, and verification.  
+> **Audience:** [designers].  
+> **Task:** One-page “how image models learn” + checklist before publish.  
+> **Examples:** Hands/text artifacts from your last campaign draft.
+
+**Worked CREATE example:**
+
+> **Context:** Marketing wants “AI product photos” for a new bottle.  
+> **Role:** Brand-safe creative technologist.  
+> **Expectation:** Explain why real packaging photos still matter for trust.  
+> **Audience:** Brand manager.  
+> **Task:** Learning pipeline summary + go/no-go checklist.  
+> **Examples:** AI bottle with wrong label text last week.
+
+## 10.6 Apply today
 
 Use this checklist for your next generated visual:
 
@@ -796,14 +1101,14 @@ Use this checklist for your next generated visual:
 
 Cost and environmental considerations also affect practice. Generate at low resolution while selecting composition, then render only approved finalists at higher quality. Avoid creating dozens of near-identical variants without a decision criterion. A small, documented selection set saves time, reduces review burden, and makes it easier to explain which asset was used and why.
 
-## 10.6 Key takeaways
+## 10.7 Key takeaways
 
 - Diffusion models progressively turn noise into a prompt-aligned image, they do not verify reality.
 - Better results come from clear constraints and controlled iteration, not longer prompts alone.
 - Use generated images for illustration and ideation, verify any factual implication before publishing.
 - Accessibility, consent, rights, and disclosure belong in the workflow from the start.
 
-## 10.7 Media
+## 10.8 Media
 
 **Videos:**
 - [How diffusion models work](https://www.youtube.com/watch?v=1CIpzeNxIhU)
@@ -861,7 +1166,35 @@ AI summarization needs similar care. Ask it to distinguish decisions, open quest
 
 **Example: handling a frustrated customer.** First, write a neutral fact record: incident date, reported impact, current status, and next confirmed update time. Ask for a calm acknowledgement that avoids blame and does not speculate about root cause. Review against incident communications policy. The AI’s job is clarity and empathy, incident ownership and technical diagnosis remain human responsibilities.
 
-## 11.5 Apply today
+## 11.5 STAR method for AI email drafting
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Relationship, stakes, deadline |
+| **T** | Task | The ask the email must achieve |
+| **A** | Action | Tone, length, must include/avoid |
+| **R** | Result | Subject + body ready to paste |
+
+**Copy-paste STAR template:**
+
+> **Situation:** Email [who] about [topic]. Relationship: [new/warm/tense].  
+> **Task:** Get [decision/meeting/info].  
+> **Action:** Tone [direct/warm/firm]. Max [N] words. One primary ask. No overpromising.  
+> **Result:** Subject + body + 2 alternate subjects.
+
+**Worked STAR example:**
+
+> **Situation:** Follow up after demo with interested SMB buyer. Warm, medium stakes.  
+> **Task:** Book a 20-minute technical review next week.  
+> **Action:** Under 120 words, mention one demo detail, soft CTA.  
+> **Result:** Email + 2 subject lines.
+
+**Weak vs STAR:**
+
+- Weak: “Write a follow-up.”
+- STAR: relationship, ask, word limit, one concrete detail.
+
+## 11.6 Apply today
 
 Practical email workflow:
 
@@ -882,14 +1215,14 @@ Practical email workflow:
 
 For multilingual communication, ask AI to draft a translation, then have a fluent reviewer check politeness, terminology, and local date formats. Translation can preserve literal content while changing the social meaning of a request. Keep the approved original with the final translation so reviewers can compare them and so later replies are based on the same facts.
 
-## 11.6 Key takeaways
+## 11.7 Key takeaways
 
 - AI drafts language, the sender remains responsible for meaning and consequences.
 - A clear message brief produces better output than generic prompts.
 - Verify facts, commitments, recipients, and data handling before sending.
 - Use structured templates and trusted fields for scalable personalization.
 
-## 11.7 Media
+## 11.8 Media
 
 **Videos:**
 - [Related video](https://www.youtube.com/watch?v=PRkCkKhO-3k)
@@ -939,7 +1272,35 @@ For quantitative reports, validate numbers outside the language model. Keep form
 
 **Example: project status report.** Feed the tool approved workstream updates tagged “on track,” “at risk,” or “blocked.” Ask it to consolidate duplicates and identify contradictory dates. The project manager resolves contradictions with workstream owners, then asks AI to create a one-page narrative. The report lists decisions needed, owner, and decision deadline: rather than burying risks in prose.
 
-## 12.5 Apply today
+## 12.5 STAR method for AI report generation
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Reporting period and decision needed |
+| **T** | Task | Report type and sections |
+| **A** | Action | Evidence rules and tone |
+| **R** | Result | Skimmable deliverable + open questions |
+
+**Copy-paste STAR template:**
+
+> **Situation:** [weekly/monthly] report for [audience]. Decision: [what].  
+> **Task:** Build [executive/client/ops] report from pasted data only.  
+> **Action:** Do not invent metrics. Flag gaps. Calm risk language.  
+> **Result:** Summary, wins, risks, asks (owner + date), Assumptions.
+
+**Worked STAR example:**
+
+> **Situation:** Monday ops review. Need weekend-coverage decision.  
+> **Task:** 1-page support report from ticket export.  
+> **Action:** No invented CSAT. Highlight volume spikes and staffing facts only.  
+> **Result:** Brief + decision options A/B with trade-offs.
+
+**Weak vs STAR:**
+
+- Weak: “Make a report from this Sheet.”
+- STAR: decision, no-invention rule, and required sections.
+
+## 12.6 Apply today
 
 Use this report production checklist:
 
@@ -957,14 +1318,14 @@ A useful final pass is the **headline challenge**: for every heading, ask “Wha
 
 Use plain language to make uncertainty visible. “The data suggests,” “among surveyed respondents,” and “subject to these assumptions” are not weak writing when they accurately describe the evidence. They help decision-makers distinguish a robust observation from a directional hypothesis and choose the appropriate level of caution.
 
-## 12.6 Key takeaways
+## 12.7 Key takeaways
 
 - AI is a writing and synthesis assistant, not an evidence authority.
 - Maintain a claims ledger so conclusions remain traceable.
 - Analyze validated data before asking for a narrative.
 - Separate observations, inference, assumptions, and recommendations.
 
-## 12.7 Media
+## 12.8 Media
 
 **Videos:**
 - [Related video](https://www.youtube.com/watch?v=1jn_RpbPbEc)
@@ -1014,7 +1375,30 @@ AI-generated visuals should be treated as illustrations unless they are verified
 
 **Example: training deck.** Convert a policy into a learner journey: what changes in their daily work, a realistic scenario, practice decisions, and a recap. AI can turn dense policy language into plain-English drafts, but an owner must validate that simplification did not alter the rule. Add a knowledge check with plausible distractors based on known mistakes, not trick questions.
 
-## 13.5 Apply today
+## 13.5 STAR method for AI presentation design
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Audience, time, goal |
+| **T** | Task | Card/slide count and topic |
+| **A** | Action | Narrative arc and constraints |
+| **R** | Result | Outline then slides, with ask slide |
+
+**Copy-paste STAR template:**
+
+> **Situation:** [audience], [N] minutes, goal: [decision/feeling].  
+> **Task:** Create a [N]-card deck about [topic].  
+> **Action:** Arc [problem→solution→ask]. One idea per card. Benefit headlines.  
+> **Result:** Outline first, then cards + speaker notes on the ask.
+
+**Worked STAR example:**
+
+> **Situation:** L&D buyer, 12 minutes tomorrow.  
+> **Task:** 12-card pitch for AI Practitioner training.  
+> **Action:** Problem → method → curriculum → proof → pricing logic → ask.  
+> **Result:** Presentable deck + one-sentence ask on final card.
+
+## 13.6 Apply today
 
 Practical workflow:
 
@@ -1035,14 +1419,14 @@ Practical workflow:
 
 Plan for distribution. A live executive presentation can rely on a concise spoken narrative, whereas a deck sent afterward needs enough context to stand alone. Ask AI to draft a short companion memo or appendix from the validated deck, but do not solve this by packing every slide with text. Maintain one source of truth for figures and update both artifacts when decisions change.
 
-## 13.6 Key takeaways
+## 13.7 Key takeaways
 
 - Start with audience action and a governing message, not slide templates.
 - Use AI for outline, language, and notes, validate evidence and narrative choices yourself.
 - Message titles, one idea per slide, and visible sourcing create clarity.
 - Rehearsal is part of production, especially for AI-assisted content.
 
-## 13.7 Media
+## 13.8 Media
 
 **Videos:**
 - [Related video](https://www.youtube.com/watch?v=sDUjoih6JgA)
@@ -1098,7 +1482,36 @@ Provenance tools are more promising than “spot the fake” games. Standards su
 
 **Example: viral disaster image.** An image claims to show a current flood. Reverse-image search finds the same scene from a different country two years earlier. The pixels may be real, but the current caption is false. Record the source and corrected context, then avoid amplifying the original image unnecessarily.
 
-## 14.5 Apply today
+## 14.5 CREATE method for deepfake verification
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Claim and channel where media appeared |
+| **R** | Role | Careful media verifier |
+| **E** | Expectation | Steps, not accusations |
+| **A** | Audience | Comms / security / self |
+| **T** | Task | Verification checklist and verdict options |
+| **E** | Examples | Known authentic reference if available |
+
+**Copy-paste CREATE template:**
+
+> **Context:** [image/video/audio] claims [X]. Found on [channel].  
+> **Role:** Act as a media-literacy investigator.  
+> **Expectation:** Separate visual tells, metadata, and corroboration. Do not overclaim.  
+> **Audience:** [comms lead].  
+> **Task:** Step checklist + possible outcomes (likely real / uncertain / likely synthetic).  
+> **Examples:** Link or describe reverse-search findings.
+
+**Worked CREATE example:**
+
+> **Context:** Urgent “CEO” video asks finance for a wire.  
+> **Role:** Fraud-aware verifier.  
+> **Expectation:** Escalate process, not panic.  
+> **Audience:** Finance ops.  
+> **Task:** Verification steps + call-back protocol.  
+> **Examples:** Previous deepfake invoice cases in industry news.
+
+## 14.6 Apply today
 
 - [ ] Do not make a high-impact decision from an unexpected image, call, or video alone.
 - [ ] Verify identity through an independent, known channel.
@@ -1113,14 +1526,14 @@ Teach teams a simple rule: **plausibility is not provenance**. The more costly t
 
 Verification has a time dimension. A first assessment may be all that is possible in minutes, while a publication decision may justify hours of corroboration. Define thresholds in advance: routine social sharing, internal awareness, customer communications, financial action, and public statements require progressively stronger evidence. This prevents improvised decisions when pressure is highest.
 
-## 14.6 Key takeaways
+## 14.7 Key takeaways
 
 - Deepfake detection is a verification workflow, not a visual superpower.
 - Context and independent corroboration are usually more reliable than pixel-level intuition.
 - Authentic media can still support a false claim when it is relabeled or cropped.
 - Strong business controls prevent fraud even when media is convincing.
 
-## 14.7 Media
+## 14.8 Media
 
 **Videos:**
 - [How to spot deepfakes and synthetic media](https://www.youtube.com/watch?v=9hE5-98ZeCg)
@@ -1179,7 +1592,30 @@ Never put credentials in prompts, source code, screenshots, or model context. Us
 
 **Example: AI-enhanced phishing.** Employees receive polished messages that mimic internal style and include an urgent invoice. Traditional spelling checks fail. The response is procedural: hover/check the sender domain, verify invoices in the procurement system, and call a known contact number. Report the message, do not forward it to colleagues.
 
-## 15.5 Apply today
+## 15.5 STAR method for an AI security response brief
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Threat or incident signal |
+| **T** | Task | Immediate containment job |
+| **A** | Action | Steps, owners, communications |
+| **R** | Result | Contained state + evidence captured |
+
+**Copy-paste STAR template:**
+
+> **Situation:** [prompt leak / phishing / shadow AI finding].  
+> **Task:** Contain and document within [time].  
+> **Action:** Disable access, preserve logs, notify [roles], do not blame publicly yet.  
+> **Result:** Incident note with timeline, impact, next controls.
+
+**Worked STAR example:**
+
+> **Situation:** Employee pasted customer PII into a public LLM.  
+> **Task:** Contain exposure and start incident record today.  
+> **Action:** Revoke/rotate related access if needed, collect chat export if available, notify security + DPO path.  
+> **Result:** Incident ticket + interim staff guidance on approved tools.
+
+## 15.6 Apply today
 
 - [ ] Inventory AI tools and their data/integration access.
 - [ ] Do not enter secrets or restricted data into unapproved services.
@@ -1193,14 +1629,14 @@ Never put credentials in prompts, source code, screenshots, or model context. Us
 
 Prepare for incidents before launch. Define who can disable an integration, revoke credentials, notify affected teams, preserve logs, and communicate externally. Practice the decision with a tabletop exercise. Fast, orderly containment depends far more on these preassigned responsibilities than on a model’s ability to explain what went wrong after the fact.
 
-## 15.6 Key takeaways
+## 15.7 Key takeaways
 
 - AI expands both attacker capability and the organization’s attack surface.
 - Treat connected AI as a software system with identities, permissions, logs, and failure modes.
 - Prompt injection is managed through architecture and permissions, not prompt wording alone.
 - Least privilege and independent verification reduce the impact of convincing attacks.
 
-## 15.7 Media
+## 15.8 Media
 
 **Videos:**
 - [AI cybersecurity threats overview](https://www.youtube.com/watch?v=cQ54GDm1eL0)
@@ -1257,7 +1693,36 @@ Human-in-the-loop is not automatically meaningful. A reviewer needs time, author
 
 **Example: internal meeting transcription.** Risks include recording consent, confidential information, inaccurate summaries, and retention. Governance specifies allowed meetings, participant notice, transcript retention period, access controls, and a process to correct a summary. The team pilots with volunteers and measures error types before broad rollout.
 
-## 16.5 Apply today
+## 16.5 CREATE method for an AI ethics / governance memo
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Use case and risk tier |
+| **R** | Role | Governance facilitator |
+| **E** | Expectation | Practical controls, not slogans |
+| **A** | Audience | Risk + business owners |
+| **T** | Task | Mini impact assessment |
+| **E** | Examples | Who could be harmed if wrong |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Proposed AI use: [case]. Data class: [public/internal/sensitive].  
+> **Role:** Act as a responsible-AI facilitator.  
+> **Expectation:** Name harms, controls, owner, and human oversight.  
+> **Audience:** [risk committee].  
+> **Task:** One-page ethics/governance memo.  
+> **Examples:** Include one unfair or privacy failure mode.
+
+**Worked CREATE example:**
+
+> **Context:** Résumé-screening assistant for first shortlist.  
+> **Role:** HR + AI governance lead.  
+> **Expectation:** AI summarizes, humans decide.  
+> **Audience:** CHRO + Legal.  
+> **Task:** Impact notes, prohibited uses, review cadence.  
+> **Examples:** Bias risk if training data over-represents one college.
+
+## 16.6 Apply today
 
 - [ ] Write the intended purpose and explicitly prohibited uses.
 - [ ] Identify affected people, not only the direct user.
@@ -1271,14 +1736,14 @@ Human-in-the-loop is not automatically meaningful. A reviewer needs time, author
 
 Procurement is a governance control too. Ask vendors about training-data practices, data retention, subprocessors, security controls, model changes, audit evidence, and exit options. Contract terms should match the intended use and risk tier. A suitable vendor for public marketing drafts may not be suitable for regulated or confidential workflows.
 
-## 16.6 Key takeaways
+## 16.7 Key takeaways
 
 - Ethics becomes operational through explicit requirements, owners, tests, and remedies.
 - Governance should begin at idea stage and continue after launch.
 - Risk-based controls concentrate effort where consequences are greatest.
 - Human oversight works only when reviewers can understand and override the system.
 
-## 16.7 Media
+## 16.8 Media
 
 **Videos:**
 - [Responsible AI and ethics basics](https://www.youtube.com/watch?v=i_LwzRVP7bg)
@@ -1345,7 +1810,30 @@ Move one level at a time. Automation must have a clear owner, permissions, logs,
 
 **Example: policy-answer assistant.** HR publishes approved policies in a maintained repository. The assistant retrieves only those documents, cites the section and last-updated date, and replies “I don’t know” when sources conflict or do not answer the question. It routes personal employment cases to HR rather than interpreting policy. Metrics include citation coverage, correction rate, and unresolved-question themes.
 
-## 17.5 Apply today
+## 17.5 STAR method for a functional AI pilot
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Function pain and baseline |
+| **T** | Task | Pilot scope |
+| **A** | Action | Workflow, owner, review loop |
+| **R** | Result | Success/stop criteria |
+
+**Copy-paste STAR template:**
+
+> **Situation:** In [function], [process] takes [time] with [error type].  
+> **Task:** Pilot AI for [narrow step] only.  
+> **Action:** Owner [name/role], data path [source], human review [when].  
+> **Result:** After [N] weeks, [metric] improves or we stop.
+
+**Worked STAR example:**
+
+> **Situation:** Procurement exceptions take 25 minutes each.  
+> **Task:** AI drafts exception summaries for human triage.  
+> **Action:** Use invoice + PO text only, no auto-approval.  
+> **Result:** Median handling time under 12 minutes on 50 cases, or stop.
+
+## 17.6 Apply today
 
 - [ ] Choose one painful, measurable functional workflow.
 - [ ] Map inputs, decisions, owners, and exceptions.
@@ -1359,14 +1847,14 @@ Move one level at a time. Automation must have a clear owner, permissions, logs,
 
 Functional teams should retain domain ownership. A central AI group can provide platforms and guardrails, but it cannot decide whether a suggested inventory action, legal summary, or customer response fits the actual process. Put feedback and quality review close to the people who experience the consequences of errors.
 
-## 17.6 Key takeaways
+## 17.7 Key takeaways
 
 - Functional AI solves a workflow problem inside a business function.
 - Begin with process mapping and measurable outcomes, not tool selection.
 - Match the technology to the task, rules and retrieval are often enough.
 - Scale through controlled pilots, clear ownership, and exception design.
 
-## 17.7 Media
+## 17.8 Media
 
 **Videos:**
 - [AI strategy for organizations](https://www.youtube.com/watch?v=5p248yoa3oE)
@@ -1417,7 +1905,36 @@ Strategy also needs a learning cadence. Review each pilot monthly or quarterly: 
 
 **Example: enterprise enablement.** Rather than offering every employee an ungoverned chatbot, the organization provides an approved assistant, training on safe use, approved prompt templates, a use-case intake process, and a secure pathway for integrations. A cross-functional council reviews high-impact cases. This converts scattered experimentation into managed learning without blocking low-risk productivity gains.
 
-## 18.5 Apply today
+## 18.5 CREATE method for AI strategy framing
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Business goals and constraints |
+| **R** | Role | Strategy facilitator |
+| **E** | Expectation | Portfolio, not a tool shopping list |
+| **A** | Audience | Leadership |
+| **T** | Task | 90-day strategy sketch |
+| **E** | Examples | One quick win + one strategic bet |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Company goal: [retention/cost/growth]. Constraints: [data/talent/risk].  
+> **Role:** Act as an AI strategy facilitator.  
+> **Expectation:** Quick wins, bets, experiments, owners, measures.  
+> **Audience:** [ELT].  
+> **Task:** One-page 90-day AI strategy sketch.  
+> **Examples:** Name one process already digitized enough to win.
+
+**Worked CREATE example:**
+
+> **Context:** Service org wants retention via faster resolution.  
+> **Role:** COO + AI lead ghostwriter.  
+> **Expectation:** No model-name theater.  
+> **Audience:** Executive leadership.  
+> **Task:** Portfolio: agent assist (win), knowledge hygiene (bet), forecasting (experiment).  
+> **Examples:** Current average handle time baseline.
+
+## 18.6 Apply today
 
 Run a 90-minute strategy workshop:
 
@@ -1439,14 +1956,14 @@ Run a 90-minute strategy workshop:
 
 Communicate strategic choices plainly. Teams should know which uses are encouraged now, which are being explored, and which are prohibited or deferred. Transparent priorities reduce duplicate experimentation and help employees bring forward relevant ideas. Revisit the strategy on evidence, not vendor announcements: changes in measured value, risk, regulation, customer needs, and organizational capability are the inputs that matter.
 
-## 18.6 Key takeaways
+## 18.7 Key takeaways
 
 - AI strategy is a portfolio of business choices, foundations, and learning loops.
 - Prioritize by value, readiness, and risk, not hype.
 - Measure outcomes and total cost of ownership from the start.
 - Scale repeatable patterns while retaining functional accountability.
 
-## 18.7 Media
+## 18.8 Media
 
 **Videos:**
 - [AI strategy for organizations](https://www.youtube.com/watch?v=5p248yoa3oE)
@@ -1503,11 +2020,34 @@ For sensitive work, follow a simple data classification gate: public information
 
 **Example: create a reusable content brief.** In a project instruction, define voice, audience, prohibited claims, product terminology, and a source-of-truth folder. For each brief, supply the campaign goal and approved facts. Ask for a claim ledger with each factual statement mapped to its source. This makes review faster and lowers the risk of accidental marketing invention.
 
-## 19.5 Apply today
+## 19.5 STAR method for a strong ChatGPT brief
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Job and constraints |
+| **T** | Task | Deliverable |
+| **A** | Action | Mode, tools, rules |
+| **R** | Result | Format + verification |
+
+**Copy-paste STAR template:**
+
+> **Situation:** I am [role]. Need [outcome] for [audience].  
+> **Task:** Produce [deliverable] in ChatGPT.  
+> **Action:** Use [chat/project/file analysis]. Do not invent. Ask up to 5 clarifying questions if critical facts missing.  
+> **Result:** [format]. End with Assumptions + What I should verify.
+
+**Worked STAR example:**
+
+> **Situation:** Analyst preparing Monday funnel review.  
+> **Task:** Profile CSV then summarize conversion by channel.  
+> **Action:** File analysis, flag small denominators, no fake causality.  
+> **Result:** Table + 3 hypotheses labeled as hypotheses only.
+
+## 19.6 Apply today
 
 Pick one recurring, low-risk task that currently consumes 20-40 minutes: meeting follow-ups, first-pass FAQs, a weekly status summary, or data cleanup instructions. Build a one-page prompt template with purpose, source material, output format, quality checks, and escalation conditions. Run it on three real examples. Record where it saved time, where it was wrong, and which instruction removed the error. Improve the template once, do not create a complicated custom GPT before a plain prompt has proven its value.
 
-## 19.6 Key takeaways
+## 19.7 Key takeaways
 
 - ChatGPT is a workspace of capabilities, select the mode that fits the job.
 - Clear inputs and an explicit output contract matter more than elaborate wording.
@@ -1515,7 +2055,7 @@ Pick one recurring, low-risk task that currently consumes 20-40 minutes: meeting
 - Keep sensitive data inside approved boundaries and control connected-tool permissions.
 - Build repeatable prompts from proven tasks, then measure quality and time saved.
 
-## 19.7 Media
+## 19.8 Media
 
 - [ChatGPT feature walkthrough](https://www.youtube.com/watch?v=1jn_RpbPbEc)
 - OpenAI’s official product documentation is the best source for current plan and availability details.
@@ -1573,11 +2113,40 @@ Before using an integrated feature, answer four questions: Who can access the so
 
 **Example: improve a support response in Gmail.** Supply the approved resolution policy and anonymized ticket context. Ask for two reply drafts: one concise, one empathetic. Require it to list any policy condition that must be confirmed before sending. The agent checks account details and sends only the correct version.
 
-## 20.5 Apply today
+## 20.5 CREATE method for a Gemini / Workspace brief
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Which Workspace app and file |
+| **R** | Role | In-app collaborator |
+| **E** | Expectation | Stay grounded in selected content |
+| **A** | Audience | Reviewer / teammates |
+| **T** | Task | Summarize, rewrite, or extract |
+| **E** | Examples | Highlight the messy range/paragraph |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Working in [Docs/Sheets/Gmail]. Content: [what].  
+> **Role:** Act as a careful Workspace assistant.  
+> **Expectation:** Use only selected content. Preserve names/numbers.  
+> **Audience:** [manager].  
+> **Task:** [summarize / rewrite / extract actions].  
+> **Examples:** Point to rows/paragraphs that are source of truth.
+
+**Worked CREATE example:**
+
+> **Context:** Weekly KPI Sheet with raw exports.  
+> **Role:** Ops briefing assistant inside Sheets/Docs.  
+> **Expectation:** No invented metrics.  
+> **Audience:** Leadership Monday review.  
+> **Task:** Wins, risks, asks with proposed owners.  
+> **Examples:** Highlight anomaly rows 12–20 for human check.
+
+## 20.6 Apply today
 
 Select a real meeting, a short approved document set, and one spreadsheet. Build a “source-grounded briefing” prompt that requires citations to file names, page numbers, and cells. Test it with a colleague who knows the material and note every unsupported statement. Adjust instructions so uncertainty appears as a question or blank field rather than a confident guess.
 
-## 20.6 Key takeaways
+## 20.7 Key takeaways
 
 - Gemini is most valuable when multimodal evidence and Google workflows are genuinely part of the task.
 - Ground the work in named, approved sources and preserve references to them.
@@ -1585,7 +2154,7 @@ Select a real meeting, a short approved document set, and one spreadsheet. Build
 - Workspace access requires deliberate permissions and administrator governance.
 - Review suggested actions where they will be executed, by the accountable human.
 
-## 20.7 Media
+## 20.8 Media
 
 - [Gemini walkthrough](https://www.youtube.com/watch?v=PRkCkKhO-3k)
 - Consult Google’s official Gemini and Workspace release notes for current feature availability.
@@ -1642,11 +2211,34 @@ Before accepting an important artifact, run a separate prompt: “Act as a skept
 
 **Example: prepare a code-change review.** Paste a focused diff and an interface contract. Ask for failure modes, tests that would expose them, backwards-compatibility risks, and an explanation of data flow. Run the suggested tests and use normal peer review, the model’s review is a supplement, not a merge gate.
 
-## 21.5 Apply today
+## 21.5 STAR method for a strong Claude brief
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Project/files and stakes |
+| **T** | Task | Careful analysis or writing job |
+| **A** | Action | Source rules and process |
+| **R** | Result | Deliverable + gaps list |
+
+**Copy-paste STAR template:**
+
+> **Situation:** Working in Project “[name]” with sources [list].  
+> **Task:** Produce [FAQ/memo/rewrite] grounded only in sources.  
+> **Action:** Extract → structure → simplify → flag conflicts. Never invent policy.  
+> **Result:** [format] + Open questions + Source notes.
+
+**Worked STAR example:**
+
+> **Situation:** HR onboarding Project with policy PDF + welcome email.  
+> **Task:** 12-question week-1 FAQ.  
+> **Action:** Plain language, flag conflicts, no invented rules.  
+> **Result:** FAQ + Day-1 checklist + unclear clauses for Legal.
+
+## 21.6 Apply today
 
 Choose two versions of a document you already need to compare. Use the evidence-interpretation-recommendation structure, then have the actual owner score the output for completeness and false positives. Save the best prompt with a clear scope statement. This gives you a reusable, low-risk capability without embedding AI in an irreversible workflow.
 
-## 21.6 Key takeaways
+## 21.7 Key takeaways
 
 - Claude is useful for structured document work, critique, artifacts, and coding collaboration.
 - Separate source evidence from interpretation and recommendations.
@@ -1654,7 +2246,7 @@ Choose two versions of a document you already need to compare. Use the evidence-
 - Tool-using or computer-operating features require constrained permissions and approvals.
 - A deliberate skeptical review pass raises quality on important work.
 
-## 21.7 Media
+## 21.8 Media
 
 - [Claude overview and tutorial](https://www.youtube.com/watch?v=BGuv4pjOTOI)
 - Check Anthropic’s official documentation for current feature, privacy, and plan details.
@@ -1724,11 +2316,40 @@ This architecture explains why “which LLM?” is usually the second question. 
 
 **Example: choose for accounts-payable automation.** Start with deterministic rules for known invoice formats, then use a model only to extract variable descriptions or exceptions into a strict schema. Reject invalid output, cross-check totals, and never release payment without existing authorization controls. The best “model” here may be a hybrid system.
 
-## 22.5 Apply today
+## 22.5 CREATE method for LLM selection
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Use case and data class |
+| **R** | Role | Model selector |
+| **E** | Expectation | Compare on evidence, not brand loyalty |
+| **A** | Audience | Buyer / team lead |
+| **T** | Task | Recommend primary + fallback |
+| **E** | Examples | Three eval prompts |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Use case [x], data [public/internal], need [speed/quality/privacy].  
+> **Role:** Act as an LLM selection advisor.  
+> **Expectation:** Score quality, cost, latency, grounding, ecosystem.  
+> **Audience:** [IT + business].  
+> **Task:** Recommend primary model/tool and fallback.  
+> **Examples:** Attach 3 representative prompts/outputs.
+
+**Worked CREATE example:**
+
+> **Context:** HR policy Q&A must cite current internal docs.  
+> **Role:** Enterprise AI advisor.  
+> **Expectation:** Grounded system over clever chat.  
+> **Audience:** HR + Security.  
+> **Task:** Choose stack (assistant + retrieval + review).  
+> **Examples:** Three real policy questions with known answers.
+
+## 22.6 Apply today
 
 Create a one-page model selection card for one workflow: users, input data class, desired output, error cost, required integrations, evaluation examples, success threshold, human owner, and rollback path. Run two candidate models on the same ten examples. Compare output quality and reviewer time blind to model name. Do not procure or automate until the card shows a defensible fit.
 
-## 22.6 Key takeaways
+## 22.7 Key takeaways
 
 - Select for the workflow, not a leaderboard.
 - Risk, data controls, and integration constraints can eliminate candidates before quality testing.
@@ -1736,7 +2357,7 @@ Create a one-page model selection card for one workflow: users, input data class
 - Use retrieval, schemas, rules, and human approval around the model.
 - Keep a fallback and continuously monitor model behavior.
 
-## 22.7 Media
+## 22.8 Media
 
 - [LLM selection discussion](https://www.youtube.com/watch?v=zjkBMFhNj_g)
 
@@ -1796,11 +2417,34 @@ Consider a procurement inbox receiving supplier emails. The initial temptation i
 
 This design preserves accounting controls and gives the team evidence when the automation is wrong.
 
-## 23.5 Apply today
+## 23.5 STAR method for an AI automation scenario
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Manual process pain |
+| **T** | Task | What to automate first |
+| **A** | Action | Trigger, AI step, human checkpoint |
+| **R** | Result | Live test criteria |
+
+**Copy-paste STAR template:**
+
+> **Situation:** Manual process [describe]. Pain: [time/errors]. Apps: [list].  
+> **Task:** Automate [handoff] without changing business rules.  
+> **Action:** Trigger = [event]. AI = [interpret/draft]. Human = [approve]. Log = [fields].  
+> **Result:** [N] clean test records + failure alert path.
+
+**Worked STAR example:**
+
+> **Situation:** Leads sit in a form overnight.  
+> **Task:** Form → Sheet → Slack → draft welcome (human send).  
+> **Action:** Filter invalid email, AI personalizes first line only, sales approves send.  
+> **Result:** 3 test leads processed with logs.
+
+## 23.6 Apply today
 
 Choose one process with at least ten similar instances per week. Create a baseline: manual minutes, error types, and rework rate. Automate only the intake, classification, or draft stage for two weeks. Add a simple reviewer choice: accept, edit, reject, and reason. Use those reasons to decide whether to improve the prompt, add a rule, fix source data, or keep the task human-led.
 
-## 23.6 Key takeaways
+## 23.7 Key takeaways
 
 - Automate a measured process, not a vague aspiration.
 - Let AI interpret unstructured inputs, keep deterministic controls for business rules and actions.
@@ -1808,7 +2452,7 @@ Choose one process with at least ten similar instances per week. Create a baseli
 - Begin with human review and promote autonomy only with measured evidence.
 - The best outcome is lower rework and safer service, not maximum automation.
 
-## 23.7 Media
+## 23.8 Media
 
 - [AI automation scenarios](https://www.youtube.com/watch?v=JSA2oezQWOU)
 
@@ -1865,11 +2509,34 @@ Each stage has a different responsibility. Do not ask an AI module to determine 
 
 A form submission triggers Make.com. It validates required campaign fields, stores source data in an approved workspace, calls an AI model to produce three draft angles using only approved facts, and creates a review card for marketing. Publishing remains a separate, human-approved action. An error handler sends malformed inputs to the submitter for correction rather than trying to guess missing product facts.
 
-## 24.5 Apply today
+## 24.5 STAR method for a make.com scenario design
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Apps and failure pain |
+| **T** | Task | Scenario to build |
+| **A** | Action | Modules, filters, error route |
+| **R** | Result | Scenario ON criteria |
+
+**Copy-paste STAR template:**
+
+> **Situation:** [App A] to [App B] is manual. Errors: [examples].  
+> **Task:** Build make.com scenario for [flow].  
+> **Action:** Trigger, filters, field mapping, error email/Slack, Sheet log.  
+> **Result:** Pass 3 real tests including one bad record.
+
+**Worked STAR example:**
+
+> **Situation:** Course signup → Notion checklist is copy-paste.  
+> **Task:** Webhook/form → Notion page + Slack notify.  
+> **Action:** Filter consent=yes, map name/email/course, on error email ops.  
+> **Result:** Scenario ON after three successful tests.
+
+## 24.6 Apply today
 
 Build a sandbox scenario with a manual trigger and a spreadsheet or test database, not a live customer system. Pass three sample records through validation, a single AI classification module, and a review table. Deliberately test missing fields, duplicate IDs, malformed model output, and a rate-limit error. Add an error route before enabling a schedule or webhook. Only then connect a low-risk live source.
 
-## 24.6 Key takeaways
+## 24.7 Key takeaways
 
 - Make.com scenarios are production workflows, even when built visually.
 - Preserve a stable source ID, validate mappings, and prevent duplicate writes.
@@ -1877,7 +2544,7 @@ Build a sandbox scenario with a manual trigger and a spreadsheet or test databas
 - Use strict schemas, error routes, least-privilege connections, and operational monitoring.
 - Start with draft creation or review queues before enabling any external action.
 
-## 24.7 Media
+## 24.8 Media
 
 - [AI automation overview](https://www.youtube.com/watch?v=JSA2oezQWOU)
 - [Make.com workflow tutorial](https://www.youtube.com/watch?v=d0vHcgTVOc4)
@@ -1942,11 +2609,40 @@ Prompt injection is a workflow threat, not just a model problem. An email may sa
 
 An event creates a lead-review task. The workflow validates a company domain, uses approved public research sources, summarizes fit against a fixed ideal-customer profile, and creates a CRM note marked “AI research, verify.” A salesperson approves any outbound message. Do not use the agent to infer protected characteristics or make eligibility decisions. The outcome is faster preparation, not automated persuasion.
 
-## 25.5 Apply today
+## 25.5 CREATE method for an n8n agent brief
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | Goal and systems the agent may touch |
+| **R** | Role | Agent architect |
+| **E** | Expectation | Tools allowlist + approval gates |
+| **A** | Audience | Builder + owner |
+| **T** | Task | Design agent workflow |
+| **E** | Examples | One happy path + one refusal path |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Want an agent that [goal] using [systems].  
+> **Role:** Act as an n8n agent architect.  
+> **Expectation:** No open-ended tool use. Log every action.  
+> **Audience:** [ops engineer].  
+> **Task:** Trigger → retrieve → LLM reason → allowed tools → approval → log.  
+> **Examples:** Include a case the agent must refuse.
+
+**Worked CREATE example:**
+
+> **Context:** Lead research digest before sales calls.  
+> **Role:** n8n builder coach.  
+> **Expectation:** Public research only, no auto-email.  
+> **Audience:** Sales ops.  
+> **Task:** Agent creates CRM note “AI research, verify.”  
+> **Examples:** Refuse requests to infer protected characteristics.
+
+## 25.6 Apply today
 
 Build one narrow n8n workflow with a manual trigger, a read-only source, a model call, a structured-output parser, and a review destination. Set a maximum execution time and a maximum number of tool calls. Test five normal examples plus a malicious instruction, a missing source, a malformed response, a duplicate event, and a failed downstream write. If the workflow cannot fail safely, do not add an agent loop yet.
 
-## 25.6 Key takeaways
+## 25.7 Key takeaways
 
 - An agent is a constrained, tool-using workflow, not an autonomous employee.
 - Prefer deterministic n8n workflows when the path is known.
@@ -1954,7 +2650,7 @@ Build one narrow n8n workflow with a manual trigger, a read-only source, a model
 - Protect credentials, authenticate triggers, prevent duplicate writes, and log the run.
 - Evaluate with realistic edge cases, including prompt injection and tool failures.
 
-## 25.7 Media
+## 25.8 Media
 
 - [The AI Agent Tutorial That Should've Been Your First (n8n)](https://www.youtube.com/watch?v=GchXMRwuWxE)
 - Refer to n8n’s official documentation for current node, hosting, credential, and AI-agent guidance.
@@ -2004,13 +2700,42 @@ Imagine a team that wants “an AI agent for operations.” After discovery, the
 
 This example captures the handbook’s central lesson: system design and process quality often matter more than model cleverness.
 
-## 26.5 Apply today
+## 26.5 CREATE method for a personal wrap-up plan
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **C** | Context | What you learned and where you work |
+| **R** | Role | Your own coach |
+| **E** | Expectation | Concrete 30-day practice, not vague motivation |
+| **A** | Audience | Yourself / manager |
+| **T** | Task | Personal AI practice plan |
+| **E** | Examples | One workflow you will change this month |
+
+**Copy-paste CREATE template:**
+
+> **Context:** Finished AI Ascent topics. My job: [role]. Biggest pain: [x].  
+> **Role:** Act as a pragmatic practice coach.  
+> **Expectation:** 30-day plan with weekly habits and one measurable win.  
+> **Audience:** Me (and optionally my manager).  
+> **Task:** Build a wrap-up practice plan.  
+> **Examples:** The one process I will improve first.
+
+**Worked CREATE example:**
+
+> **Context:** Support lead, slow follow-ups, no automation yet.  
+> **Role:** Practice coach.  
+> **Expectation:** Small weekly drills + one make.com/n8n micro-flow.  
+> **Audience:** Self.  
+> **Task:** 30-day plan: prompts library, one STAR email habit, one automation.  
+> **Examples:** Post-call follow-up currently takes 25 minutes.
+
+## 26.6 Apply today
 
 Write an AI opportunity brief for one task this week. Include: the current process, affected users, baseline time, cost, and error, data classification, the smallest possible intervention, source of truth, output and acceptance criteria, risk and escalation conditions, owner, pilot duration, and success threshold. Review it with someone who performs the work and someone responsible for risk or data. If you cannot agree on a safe pilot, the use case is not ready.
 
 Then create a personal practice habit. Each week, choose one task, use AI in a bounded way, retain your before-and-after work, and record one lesson about prompting, verification, or workflow design. Small evidence-backed experiments build far more durable skill than passive tool watching.
 
-## 26.6 Key takeaways
+## 26.7 Key takeaways
 
 - AI practice begins with a real work problem and a measurable outcome.
 - The smallest reliable solution often combines rules, source grounding, and human review.
@@ -2018,7 +2743,7 @@ Then create a personal practice habit. Each week, choose one task, use AI in a b
 - Evaluate the full workflow, including reviewer effort and failures.
 - Build an ongoing learning loop, tools change, sound judgment remains valuable.
 
-## 26.7 Media
+## 26.8 Media
 
 - Revisit the media from topics 19-25 and select one workflow to reproduce in a sandbox.
 - Keep current through official product documentation, release notes, security guidance, and your organization’s policies.
@@ -2070,23 +2795,51 @@ The final result is a practical proposal or prototype that is useful beyond the 
 
 **Team leader participant:** evaluates three assistants against representative internal questions, documents the data controls, and proposes a limited pilot with success and stop criteria.
 
-## 27.5 Apply today
+## 27.5 STAR method for your program registration note
+
+| Letter | Meaning | What you write |
+|--------|---------|----------------|
+| **S** | Situation | Your role and why now |
+| **T** | Task | What you want from the program |
+| **A** | Action | How you will practice during/after |
+| **R** | Result | Outcome you want in 30–60 days |
+
+**Copy-paste STAR template:**
+
+> **Situation:** I am [role] at [org/context]. Current AI friction: [x].  
+> **Task:** Join the AI Practitioner program to [goal].  
+> **Action:** I will bring [de-identified example], practice weekly, and apply learning to [workflow].  
+> **Result:** In [30/60] days I will have [measurable outcome] with clear controls.
+
+**Worked STAR example:**
+
+> **Situation:** Operations analyst, manual weekly KPI narrative takes half a day.  
+> **Task:** Learn practical AI + light automation for reporting.  
+> **Action:** Use approved tools only, build a reviewed draft workflow, document verification steps.  
+> **Result:** KPI narrative under 45 minutes with zero invented metrics.
+
+**Weak vs STAR:**
+
+- Weak: “I want to learn AI.”
+- STAR: role, workflow, practice plan, and a measurable result.
+
+## 27.6 Apply today
 
 Before enrolling, identify one work challenge that is frequent, frustrating, and safe to examine. Bring a de-identified example, the current process steps, and a simple definition of success. During the program, resist the temptation to pursue a grand autonomous system. A small, well-tested improvement with a real owner is a stronger learning outcome and a more credible business case.
 
-## 27.6 Key takeaways
+## 27.7 Key takeaways
 
 - The program develops practical AI judgment, not tool memorization.
 - Learning combines concepts, hands-on scenarios, feedback, and an applied outcome.
 - Participants learn to balance value, data protection, reliability, and human accountability.
 - A credible AI initiative is measurable, bounded, and owned.
 
-## 27.7 Media
+## 27.8 Media
 
 - Use the topic 19-25 media collection as optional pre-program exploration.
 - Official release notes and organization-approved policies should guide live tool use during the program.
 
-## 27.8 Registration
+## 27.9 Registration
 
 Use the registration form on this web page to share your interest in the AI Practitioner program. The form is designed to give the Traininglobe team enough context to respond appropriately and to understand the learning goals of prospective participants.
 
