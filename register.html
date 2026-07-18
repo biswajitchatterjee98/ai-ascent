@@ -6,61 +6,76 @@
 <title>Register · AI Ascent</title>
 <meta name="description" content="Register for the Traininglobe AI Practitioner program." />
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces: opsz,wght@9..144,500;9..144,700&family=Source+Sans+3: wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
 :root{
- --bg:#f3f6f4;--ink:#142033;--muted:#5b6777;--card:#fff;--line:#d7e0db;
- --accent:#0f7a6c;--accent-deep:#0b5a51;--accent-soft:#e4f4f0;--navy:#12324a;
- --shadow:0 14px 40px rgba(18,50,74,.08);--max:860px;--sidebar:270px;
+  --bg:#f3f6f4;--ink:#142033;--muted:#5b6777;--card:#fff;--line:#d7e0db;
+  --accent:#0f7a6c;--accent-deep:#0b5a51;--accent-soft:#e4f4f0;--navy:#12324a;
+  --shadow:0 14px 40px rgba(18,50,74,.08);--max:860px;--sidebar:270px;
 }
-*{box-sizing: border-box}
+*{box-sizing:border-box}
 body{
- margin:0;color: var(--ink);font-family:"Source Sans 3",ui-sans-serif,system-ui,sans-serif;line-height:1.7;
- background:
- radial-gradient(900px 420px at 8% -8%, rgba(15,122,108,.14), transparent 55%),
- radial-gradient(800px 380px at 100% 0%, rgba(18,50,74,.10), transparent 50%),
- linear-gradient(180deg,#eef3f0 0%, var(--bg) 40%, #eef2f5 100%);
+  margin:0;color:var(--ink);font-family:"Source Sans 3",ui-sans-serif,system-ui,sans-serif;line-height:1.7;
+  background:
+    radial-gradient(900px 420px at 8% -8%, rgba(15,122,108,.14), transparent 55%),
+    radial-gradient(800px 380px at 100% 0%, rgba(18,50,74,.10), transparent 50%),
+    linear-gradient(180deg,#eef3f0 0%, var(--bg) 40%, #eef2f5 100%);
 }
-.wrap{max-width: calc(var(--max) + var(--sidebar) + 64px);margin:0 auto;padding:1.5rem 1.25rem 3.5rem;display: grid;grid-template-columns: var(--sidebar) 1fr;gap:1.5rem}
-@media(max-width:960px){.wrap{grid-template-columns:1fr}.toc{position: static!important}}
+.wrap{max-width:calc(var(--max) + var(--sidebar) + 64px);margin:0 auto;padding:1.5rem 1.25rem 3.5rem;display:grid;grid-template-columns:var(--sidebar) 1fr;gap:1.5rem}
+@media(max-width:960px){.wrap{grid-template-columns:1fr}.toc{position:static!important}}
 header.hero{
- grid-column:1/-1;overflow: hidden;position: relative;
- background: linear-gradient(135deg, rgba(18,50,74,.92), rgba(11,90,81,.88) 55%, rgba(15,122,108,.85));
- color:#f4fffc;border-radius:24px;padding:1.6rem 1.8rem;box-shadow: var(--shadow);
- display: flex;align-items: center;gap:1.75rem;animation: heroIn .7s ease both;
+  grid-column:1/-1;overflow:hidden;position:relative;
+  background:linear-gradient(135deg, rgba(18,50,74,.92), rgba(11,90,81,.88) 55%, rgba(15,122,108,.85));
+  color:#f4fffc;border-radius:24px;padding:1.6rem 1.8rem;box-shadow:var(--shadow);
+  display:flex;align-items:center;gap:1.75rem;
 }
-.brand-logo{display: block;width: min(300px,40%);height: auto;padding:.7rem 1rem;background:#fff;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.16)}
+.brand-logo{display:block;width:min(300px,40%);height:auto;padding:.7rem 1rem;background:#fff;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.16)}
 .hero-copy{min-width:0}
-.hero-kicker{display: block;margin:0 0 .9rem;font-size:.95rem;font-weight:500;color: rgba(244,255,252,.82)}
-header.hero h1{margin:0 0 .55rem;font-family: Fraunces,Georgia,serif;font-size: clamp(1.85rem,3.6vw,2.5rem);letter-spacing:-.02em}
+.hero-kicker{display:block;margin:0 0 .9rem;font-size:.95rem;font-weight:500;color:rgba(244,255,252,.82)}
+header.hero h1{margin:0 0 .55rem;font-family:Fraunces,Georgia,serif;font-size:clamp(1.85rem,3.6vw,2.5rem);letter-spacing:-.02em}
 header.hero p{margin:0;max-width:58ch;opacity:.95;font-size:1.05rem}
-.toc{position: sticky;top:1rem;align-self: start;background: rgba(255,255,255,.86);backdrop-filter: blur(10px);border:1px solid var(--line);border-radius:20px;padding:1rem;box-shadow: var(--shadow)}
-.toc h2{margin:0 0 .7rem;font-size:.75rem;text-transform: uppercase;letter-spacing:.08em;color: var(--muted);font-weight:700}
-.toc-topics{list-style: none;padding:0;margin:0}
+.toc{position:sticky;top:1rem;align-self:start;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:20px;padding:1rem;box-shadow:var(--shadow)}
+.toc h2{margin:0 0 .7rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.toc-topics{list-style:none;padding:0;margin:0}
 .toc-topic{margin:.2rem 0}
-.toc-link{display: block;padding:.62rem .6rem;border-radius:12px;color: var(--ink);text-decoration: none;font-weight:600}
-.toc-link: hover{background: var(--accent-soft);color: var(--accent-deep)}
+.toc-link{display:block;padding:.62rem .6rem;border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600}
+.toc-link:hover{background:var(--accent-soft);color:var(--accent-deep)}
 .toc-contact{margin-top:.85rem;padding-top:.75rem;border-top:1px solid var(--line)}
-.toc-contact .toc-link{font-weight:700;color:#fff;background: linear-gradient(135deg,var(--accent),var(--accent-deep));text-align: center}
-.toc-contact .toc-link: hover{color:#fff;filter: brightness(1.05)}
-main{background: var(--card);border:1px solid var(--line);border-radius:22px;padding:1.6rem;box-shadow: var(--shadow);position: relative;overflow: hidden}
-main: before{content:"";position: absolute;left:0;top:0;right:0;height:4px;background: linear-gradient(90deg,var(--navy),var(--accent))}
-.contact{background: linear-gradient(145deg,#fff,#f3faf7);border:1px solid var(--line);border-radius:18px;padding:1.5rem;box-shadow:0 8px 24px rgba(18,50,74,.05)}
-.contact h2{margin:0 0 .4rem;font-family: Fraunces,Georgia,serif;color: var(--navy);font-size:1.55rem}
-.contact-intro{margin:0 0 1.2rem;color: var(--muted)}
-.contact-grid{display: grid;grid-template-columns:1fr 1fr;gap:1rem}
-.field{display: flex;flex-direction: column;gap:.35rem}
+.toc-contact .toc-link{font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-deep));text-align:center}
+.toc-contact .toc-link:hover{color:#fff;filter:brightness(1.05)}
+main{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.6rem;box-shadow:var(--shadow);position:relative;overflow:hidden}
+main::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--navy),var(--accent))}
+.contact{background:linear-gradient(145deg,#fff,#f3faf7);border:1px solid var(--line);border-radius:18px;padding:1.5rem;box-shadow:0 8px 24px rgba(18,50,74,.05)}
+.contact h2{margin:0 0 .4rem;font-family:Fraunces,Georgia,serif;color:var(--navy);font-size:1.55rem}
+.contact-intro{margin:0 0 1.2rem;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{display:flex;flex-direction:column;gap:.35rem}
 .field.full,.contact-actions,.consent{grid-column:1/-1}
-.field label{font-size:.88rem;font-weight:700;color: var(--navy)}
-.consent label{font-weight:500;display: flex;gap:.55rem;align-items: flex-start}
-.field input,.field textarea,.field select{width:100%;font: inherit;color: var(--ink);background:#fff;border:1px solid #c9d5cf;border-radius:11px;padding:.78rem .85rem;outline: none}
-.field input: focus,.field textarea: focus,.field select: focus{border-color: var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
-.field textarea{min-height:110px;resize: vertical}
-.contact-submit{border:0;border-radius:11px;padding:.82rem 1.25rem;background: linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff;font:700 .98rem "Source Sans 3",sans-serif;cursor: pointer;box-shadow:0 8px 18px rgba(15,122,108,.25)}
-.contact-submit: hover{filter: brightness(1.05)}
+.field label{font-size:.88rem;font-weight:700;color:var(--navy)}
+.field input,.field textarea,.field select{width:100%;font:inherit;color:var(--ink);background:#fff;border:1px solid #c9d5cf;border-radius:11px;padding:.78rem .85rem;outline:none}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.field textarea{min-height:110px;resize:vertical}
+.consent label{
+  display:flex;
+  align-items:flex-start;
+  gap:.65rem;
+  font-weight:500;
+  line-height:1.45;
+  cursor:pointer;
+}
+.consent input[type="checkbox"]{
+  width:1.1rem;
+  height:1.1rem;
+  min-width:1.1rem;
+  margin:.2rem 0 0;
+  flex:0 0 auto;
+  accent-color:var(--accent);
+  cursor:pointer;
+}
+.contact-submit{border:0;border-radius:11px;padding:.82rem 1.25rem;background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff;font:700 .98rem "Source Sans 3",sans-serif;cursor:pointer;box-shadow:0 8px 18px rgba(15,122,108,.25)}
+.contact-submit:hover{filter:brightness(1.05)}
 .contact-status{margin:.8rem 0 0;padding:.8rem .95rem;border-radius:11px;background:#dff5ed;color:#0b584c;font:600 .92rem "Source Sans 3",sans-serif}
-footer{grid-column:1/-1;text-align: center;color: var(--muted);font-size:.88rem;margin-top:.4rem}
-@keyframes heroIn{from{opacity:0;transform: translateY(10px)}to{opacity:1;transform: none}}
-@media(max-width:960px){header.hero{flex-direction: column;align-items: flex-start;gap:1.1rem}.brand-logo{width: min(340px,100%)}.contact-grid{grid-template-columns:1fr}}
+footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:.88rem;margin-top:.4rem}
+@media(max-width:960px){header.hero{flex-direction:column;align-items:flex-start;gap:1.1rem}.brand-logo{width:min(340px,100%)}.contact-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -85,7 +100,7 @@ footer{grid-column:1/-1;text-align: center;color: var(--muted);font-size:.88rem;
 <h2>Registration form</h2>
 <p class="contact-intro">Submissions are sent to <strong>atharv.kumar@webisdom.com</strong>. Do not include passwords, payment details, or confidential customer data.</p>
 <form id="reg-form" class="contact-grid" action="https://formsubmit.co/atharv.kumar@webisdom.com" method="POST">
-<input type="hidden" name="_subject" value="AI Practitioner Program Registration: AI Ascent" />
+<input type="hidden" name="_subject" value="AI Practitioner Program Registration · AI Ascent" />
 <input type="hidden" name="_template" value="table" />
 <input type="hidden" name="_captcha" value="false" />
 <input type="hidden" name="_next" value="https://biswajitchatterjee98.github.io/ai-ascent/register.html?registered=true" />
@@ -127,12 +142,15 @@ footer{grid-column:1/-1;text-align: center;color: var(--muted);font-size:.88rem;
 <textarea id="reg-notes" name="message" placeholder="Timing, team needs, questions…"></textarea>
 </div>
 <div class="field full consent">
-<label><input type="checkbox" name="consent" value="yes" required /> I consent to Traininglobe contacting me about the AI Practitioner program using the details I submit.</label>
+<label for="reg-consent">
+<input id="reg-consent" type="checkbox" name="consent" value="yes" required />
+<span>I consent to Traininglobe contacting me about the AI Practitioner program using the details I submit.</span>
+</label>
 </div>
 <div class="contact-actions">
 <button class="contact-submit" type="submit">Submit registration</button>
 </div>
-<p id="reg-status" class="contact-status" hidden>Thank you: your registration was submitted. We will get back to you soon.</p>
+<p id="reg-status" class="contact-status" hidden>Thank you. Your registration was submitted. We will get back to you soon.</p>
 </form>
 </section>
 </main>
@@ -140,8 +158,8 @@ footer{grid-column:1/-1;text-align: center;color: var(--muted);font-size:.88rem;
 </div>
 <script>
 if (new URLSearchParams(window.location.search).get('registered') === 'true') {
- var status = document.getElementById('reg-status');
- if (status) status.hidden = false;
+  var status = document.getElementById('reg-status');
+  if (status) status.hidden = false;
 }
 </script>
 </body>

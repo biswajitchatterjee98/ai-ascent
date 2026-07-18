@@ -44,7 +44,7 @@
 - Measurement: cycle time, error rate, personalization, cost-to-serve
 - Adoption maturity ladder for a company
 
-**Media need:** Industry transformation image; overview video on AI at work.
+**Media need:** Industry transformation image, overview video on AI at work.
 
 ---
 
@@ -63,7 +63,7 @@
 - Where most organizations sit today 
 - How to climb one rung without skipping governance
 
-**Media need:** Ladder/steps visual; short explainer on AI maturity.
+**Media need:** Ladder/steps visual, short explainer on AI maturity.
 
 ---
 
@@ -78,7 +78,7 @@
 - Decision rights at each layer 
 - Anti-patterns: tool sprawl without hierarchy clarity
 
-**Media need:** Hierarchy diagram-style image; systems-thinking AI video.
+**Media need:** Hierarchy diagram-style image, systems-thinking AI video.
 
 ---
 
@@ -95,7 +95,7 @@
 - When classical ML beats DL 
 - When DL / foundation models are worth the cost
 
-**Media need:** Venn-style visual; classic AI/ML/DL explainer video.
+**Media need:** Venn-style visual, classic AI/ML/DL explainer video.
 
 ---
 
@@ -108,10 +108,10 @@
 - AGI (general): working definition and open debates 
 - ASI (superintelligence): speculative horizon 
 - Capability vs autonomy vs alignment 
-- Practical takeaway: build for ANI excellence now; watch AGI signals 
+- Practical takeaway: build for ANI excellence now, watch AGI signals 
 - Myths to retire
 
-**Media need:** Capability spectrum image; balanced ANI/AGI explainer.
+**Media need:** Capability spectrum image, balanced ANI/AGI explainer.
 
 ---
 
@@ -128,7 +128,7 @@
 - Human-in-the-loop writing loop 
 - Quality bar before publishing
 
-**Media need:** Writing/LLM visual; text-generation explainer.
+**Media need:** Writing/LLM visual, text-generation explainer.
 
 ---
 
@@ -145,7 +145,7 @@
 - Types: feedforward, CNN intuition, RNN/sequence note 
 - Why scale + data changed everything
 
-**Media need:** Network diagram image; 3Blue1Brown-style intro video.
+**Media need:** Network diagram image, 3Blue1Brown-style intro video.
 
 ---
 
@@ -162,7 +162,7 @@
 - Why transformers power LLMs and multimodal models 
 - Practical implications for users (context, long docs, tools)
 
-**Media need:** Attention visual; transformer explainer video.
+**Media need:** Attention visual, transformer explainer video.
 
 ---
 
@@ -179,7 +179,7 @@
 - Strengths vs Midjourney-style closed tools 
 - Responsible use and licensing notes
 
-**Media need:** Generative art image; Stable Diffusion tutorial video.
+**Media need:** Generative art image, Stable Diffusion tutorial video.
 
 ---
 
@@ -196,7 +196,7 @@
 - From research model to product UX 
 - What practitioners should verify in outputs
 
-**Media need:** Dataset/training visual; image-model training explainer.
+**Media need:** Dataset/training visual, image-model training explainer.
 
 ---
 
@@ -213,7 +213,7 @@
 - Risk: wrong facts, tone, confidentiality 
 - Review checklist before send
 
-**Media need:** Inbox visual; Gmail/Gemini or email-AI tutorial.
+**Media need:** Inbox visual, Gmail/Gemini or email-AI tutorial.
 
 ---
 
@@ -230,7 +230,7 @@
 - Versioning and source notes 
 - Example weekly KPI report workflow
 
-**Media need:** Analytics/report visual; reporting-with-AI video.
+**Media need:** Analytics/report visual, reporting-with-AI video.
 
 ---
 
@@ -247,7 +247,7 @@
 - Rehearsal and skim test 
 - Example: 12-slide pitch workflow
 
-**Media need:** Presentation visual; Gamma or AI slides tutorial.
+**Media need:** Presentation visual, Gamma or AI slides tutorial.
 
 ---
 
@@ -264,7 +264,7 @@
 - Organizational response playbook 
 - Ethics of accusation and escalation
 
-**Media need:** Media-literacy visual; deepfake detection explainer.
+**Media need:** Media-literacy visual, deepfake detection explainer.
 
 ---
 
@@ -281,7 +281,7 @@
 - Shadow AI and unmanaged tools 
 - Defenses: policy, least privilege, logging, training, vendor review
 
-**Media need:** Security visual; AI security overview video.
+**Media need:** Security visual, AI security overview video.
 
 ---
 
@@ -298,7 +298,7 @@
 - Documentation: model cards / use-case registers (lightweight) 
 - India/enterprise-friendly operating habits
 
-**Media need:** Governance/scales visual; responsible AI video.
+**Media need:** Governance/scales visual, responsible AI video.
 
 ---
 
@@ -314,7 +314,7 @@
 - Pilot → scale criteria 
 - Failure modes (no owner, no metric, no change management)
 
-**Media need:** Team/ops visual; enterprise AI adoption video.
+**Media need:** Team/ops visual, enterprise AI adoption video.
 
 ---
 
@@ -331,7 +331,7 @@
 - 90-day strategy starter plan 
 - Linking strategy to the Intelligent Ladder (Topic 2)
 
-**Media need:** Strategy/roadmap visual; AI strategy talk.
+**Media need:** Strategy/roadmap visual, AI strategy talk.
 
 ---
 
@@ -348,7 +348,7 @@
 - Limits and verification 
 - Feature checklist for daily use
 
-**Media need:** ChatGPT topic image; official/intro feature video.
+**Media need:** ChatGPT topic image, official/intro feature video.
 
 ---
 
@@ -365,7 +365,7 @@
 - Enterprise admin considerations 
 - Best-fit use cases
 
-**Media need:** Gemini/Workspace visual; Gemini tutorial video.
+**Media need:** Gemini/Workspace visual, Gemini tutorial video.
 
 ---
 
@@ -382,7 +382,7 @@
 - Limits 
 - Best-fit use cases
 
-**Media need:** Claude/writing visual; Claude tutorial video.
+**Media need:** Claude/writing visual, Claude tutorial video.
 
 ---
 
@@ -398,7 +398,7 @@
 - Switching costs and prompt portability 
 - Recommendation table
 
-**Media need:** Comparison/decision visual; LLM comparison video.
+**Media need:** Comparison/decision visual, LLM comparison video.
 
 ---
 
@@ -416,7 +416,7 @@
 - Human checkpoints for high-risk steps 
 - Selecting what not to automate
 
-**Media need:** Workflow visual; AI automation scenarios video.
+**Media need:** Workflow visual, AI automation scenarios video.
 
 ---
 
@@ -433,7 +433,7 @@
 - Cost/operations awareness 
 - Practice path
 
-**Media need:** Automation systems visual; make.com beginner tutorial.
+**Media need:** Automation systems visual, make.com beginner tutorial.
 
 ---
 
@@ -450,7 +450,7 @@
 - Observability and iteration 
 - When n8n vs make.com vs custom code
 
-**Media need:** Agent/workflow visual; n8n AI agent tutorial.
+**Media need:** Agent/workflow visual, n8n AI agent tutorial.
 
 ---
 
@@ -466,7 +466,7 @@
 - Resources to keep learning 
 - Bridge to the AI Practitioner Program
 
-**Media need:** Milestone/finish visual; optional closing talk.
+**Media need:** Milestone/finish visual, optional closing talk.
 
 ---
 
@@ -483,7 +483,7 @@
 - Submit to: `atharv.kumar@webisdom.com` 
 - Privacy note / consent checkbox
 
-**Media need:** Learning/cohort visual; optional program intro video.
+**Media need:** Learning/cohort visual, optional program intro video.
 
 ---
 
@@ -526,7 +526,7 @@ Reuse Traininglobe brand logo and the playbook visual system (teal/navy) for con
 ## Deliverables after this outline
 
 1. `AI-Practitioner-Handbook.md`: full rich content for topics 1-27 
-2. `index.html`: side panel; one open topic at a time; media embeds 
+2. `index.html`: side panel, one open topic at a time, media embeds 
 3. Registration form in topic 27 → `atharv.kumar@webisdom.com` 
 4. `images/topics/` and `images/youtube/` assets 
 
