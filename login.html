@@ -86,31 +86,6 @@ button.primary:hover{filter:brightness(1.05)}
   background:#fdecea;color:#8a1f1a;font-weight:600;font-size:.92rem;
 }
 .error.show{display:block}
-.demo{
-  margin-top:1.35rem;border-top:1px solid var(--line);padding-top:1rem;
-}
-.demo-toggle{
-  display:flex;align-items:center;justify-content:space-between;gap:.5rem;
-  width:100%;border:0;background:transparent;padding:0;cursor:pointer;
-  font:700 1rem "Source Sans 3",sans-serif;color:var(--navy);text-align:left;
-}
-.demo-toggle::after{content:"▾";color:var(--accent);font-size:.95rem}
-.demo-toggle[aria-expanded="true"]::after{content:"▴"}
-.demo-panel{display:none;margin-top:.55rem}
-.demo-panel.is-open{display:block}
-.demo-note{margin:0 0 .7rem;color:var(--muted);font-size:.9rem}
-.accounts{
-  width:100%;border-collapse:collapse;font-size:.86rem;
-  border:1px solid var(--line);border-radius:12px;overflow:hidden;
-}
-.accounts th,.accounts td{padding:.5rem .65rem;text-align:left;border-bottom:1px solid var(--line)}
-.accounts th{background:#eef7f4;color:var(--navy)}
-.accounts tr:last-child td{border-bottom:0}
-.accounts code{
-  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  background:var(--accent-soft);color:#0d4f46;padding:.1em .35em;border-radius:6px;
-}
-.fill{margin:.7rem 0 0;color:var(--muted);font-size:.82rem}
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 </style>
 </head>
@@ -123,12 +98,12 @@ button.primary:hover{filter:brightness(1.05)}
     <ul class="points">
       <li>27 topics from foundations to automation</li>
       <li>STAR and CREATE prompting methods</li>
-      <li>Demo logins for classroom practice</li>
+      <li>Guided practice for real work scenarios</li>
     </ul>
   </section>
   <section class="form-pane">
     <h2>Welcome back</h2>
-    <p class="lead">Use one of the demo accounts below to continue.</p>
+    <p class="lead">Sign in with the username and password you were given.</p>
     <p id="login-error" class="error" role="alert"></p>
     <form id="login-form" autocomplete="on">
       <div class="field">
@@ -143,57 +118,10 @@ button.primary:hover{filter:brightness(1.05)}
         <button class="primary" type="submit">Sign in</button>
       </div>
     </form>
-    <div class="demo">
-      <button type="button" class="demo-toggle" id="demo-toggle" aria-expanded="false" aria-controls="demo-panel">
-        Demo accounts (10)
-      </button>
-      <div class="demo-panel" id="demo-panel" hidden>
-        <p class="demo-note">These are practice credentials for this static site. Anyone with the link can use them.</p>
-        <div style="overflow:auto">
-          <table class="accounts" id="accounts-table">
-            <thead><tr><th>#</th><th>Username</th><th>Password</th><th>Name</th></tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <p class="fill">Tip: click a row to fill the form.</p>
-      </div>
-    </div>
   </section>
 </div>
 <script>
 (function () {
-  var tbody = document.querySelector("#accounts-table tbody");
-  var filled = false;
-  function fillAccounts() {
-    if (filled) return;
-    filled = true;
-    AscentAuth.USERS.forEach(function (user, i) {
-      var tr = document.createElement("tr");
-      tr.style.cursor = "pointer";
-      tr.innerHTML =
-        "<td>" + (i + 1) + "</td>" +
-        "<td><code>" + user.username + "</code></td>" +
-        "<td><code>" + user.password + "</code></td>" +
-        "<td>" + user.name + "</td>";
-      tr.addEventListener("click", function () {
-        document.getElementById("username").value = user.username;
-        document.getElementById("password").value = user.password;
-        document.getElementById("username").focus();
-      });
-      tbody.appendChild(tr);
-    });
-  }
-
-  var toggle = document.getElementById("demo-toggle");
-  var panel = document.getElementById("demo-panel");
-  toggle.addEventListener("click", function () {
-    var next = toggle.getAttribute("aria-expanded") !== "true";
-    toggle.setAttribute("aria-expanded", next ? "true" : "false");
-    panel.hidden = !next;
-    panel.classList.toggle("is-open", next);
-    if (next) fillAccounts();
-  });
-
   document.getElementById("login-form").addEventListener("submit", function (e) {
     e.preventDefault();
     var err = document.getElementById("login-error");

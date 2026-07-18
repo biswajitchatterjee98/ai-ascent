@@ -40,4 +40,4 @@ Open **`register.html`** (sidebar: Register · Practitioner Program). Submission
 
 ## Login
 
-Open `login.html` first. Ten demo accounts are listed on the page (for example `demo` / `Demo@2026`). Session lasts until logout or the tab is closed.
+Open `login.html` first. Use the username and password issued to you. Session lasts until logout or the tab is closed.
