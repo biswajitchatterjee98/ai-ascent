@@ -89,13 +89,16 @@ button.primary:hover{filter:brightness(1.05)}
 .demo{
   margin-top:1.35rem;border-top:1px solid var(--line);padding-top:1rem;
 }
-.demo summary{
-  cursor:pointer;font-weight:700;color:var(--navy);list-style:none;
+.demo-toggle{
+  display:flex;align-items:center;justify-content:space-between;gap:.5rem;
+  width:100%;border:0;background:transparent;padding:0;cursor:pointer;
+  font:700 1rem "Source Sans 3",sans-serif;color:var(--navy);text-align:left;
 }
-.demo summary::-webkit-details-marker{display:none}
-.demo summary::after{content:" ▾";color:var(--accent)}
-.demo[open] summary::after{content:" ▴"}
-.demo-note{margin:.55rem 0 .7rem;color:var(--muted);font-size:.9rem}
+.demo-toggle::after{content:"▾";color:var(--accent);font-size:.95rem}
+.demo-toggle[aria-expanded="true"]::after{content:"▴"}
+.demo-panel{display:none;margin-top:.55rem}
+.demo-panel.is-open{display:block}
+.demo-note{margin:0 0 .7rem;color:var(--muted);font-size:.9rem}
 .accounts{
   width:100%;border-collapse:collapse;font-size:.86rem;
   border:1px solid var(--line);border-radius:12px;overflow:hidden;
@@ -140,36 +143,55 @@ button.primary:hover{filter:brightness(1.05)}
         <button class="primary" type="submit">Sign in</button>
       </div>
     </form>
-    <details class="demo">
-      <summary>Demo accounts (10)</summary>
-      <p class="demo-note">These are practice credentials for this static site. Anyone with the link can use them.</p>
-      <div style="overflow:auto">
-        <table class="accounts" id="accounts-table">
-          <thead><tr><th>#</th><th>Username</th><th>Password</th><th>Name</th></tr></thead>
-          <tbody></tbody>
-        </table>
+    <div class="demo">
+      <button type="button" class="demo-toggle" id="demo-toggle" aria-expanded="false" aria-controls="demo-panel">
+        Demo accounts (10)
+      </button>
+      <div class="demo-panel" id="demo-panel" hidden>
+        <p class="demo-note">These are practice credentials for this static site. Anyone with the link can use them.</p>
+        <div style="overflow:auto">
+          <table class="accounts" id="accounts-table">
+            <thead><tr><th>#</th><th>Username</th><th>Password</th><th>Name</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="fill">Tip: click a row to fill the form.</p>
       </div>
-      <p class="fill">Tip: click a row to fill the form.</p>
-    </details>
+    </div>
   </section>
 </div>
 <script>
 (function () {
   var tbody = document.querySelector("#accounts-table tbody");
-  AscentAuth.USERS.forEach(function (user, i) {
-    var tr = document.createElement("tr");
-    tr.style.cursor = "pointer";
-    tr.innerHTML =
-      "<td>" + (i + 1) + "</td>" +
-      "<td><code>" + user.username + "</code></td>" +
-      "<td><code>" + user.password + "</code></td>" +
-      "<td>" + user.name + "</td>";
-    tr.addEventListener("click", function () {
-      document.getElementById("username").value = user.username;
-      document.getElementById("password").value = user.password;
-      document.getElementById("username").focus();
+  var filled = false;
+  function fillAccounts() {
+    if (filled) return;
+    filled = true;
+    AscentAuth.USERS.forEach(function (user, i) {
+      var tr = document.createElement("tr");
+      tr.style.cursor = "pointer";
+      tr.innerHTML =
+        "<td>" + (i + 1) + "</td>" +
+        "<td><code>" + user.username + "</code></td>" +
+        "<td><code>" + user.password + "</code></td>" +
+        "<td>" + user.name + "</td>";
+      tr.addEventListener("click", function () {
+        document.getElementById("username").value = user.username;
+        document.getElementById("password").value = user.password;
+        document.getElementById("username").focus();
+      });
+      tbody.appendChild(tr);
     });
-    tbody.appendChild(tr);
+  }
+
+  var toggle = document.getElementById("demo-toggle");
+  var panel = document.getElementById("demo-panel");
+  toggle.addEventListener("click", function () {
+    var next = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", next ? "true" : "false");
+    panel.hidden = !next;
+    panel.classList.toggle("is-open", next);
+    if (next) fillAccounts();
   });
 
   document.getElementById("login-form").addEventListener("submit", function (e) {
