@@ -194,7 +194,7 @@ Reports influence decisions about budgets, customers, risk, and people. A fluent
 
 ## 12.3 Deep dive / frameworks
 
-The **Question–Evidence–Insight–Action (QEIA)** structure keeps reports decision-oriented:
+The **Question-Evidence-Insight-Action (QEIA)** structure keeps reports decision-oriented:
 
 | Layer | Content | Test |
 |---|---|---|
@@ -211,7 +211,7 @@ For quantitative reports, validate numbers outside the language model. Keep form
 
 **Example: monthly support report.** Decision: whether to add weekend coverage. Evidence includes ticket export, staffing schedule, and customer satisfaction survey. Calculate ticket volume, median first response, and backlog by day before drafting. The AI creates an outline: executive summary, volume trend, service-level performance, root-cause themes, options, and recommendation. It may summarize anonymized ticket themes, but a human samples the underlying tickets to ensure the themes are representative. The final recommendation states assumptions: forecast demand, hiring lead time, and desired service level.
 
-**Example: project status report.** Feed the tool approved workstream updates tagged “on track,” “at risk,” or “blocked.” Ask it to consolidate duplicates and identify contradictory dates. The project manager resolves contradictions with workstream owners, then asks AI to create a one-page narrative. The report lists decisions needed, owner, and decision deadline—rather than burying risks in prose.
+**Example: project status report.** Feed the tool approved workstream updates tagged “on track,” “at risk,” or “blocked.” Ask it to consolidate duplicates and identify contradictory dates. The project manager resolves contradictions with workstream owners, then asks AI to create a one-page narrative. The report lists decisions needed, owner, and decision deadline: rather than burying risks in prose.
 
 ## 12.5 Apply today
 
@@ -270,15 +270,13 @@ Create the storyline before design:
 4. Evidence: why should they believe it?
 5. Ask: what decision, resource, or next step is required?
 
-Ask AI for three alternative outlines and choose the one that best fits the audience—not necessarily the longest. Then create one “message title” per slide, such as “Weekend demand now exceeds current support capacity,” rather than a label like “Demand Analysis.” Each slide should have one primary idea and evidence that supports it.
+Ask AI for three alternative outlines and choose the one that best fits the audience: not necessarily the longest. Then create one “message title” per slide, such as “Weekend demand now exceeds current support capacity,” rather than a label like “Demand Analysis.” Each slide should have one primary idea and evidence that supports it.
 
 ## 13.3 Deep dive / frameworks
 
 Use the **SCQA** framework for executive communication: Situation, Complication, Question, Answer. It is effective when the audience needs a recommendation quickly. Use the **Pyramid Principle** for the deck structure: lead with the answer, support it with grouped reasons, and support each reason with evidence.
 
-For slide quality, apply the **ONE test**:
-
-- **One message:** can a viewer repeat the point after five seconds?
+For slide quality, apply the **ONE test**: - **One message:** can a viewer repeat the point after five seconds?
 - **One visual hierarchy:** is the most important element unmistakable?
 - **One evidence standard:** are sources, dates, and definitions visible for material claims?
 
@@ -288,7 +286,7 @@ AI-generated visuals should be treated as illustrations unless they are verified
 
 **Example: leadership proposal.** Brief: gain approval for a customer-support pilot in a 10-minute meeting. Give AI the verified metrics, budget range, options, and risk constraints. Ask for a seven-slide SCQA outline. Edit it into: decision requested, current performance, cost of inaction, pilot design, expected value, risks and controls, next steps. Use a verified chart for performance; do not ask the model to invent values. Generate speaker notes that explain the chart, then rehearse and remove claims you cannot defend in Q&A.
 
-**Example: training deck.** Convert a policy into a learner journey: what changes in their daily work, a realistic scenario, practice decisions, and a recap. AI can turn dense policy language into plain-English drafts, but an owner must validate that simplification did not alter the rule. Add a knowledge check with plausible distractors based on known mistakes—not trick questions.
+**Example: training deck.** Convert a policy into a learner journey: what changes in their daily work, a realistic scenario, practice decisions, and a recap. AI can turn dense policy language into plain-English drafts, but an owner must validate that simplification did not alter the rule. Add a knowledge check with plausible distractors based on known mistakes: not trick questions.
 
 ## 13.5 Apply today
 
@@ -562,7 +560,7 @@ Procurement is a governance control too. Ask vendors about training-data practic
 # 17. Functional AI
 ![Functional AI embedded in business workflows](images/topics/functional-ai.jpg)
 
-Functional AI means applying AI within a specific business function—such as marketing, finance, HR, sales, operations, customer service, legal, or IT—to improve a defined workflow. It is not a list of impressive tools. Its value comes from combining domain knowledge, clean inputs, human decisions, and measurable outcomes.
+Functional AI means applying AI within a specific business function: such as marketing, finance, HR, sales, operations, customer service, legal, or IT: to improve a defined workflow. It is not a list of impressive tools. Its value comes from combining domain knowledge, clean inputs, human decisions, and measurable outcomes.
 
 ## 17.1 Why this matters
 
@@ -592,7 +590,7 @@ Different problem shapes fit different approaches. Generative models help draft 
 
 ## 17.3 Deep dive / frameworks
 
-Use the **Function–Task–Decision–Control–Metric (FTDCM)** canvas:
+Use the **Function-Task-Decision-Control-Metric (FTDCM)** canvas:
 
 | Element | Example: customer support |
 |---|---|
@@ -664,7 +662,7 @@ Without strategy, organizations collect disconnected pilots: duplicated licenses
 
 ## 18.2 Core concepts (step by step)
 
-1. **Anchor on business goals.** Revenue growth, cost-to-serve, quality, resilience, employee experience, or risk reduction are starting points—not model capabilities.
+1. **Anchor on business goals.** Revenue growth, cost-to-serve, quality, resilience, employee experience, or risk reduction are starting points: not model capabilities.
 2. **Build a use-case portfolio.** Collect opportunities from functions, then describe task, users, data, expected value, risk, effort, dependencies, and owner.
 3. **Prioritize transparently.** Score value, feasibility, strategic fit, risk, and time to learning. Do not select only easy demos or only ambitious moonshots.
 4. **Set foundations.** Define approved tools, data access patterns, security, governance, vendor standards, training, and measurement.
@@ -674,16 +672,14 @@ Without strategy, organizations collect disconnected pilots: duplicated licenses
 
 ## 18.3 Deep dive / frameworks
 
-Use a portfolio matrix that balances **value** and **readiness**:
-
-| Category | Characteristics | Action |
+Use a portfolio matrix that balances **value** and **readiness**: | Category | Characteristics | Action |
 |---|---|---|
 | Quick wins | High value, available data, manageable risk | Pilot now |
 | Foundation bets | High value, missing data/integration | Build prerequisites |
 | Learning experiments | Uncertain value, low cost/risk | Time-box and learn |
 | Avoid/defer | Low value or unacceptable risk | Document rationale |
 
-Value should include more than labor hours. Consider quality, revenue, risk avoided, customer experience, employee capability, and strategic differentiation. Estimate a baseline and counterfactual: what happens without the initiative? Track total cost of ownership too—licenses, integration, data preparation, security, monitoring, vendor management, and change support.
+Value should include more than labor hours. Consider quality, revenue, risk avoided, customer experience, employee capability, and strategic differentiation. Estimate a baseline and counterfactual: what happens without the initiative? Track total cost of ownership too: licenses, integration, data preparation, security, monitoring, vendor management, and change support.
 
 An AI operating model usually needs four connected roles: business teams own outcomes; a platform/data team provides reusable capabilities; risk/security/legal set guardrails; and enablement helps people redesign work and build skills. Centralize standards where consistency matters, while keeping use-case accountability close to the function.
 
@@ -720,7 +716,7 @@ Communicate strategic choices plainly. Teams should know which uses are encourag
 ## 18.6 Key takeaways
 
 - AI strategy is a portfolio of business choices, foundations, and learning loops.
-- Prioritize by value, readiness, and risk—not hype.
+- Prioritize by value, readiness, and risk: not hype.
 - Measure outcomes and total cost of ownership from the start.
 - Scale repeatable patterns while retaining functional accountability.
 

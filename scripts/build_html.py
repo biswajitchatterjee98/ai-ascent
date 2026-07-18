@@ -11,60 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 MD_PATH = ROOT / "AI-Ascent.md"
 OUT_PATH = ROOT / "index.html"
 
-REG_FORM = """
+REG_CTA = """
 <section class="contact" id="registration-form">
-<h2>Register for the AI Practitioner program</h2>
-<p class="contact-intro">Submit the form below. Your registration is sent to <strong>atharv.kumar@webisdom.com</strong>.</p>
-<form id="reg-form" class="contact-grid" action="https://formsubmit.co/atharv.kumar@webisdom.com" method="POST">
-<input type="hidden" name="_subject" value="AI Practitioner Program Registration" />
-<input type="hidden" name="_template" value="table" />
-<input type="hidden" name="_captcha" value="false" />
-<input type="hidden" name="_next" value="" />
-<div class="field">
-<label for="reg-name">Full Name</label>
-<input id="reg-name" name="full_name" type="text" autocomplete="name" required />
-</div>
-<div class="field">
-<label for="reg-email">Email</label>
-<input id="reg-email" name="email" type="email" autocomplete="email" required />
-</div>
-<div class="field">
-<label for="reg-phone">Phone</label>
-<input id="reg-phone" name="phone" type="tel" autocomplete="tel" required />
-</div>
-<div class="field">
-<label for="reg-org">Organization</label>
-<input id="reg-org" name="organization" type="text" autocomplete="organization" required />
-</div>
-<div class="field">
-<label for="reg-role">Role</label>
-<input id="reg-role" name="role" type="text" required />
-</div>
-<div class="field">
-<label for="reg-level">Experience Level</label>
-<select id="reg-level" name="experience_level" required>
-<option value="">Select…</option>
-<option value="Beginner">Beginner</option>
-<option value="Intermediate">Intermediate</option>
-<option value="Advanced">Advanced</option>
-</select>
-</div>
-<div class="field full">
-<label for="reg-goal">Primary Goal</label>
-<textarea id="reg-goal" name="primary_goal" required placeholder="What do you want to achieve through this program?"></textarea>
-</div>
-<div class="field full">
-<label for="reg-notes">Message / Notes</label>
-<textarea id="reg-notes" name="message" placeholder="Timing, team needs, questions…"></textarea>
-</div>
-<div class="field full consent">
-<label><input type="checkbox" name="consent" value="yes" required /> I consent to Traininglobe contacting me about the AI Practitioner program using the details I submit.</label>
-</div>
-<div class="contact-actions">
-<button class="contact-submit" type="submit">Submit registration</button>
-</div>
-<p id="reg-status" class="contact-status" hidden>Thank you — your registration was submitted.</p>
-</form>
+<h2>Ready to register?</h2>
+<p class="contact-intro">Open the registration page to submit your details. Your form goes to <strong>atharv.kumar@webisdom.com</strong>.</p>
+<p class="contact-actions"><a class="contact-submit" href="register.html" style="display:inline-block;text-decoration:none">Go to registration form</a></p>
 </section>
 """
 
@@ -344,13 +295,7 @@ def md_to_html(md: str, topic_id: str) -> str:
     # inject registration form into topic 27 after registration heading block
     if topic_id.startswith("27-") or "practitioner-program" in topic_id:
         if 'id="registration-form"' not in html_body:
-            # place after 27.8 Registration heading if present, else at end
-            marker = '<h2 id="278-registration">'
-            if marker in html_body:
-                # insert after the registration section's explanatory content — append before end
-                html_body += REG_FORM
-            else:
-                html_body += REG_FORM
+            html_body += REG_CTA
     return html_body
 
 
@@ -560,17 +505,6 @@ JS = r"""
     frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
     card.classList.add('is-playing');
   });
-  var form = document.getElementById('reg-form');
-  if (form) {
-    var next = form.querySelector('input[name="_next"]');
-    if (next && !next.value) {
-      next.value = location.href.split('#')[0] + '?registered=true#27-ai-practitioner-program';
-    }
-    if (/[?&]registered=true/.test(location.search)) {
-      var status = document.getElementById('reg-status');
-      if (status) status.hidden = false;
-    }
-  }
   var initialTopic = topicIdFromHash(location.hash);
   if (initialTopic) showTopic(initialTopic, location.hash.replace(/^#/, ''));
   else {
@@ -633,7 +567,7 @@ def main() -> None:
         )
 
     toc_items.append(
-        '<li class="toc-topic toc-contact"><a class="toc-link" href="#27-ai-practitioner-program">Register · Practitioner Program</a></li>'
+        '<li class="toc-topic toc-contact"><a class="toc-link" href="register.html">Register · Practitioner Program</a></li>'
     )
 
     doc = f"""<!DOCTYPE html>

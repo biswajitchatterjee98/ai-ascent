@@ -18,7 +18,7 @@ For leaders, the practical measures are cycle time, error rate, conversion, cost
 3. **Predict what may happen.** Machine-learning models estimate a probability: a customer may churn, a shipment may be late, or a transaction may be fraudulent.
 4. **Recommend or generate.** Generative AI drafts a response, summary, design, or code; decision support suggests a next-best action based on rules, data, and model output.
 5. **Act with controls.** Automation executes a low-risk, reversible action. Higher-risk actions need approval, audit trails, and a clear escalation path.
-6. **Learn from outcomes.** Compare recommendations with what actually occurred. If a model’s recommendations are ignored or create rework, the workflow—not just the model—needs redesign.
+6. **Learn from outcomes.** Compare recommendations with what actually occurred. If a model’s recommendations are ignored or create rework, the workflow: not just the model: needs redesign.
 
 The difference between automation and AI matters. A workflow that sends an invoice on the first day of each month is deterministic automation. A system that extracts invoice fields from varied PDFs, identifies anomalies, and drafts a query to a supplier uses AI. Many valuable systems combine both.
 
@@ -54,7 +54,7 @@ Do not jump to transformation without proving a narrow use case. An Indian insur
 
 ## 1.5 Apply today
 
-Choose one workflow that is high-volume, repetitive, painful, and measurable. Interview the people doing it; they know exceptions that a process diagram misses. Establish a baseline for time, quality, and cost. Define one bounded AI role—such as “draft a response using only this knowledge base”—and explicitly list prohibited actions. Run a short pilot with reviewed outputs, capture failure examples, and decide whether the improvement is material enough to standardize.
+Choose one workflow that is high-volume, repetitive, painful, and measurable. Interview the people doing it; they know exceptions that a process diagram misses. Establish a baseline for time, quality, and cost. Define one bounded AI role: such as “draft a response using only this knowledge base”: and explicitly list prohibited actions. Run a short pilot with reviewed outputs, capture failure examples, and decide whether the improvement is material enough to standardize.
 
 Ask five questions before scaling:
 
@@ -70,13 +70,13 @@ Ask five questions before scaling:
 - Most near-term gains come from augmentation: faster preparation, better routing, and stronger decision support.
 - Start with a narrow, measurable use case; integrate and automate only after reliability is established.
 - Human accountability becomes more important in high-impact decisions.
-- The durable advantage is process redesign, quality data, and operational learning—not a single model.
+- The durable advantage is process redesign, quality data, and operational learning: not a single model.
 
 ## 1.7 Media
 
 **Videos:**
-- [How AI could empower any business — World Economic Forum](https://www.youtube.com/watch?v=2ePf9rue1Ao)
-- [But what is a neural network? — 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
+- [How AI could empower any business: World Economic Forum](https://www.youtube.com/watch?v=2ePf9rue1Ao)
+- [But what is a neural network?: 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
 
 # 2. Intelligent Ladder in terms of AI
 ![AI capability ladder](images/topics/intelligent-ladder.jpg)
@@ -94,7 +94,7 @@ For a practitioner, the ladder helps frame projects honestly. A document-summari
 ## 2.2 Core concepts (step by step)
 
 1. **Data capture and digitization.** Information is collected in a consistent, searchable form: transactions, customer interactions, machine readings, and documents.
-2. **Descriptive intelligence.** Reports answer “what happened?”—monthly revenue, ticket volume, late deliveries, or learner completion.
+2. **Descriptive intelligence.** Reports answer “what happened?”: monthly revenue, ticket volume, late deliveries, or learner completion.
 3. **Diagnostic intelligence.** Analysis answers “why did it happen?” by segmenting outcomes, finding correlations, and comparing cohorts.
 4. **Predictive intelligence.** Models estimate “what is likely next?” such as churn risk, expected demand, or probable delay.
 5. **Generative assistance.** A model creates a first draft, summary, translation, image, or code from instructions and context.
@@ -131,7 +131,7 @@ Avoid the “automation cliff.” A company may see good results from AI-generat
 
 ## 2.5 Apply today
 
-Draw your current workflow as a ladder. For one candidate process, write the present rung and the next useful rung—do not start from “autonomous.” Define a stopping condition: “The agent may create a draft but cannot send it,” or “The system may reorder only below ₹25,000 and only from approved suppliers.”
+Draw your current workflow as a ladder. For one candidate process, write the present rung and the next useful rung: do not start from “autonomous.” Define a stopping condition: “The agent may create a draft but cannot send it,” or “The system may reorder only below ₹25,000 and only from approved suppliers.”
 
 Create a rung-transition checklist:
 
@@ -155,8 +155,8 @@ An intelligent organization is also comfortable stopping. If the next rung canno
 ## 2.7 Media
 
 **Videos:**
-- [How machines learn — Google](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
-- [But what is a neural network? — 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
+- [How machines learn: Google](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
+- [But what is a neural network?: 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
 
 # 3. Intelligent Hierarchy with reference of AI
 ![Hierarchy of AI intelligence](images/topics/intelligent-hierarchy.jpg)
@@ -204,7 +204,7 @@ This distinction is especially useful during procurement. Ask whether a proposed
 
 ## 3.4 Worked examples
 
-**Customer-support hierarchy.** Rules route a ticket by language and product. A classifier identifies billing versus technical intent. A foundation model summarizes the conversation and retrieves approved help-centre content. An agent may open a case, draft a reply, and offer a permitted remedy. Organizational intelligence appears when the team reviews unresolved issues, updates knowledge articles, adjusts product defects, and measures whether automation improves customer effort—not just ticket closure.
+**Customer-support hierarchy.** Rules route a ticket by language and product. A classifier identifies billing versus technical intent. A foundation model summarizes the conversation and retrieves approved help-centre content. An agent may open a case, draft a reply, and offer a permitted remedy. Organizational intelligence appears when the team reviews unresolved issues, updates knowledge articles, adjusts product defects, and measures whether automation improves customer effort: not just ticket closure.
 
 **Manufacturing hierarchy.** Sensors capture vibration and temperature. Statistical monitoring spots abnormal ranges. A predictive model estimates failure risk. A deep-learning vision system identifies defects on a production line. The product layer presents evidence to an operator; the process layer schedules maintenance; governance defines safety shutdown authority. Without the latter layers, a highly accurate model can still produce no business benefit.
 
@@ -229,8 +229,8 @@ When a system fails, diagnose the layer before assigning blame: source data may 
 ## 3.7 Media
 
 **Videos:**
-- [But what is a neural network? — 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
-- [How machines learn — Google](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
+- [But what is a neural network?: 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
+- [How machines learn: Google](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
 
 # 4. AI vs ML vs DL
 ![AI machine learning deep learning](images/topics/ai-ml-dl.jpg)
@@ -247,7 +247,7 @@ The distinction also protects against “deep learning by default.” Deep model
 
 1. **Artificial intelligence:** The umbrella goal. It includes search algorithms, planning, expert systems, robotics, rules, machine learning, and generative AI.
 2. **Machine learning:** Instead of coding every rule, provide examples and a learning objective. The model adjusts parameters to reduce error on training data.
-3. **Features and labels:** In supervised ML, features are inputs—such as transaction amount, time, merchant type—and labels are known outcomes, such as fraud or not fraud.
+3. **Features and labels:** In supervised ML, features are inputs: such as transaction amount, time, merchant type: and labels are known outcomes, such as fraud or not fraud.
 4. **Deep learning:** Neural networks learn useful features automatically from raw or less-structured data. Early layers might detect simple patterns; later layers combine them into richer representations.
 5. **Training and inference:** Training is the expensive learning phase; inference is using the trained model to make a prediction or generate output.
 6. **Evaluation:** A model is judged on unseen data and business outcomes, not its training score alone.
@@ -280,7 +280,7 @@ Cost is more than a cloud bill. Include data preparation, labeling, evaluation, 
 
 **Loan pre-screening.** AI is the broad system: application intake, identity checks, policy rules, risk model, and human underwriting. ML predicts a risk score using permitted, validated features. Deep learning is not automatically better: an explainable model may be preferable where regulatory reasons and fairness audits matter. The decision should never rely solely on a score; policy, data quality, and adverse-action requirements govern the process.
 
-**Product image search.** A shopper uploads a picture of a kurta and wants similar items. Rules cannot recognize visual similarity. A deep vision model converts images into embeddings—numeric representations where visually related items are near one another. A search system combines that similarity with price, availability, size, and business rules. This is a strong fit for deep learning because the primary signal is visual and unstructured.
+**Product image search.** A shopper uploads a picture of a kurta and wants similar items. Rules cannot recognize visual similarity. A deep vision model converts images into embeddings: numeric representations where visually related items are near one another. A search system combines that similarity with price, availability, size, and business rules. This is a strong fit for deep learning because the primary signal is visual and unstructured.
 
 ## 4.5 Apply today
 
@@ -292,7 +292,7 @@ For a proposed AI project, write the input, desired output, available examples, 
 4. Is the input image, audio, or language where deep learning is justified?
 5. Can a foundation model be grounded in approved sources and reviewed?
 
-Run a baseline. If a simple rule achieves 90% of the needed outcome, a complex model must prove that its additional gain is worth the operational burden. Compare accuracy, speed, cost, interpretability, and failure mode—not only a benchmark score.
+Run a baseline. If a simple rule achieves 90% of the needed outcome, a complex model must prove that its additional gain is worth the operational burden. Compare accuracy, speed, cost, interpretability, and failure mode: not only a benchmark score.
 
 ## 4.6 Key takeaways
 
@@ -308,7 +308,7 @@ Model selection is reversible when interfaces, data contracts, and evaluations a
 
 **Videos:**
 - [AI vs Machine Learning vs Deep Learning](https://www.youtube.com/watch?v=ukzFI9rgwfU)
-- [But what is a neural network? — 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
+- [But what is a neural network?: 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
 
 # 5. ANI, AGI and ASI along with examples
 ![ANI AGI ASI capability spectrum](images/topics/ani-agi-asi.jpg)
@@ -323,10 +323,10 @@ Practitioners should focus on today’s capabilities and risks. An ANI system ca
 
 ## 5.2 Core concepts (step by step)
 
-1. **ANI—narrow intelligence.** A system is optimized for particular tasks or bounded classes of tasks. Examples include spam filters, recommendation engines, route optimization, medical-image triage, speech recognition, and large language models used through a defined interface.
+1. **ANI: narrow intelligence.** A system is optimized for particular tasks or bounded classes of tasks. Examples include spam filters, recommendation engines, route optimization, medical-image triage, speech recognition, and large language models used through a defined interface.
 2. **General-purpose versus general intelligence.** A foundation model can be useful across many tasks, but broad usefulness does not establish human-like general understanding, self-directed learning, or dependable competence in every environment.
-3. **AGI—general intelligence.** There is no universally accepted test. Common proposals include robust learning, transfer to unfamiliar tasks, planning, reasoning, and reliable real-world adaptation at or beyond human level across a wide range of domains.
-4. **ASI—superintelligence.** This refers to capability far beyond the best human performance across most intellectual fields. It remains speculative rather than an available product category.
+3. **AGI: general intelligence.** There is no universally accepted test. Common proposals include robust learning, transfer to unfamiliar tasks, planning, reasoning, and reliable real-world adaptation at or beyond human level across a wide range of domains.
+4. **ASI: superintelligence.** This refers to capability far beyond the best human performance across most intellectual fields. It remains speculative rather than an available product category.
 5. **Capability, autonomy, and alignment.** These are separate dimensions. A capable system may have little permission to act. An autonomous system may be narrow. Alignment concerns whether behavior follows intended human goals and constraints.
 
 ## 5.3 Deep dive / frameworks
@@ -350,7 +350,7 @@ The terminology also has a time dimension. A capability that feels general in a 
 
 ## 5.4 Worked examples
 
-**A customer-service assistant is ANI.** It can summarize conversation history, retrieve policy passages, draft replies, and classify intent. It does not understand the company’s obligations in the human sense; it produces patterns based on inputs. Give it approved sources, restrict refunds or account changes, and route ambiguous cases to trained staff. Its operational quality is measured by accuracy, customer effort, escalation rate, and policy compliance—not whether it sounds human.
+**A customer-service assistant is ANI.** It can summarize conversation history, retrieve policy passages, draft replies, and classify intent. It does not understand the company’s obligations in the human sense; it produces patterns based on inputs. Give it approved sources, restrict refunds or account changes, and route ambiguous cases to trained staff. Its operational quality is measured by accuracy, customer effort, escalation rate, and policy compliance: not whether it sounds human.
 
 **An autonomous vehicle illustrates dimensions.** It may have advanced perception and planning within specific roads, weather conditions, maps, and regulatory permissions. That is not evidence of general intelligence. Its safety depends on sensors, redundancy, operational design domain, fallback behavior, monitoring, and responsibility allocation. A narrow system can be highly consequential.
 
@@ -383,7 +383,7 @@ The most productive stance is neither dismissal nor prediction. Learn what a too
 
 **Videos:**
 - [Artificial General Intelligence: the future of AI](https://www.youtube.com/watch?v=Gfr50f6ZBvo)
-- [How machines learn — Google](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
+- [How machines learn: Google](https://www.youtube.com/watch?v=nKW8Ndu7Mjw)
 
 # 6. How do AI Write? Text Generation in a Nutshell
 ![Text generation with AI](images/topics/text-generation.jpg)
@@ -464,7 +464,7 @@ Use the model’s strengths deliberately: compression, reformatting, translation
 ## 6.7 Media
 
 **Videos:**
-- [Let's build GPT: from scratch, in code, spelled out — Andrej Karpathy](https://www.youtube.com/watch?v=wjZofJX0v4M)
+- [Let's build GPT: from scratch, in code, spelled out: Andrej Karpathy](https://www.youtube.com/watch?v=wjZofJX0v4M)
 - [Large Language Models explained](https://www.youtube.com/watch?v=zjkBMFhNj_g)
 
 # 7. Neural Networks and it's working
@@ -541,8 +541,8 @@ A good evaluation report shows examples, not only averages. Review false positiv
 ## 7.7 Media
 
 **Videos:**
-- [But what is a neural network? — 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
-- [Gradient descent, how neural networks learn — 3Blue1Brown](https://www.youtube.com/watch?v=IHZwWFHWa-w)
+- [But what is a neural network?: 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk)
+- [Gradient descent, how neural networks learn: 3Blue1Brown](https://www.youtube.com/watch?v=IHZwWFHWa-w)
 
 # 8. Transformers and it's working
 ![Transformer architecture](images/topics/transformers.jpg)
@@ -589,7 +589,7 @@ Attention has computational cost because relationships among tokens can grow rap
 
 **Contract Q&A assistant.** A user asks, “What are the termination conditions?” The system finds relevant clauses from the latest approved contract version, passes them with the question, and asks the model for a plain-language answer with citations. The model’s transformer architecture lets it relate definitions and references across clauses. The product must still enforce access control, show source passages, distinguish a summary from legal advice, and route unusual questions to counsel.
 
-**Multilingual support.** A customer writes in Hindi, English, or a mixed form. A transformer-based model detects intent, summarizes the issue, retrieves approved policy text, and drafts a response in the customer’s language. An agent verifies account facts and sensitive actions. Evaluation should include regional language variation, code-switching, readability, and policy accuracy—not only English benchmarks.
+**Multilingual support.** A customer writes in Hindi, English, or a mixed form. A transformer-based model detects intent, summarizes the issue, retrieves approved policy text, and drafts a response in the customer’s language. An agent verifies account facts and sensitive actions. Evaluation should include regional language variation, code-switching, readability, and policy accuracy: not only English benchmarks.
 
 **Meeting transcript summary.** The model attends across a long conversation to identify decisions and dependencies. But transcripts contain errors and participants may revise a decision later. Ask for a structured output with direct supporting quotes, then have the meeting owner confirm assignments. The transformer accelerates synthesis; it does not become the authority on what was agreed.
 
@@ -619,13 +619,13 @@ For important workflows, save the prompt template, source version, model version
 ## 8.7 Media
 
 **Videos:**
-- [Let's build GPT: from scratch, in code, spelled out — Andrej Karpathy](https://www.youtube.com/watch?v=wjZofJX0v4M)
+- [Let's build GPT: from scratch, in code, spelled out: Andrej Karpathy](https://www.youtube.com/watch?v=wjZofJX0v4M)
 - [Transformers explained](https://www.youtube.com/watch?v=zxQyTK8quyY)
 
 # 9. Stable Diffusion
 ![Stable Diffusion generative image process](images/topics/stable-diffusion.jpg)
 
-Stable Diffusion is a family of text-to-image diffusion models that generate images by learning how to reverse a gradual noising process. Starting from random noise, the model repeatedly removes noise while being guided by a text prompt, producing an image consistent with the requested concept. Its open ecosystem made image generation more accessible for experimentation, local deployment, customization, and workflow integration—but accessibility does not remove copyright, consent, brand, or safety responsibilities.
+Stable Diffusion is a family of text-to-image diffusion models that generate images by learning how to reverse a gradual noising process. Starting from random noise, the model repeatedly removes noise while being guided by a text prompt, producing an image consistent with the requested concept. Its open ecosystem made image generation more accessible for experimentation, local deployment, customization, and workflow integration: but accessibility does not remove copyright, consent, brand, or safety responsibilities.
 
 ## 9.1 Why this matters
 
