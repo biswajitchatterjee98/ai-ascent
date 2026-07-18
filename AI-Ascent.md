@@ -14,7 +14,7 @@ Each topic follows the same rhythm:
 2. **Core concepts**: step-by-step foundations 
 3. **Deep dive / frameworks**: models you can reuse 
 4. **Worked examples**: concrete scenarios 
-5. **STAR or CREATE method**: one prompting framework per topic (never both)
+5. **STAR and CREATE methods**: we will be covering two prompting methods, STAR and CREATE
 6. **Apply today**: a short action path 
 7. **Key takeaways**: portable principles 
 8. **Media**: topic image plus curated videos
