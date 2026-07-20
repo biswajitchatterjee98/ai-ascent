@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""Build index.html from AI-Ascent.md (playbook-style side panel)."""
+"""Build index.html and content-manifest.json from AI-Ascent.md."""
 
 from __future__ import annotations
 
 import html
+import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MD_PATH = ROOT / "AI-Ascent.md"
 OUT_PATH = ROOT / "index.html"
+MANIFEST_PATH = ROOT / "content-manifest.json"
 
 REG_CTA = """
 <section class="contact" id="registration-form">
@@ -127,16 +129,38 @@ def md_to_html(md: str, topic_id: str) -> str:
     table_rows: list[list[str]] = []
     in_quote = False
     quote_lines: list[str] = []
+    section_open = False
+
+    def open_section(section_id: str) -> None:
+        nonlocal section_open
+        close_section()
+        out.append(
+            f'<section class="content-block" data-section-id="{html.escape(section_id)}">'
+            f'<div class="content-block-body">'
+        )
+        section_open = True
+
+    def close_section() -> None:
+        nonlocal section_open
+        if section_open:
+            out.append("</div></section>")
+            section_open = False
+
+    def ensure_section() -> None:
+        if not section_open:
+            open_section(topic_id)
 
     def flush_para():
         nonlocal para
         if para:
+            ensure_section()
             out.append("<p>" + inline(" ".join(para)) + "</p>")
             para = []
 
     def flush_list():
         nonlocal list_kind, list_items
         if list_kind and list_items:
+            ensure_section()
             tag = "ol" if list_kind == "ol" else "ul"
             items = "".join(f"<li>{inline(x)}</li>" for x in list_items)
             out.append(f"<{tag}>{items}</{tag}>")
@@ -146,6 +170,7 @@ def md_to_html(md: str, topic_id: str) -> str:
     def flush_table():
         nonlocal table_rows
         if table_rows:
+            ensure_section()
             # drop separator rows like ---|---
             cleaned = []
             for row in table_rows:
@@ -158,6 +183,7 @@ def md_to_html(md: str, topic_id: str) -> str:
     def flush_quote():
         nonlocal in_quote, quote_lines
         if quote_lines:
+            ensure_section()
             body = "".join(f"<p>{inline(q)}</p>" for q in quote_lines)
             out.append(f"<blockquote>{body}</blockquote>")
         in_quote = False
@@ -177,6 +203,7 @@ def md_to_html(md: str, topic_id: str) -> str:
         mimg = re.fullmatch(r"!\[([^\]]*)\]\(([^)]+)\)", raw.strip())
         if mimg:
             flush_all()
+            ensure_section()
             alt, src = mimg.group(1), mimg.group(2)
             out.append(
                 f'<figure class="media topic"><img src="{html.escape(src)}" alt="{html.escape(alt)}" '
@@ -187,6 +214,7 @@ def md_to_html(md: str, topic_id: str) -> str:
 
         if raw.strip() == "---":
             flush_all()
+            ensure_section()
             out.append("<hr />")
             i += 1
             continue
@@ -194,12 +222,15 @@ def md_to_html(md: str, topic_id: str) -> str:
         if raw.startswith("## "):
             flush_all()
             title = raw[3:].strip()
-            out.append(f'<h2 id="{slugify(title)}">{inline(title)}</h2>')
+            sid = slugify(title)
+            open_section(sid)
+            out.append(f'<h2 id="{sid}">{inline(title)}</h2>')
             i += 1
             continue
 
         if raw.startswith("### "):
             flush_all()
+            ensure_section()
             title = raw[4:].strip()
             out.append(f'<h3 id="{slugify(title)}">{inline(title)}</h3>')
             i += 1
@@ -258,6 +289,7 @@ def md_to_html(md: str, topic_id: str) -> str:
             ym = re.fullmatch(r"\[([^\]]+)\]\((https?://(?:www\.)?youtube\.com/watch\?v=[^)]+)\)", item.strip())
             if ym:
                 flush_list()
+                ensure_section()
                 vid = yt_id(ym.group(2))
                 if vid:
                     out.append(yt_card(vid, ym.group(1)))
@@ -280,6 +312,7 @@ def md_to_html(md: str, topic_id: str) -> str:
         ym2 = re.fullmatch(r"\[([^\]]+)\]\((https?://(?:www\.)?youtube\.com/watch\?v=[^)]+)\)", raw.strip())
         if ym2:
             flush_para()
+            ensure_section()
             vid = yt_id(ym2.group(2))
             if vid:
                 out.append(yt_card(vid, ym2.group(1)))
@@ -290,12 +323,16 @@ def md_to_html(md: str, topic_id: str) -> str:
         i += 1
 
     flush_all()
+    close_section()
 
     html_body = "\n".join(out)
     # inject registration form into topic 27 after registration heading block
     if topic_id.startswith("27-") or "practitioner-program" in topic_id:
         if 'id="registration-form"' not in html_body:
-            html_body += REG_CTA
+            html_body += (
+                '<section class="content-block" data-section-id="registration-form">'
+                f'<div class="content-block-body">{REG_CTA}</div></section>'
+            )
     return html_body
 
 
@@ -356,6 +393,43 @@ header.hero p{margin:0;max-width:58ch;opacity:.95;font-size:1.05rem;line-height:
   border-radius:11px;padding:.55rem .6rem;font:600 .88rem "Source Sans 3",sans-serif;cursor:pointer;text-align:center;
 }
 .toc-logout:hover{background:var(--navy-soft)}
+.toc-admin{display:none;margin-top:.45rem}
+.toc-admin.is-visible{display:list-item}
+.toc-admin .toc-link{font-weight:700;color:var(--navy);background:var(--navy-soft);text-align:center}
+.toc-admin .toc-link:hover{background:#dce6ee;color:var(--navy)}
+.toc-subs a.is-locked::after{content:"";display:inline-block;width:.55rem;height:.55rem;margin-left:.35rem;border:1.5px solid currentColor;border-radius:2px;opacity:.65;vertical-align:middle}
+.content-block.is-gated .content-block-body{display:none}
+.content-block.is-gated.is-pending .content-block-body{display:none}
+.access-gate,.access-gate-pending{
+  margin:1rem 0 1.4rem;padding:1.1rem 1.15rem;border-radius:16px;
+  border:1px dashed #b8ccc4;background:linear-gradient(135deg,#f7fbf9,#eef6f2);
+}
+.access-gate h4,.access-gate-pending h4{margin:0 0 .35rem;font-family:Fraunces,Georgia,serif;color:var(--navy);font-size:1.05rem}
+.access-gate p,.access-gate-pending p{margin:0 0 .85rem;color:var(--muted);font-size:.92rem}
+.access-gate-pending{border-style:solid;background:#fff8ec;border-color:#e8c98e}
+.btn-primary,.btn-secondary{
+  border:0;border-radius:10px;padding:.65rem 1rem;cursor:pointer;
+  font:600 .92rem "Source Sans 3",sans-serif;
+}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff}
+.btn-secondary{background:#fff;border:1px solid var(--line);color:var(--navy);margin-right:.45rem}
+.access-modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:1rem}
+.access-modal[hidden]{display:none!important}
+.access-modal-backdrop{position:absolute;inset:0;background:rgba(18,50,74,.45)}
+.access-modal-panel{
+  position:relative;width:min(480px,100%);background:#fff;border-radius:18px;padding:1.25rem 1.3rem;
+  box-shadow:0 20px 50px rgba(18,50,74,.25);border:1px solid var(--line);
+}
+.access-modal-panel h3{margin:0 0 .35rem;font-family:Fraunces,Georgia,serif;color:var(--navy)}
+.access-modal-lead{margin:0 0 1rem;color:var(--muted);font-size:.92rem}
+.access-modal-section{margin:0 0 .85rem;font-size:.92rem}
+.access-modal-panel .field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.85rem}
+.access-modal-panel label{font-size:.88rem;font-weight:700;color:var(--navy)}
+.access-modal-panel textarea{
+  width:100%;min-height:110px;font:inherit;border:1px solid #c9d5cf;border-radius:11px;padding:.75rem .85rem;resize:vertical;
+}
+.access-modal-actions{display:flex;justify-content:flex-end;gap:.45rem;margin-top:.2rem}
+.access-form-error{margin:.7rem 0 0;color:#8a1f1a;font-weight:600;font-size:.9rem}
 main{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.7rem 1.6rem 2.3rem;box-shadow:var(--shadow);min-height:68vh;position:relative;overflow:hidden}
 main::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--navy),var(--accent))}
 .topic-panel{display:block;animation:panelIn .35s ease both}
@@ -534,16 +608,39 @@ def main() -> None:
     for m in re.finditer(r"^## (.+)$", preamble, re.M):
         overview_subs.append({"title": m.group(1).strip(), "id": slugify(m.group(1).strip())})
 
+    manifest_sections: list[dict] = []
+    sort_order = 0
+
+    def add_manifest(section_id: str, parent_id: str | None, title: str, stype: str) -> None:
+        nonlocal sort_order
+        sort_order += 1
+        manifest_sections.append(
+            {
+                "id": section_id,
+                "parent_id": parent_id,
+                "title": title,
+                "type": stype,
+                "sort_order": sort_order,
+            }
+        )
+
+    add_manifest(overview_id, None, "AI Ascent", "topic")
+    for s in overview_subs:
+        add_manifest(s["id"], overview_id, s["title"], "section")
+
     toc_items = []
     # overview
     subs_html = "".join(
-        f'<li><a href="#{s["id"]}">{html.escape(s["title"])}</a></li>' for s in overview_subs
+        f'<li><a href="#{s["id"]}" data-section-id="{s["id"]}">{html.escape(s["title"])}</a></li>'
+        for s in overview_subs
     )
     toc_items.append(
         f'<li class="toc-topic"><button type="button" class="toc-toggle" aria-expanded="false" '
         f'data-target="#{overview_id}"><span class="toc-label">Overview</span>'
         f'<span class="toc-chevron" aria-hidden="true"></span></button>'
-        f'<ul class="toc-subs" hidden><li><a href="#{overview_id}">Handbook overview</a></li>{subs_html}</ul></li>'
+        f'<ul class="toc-subs" hidden>'
+        f'<li><a href="#{overview_id}" data-section-id="{overview_id}">Handbook overview</a></li>'
+        f'{subs_html}</ul></li>'
     )
 
     panels = [
@@ -560,8 +657,14 @@ def main() -> None:
             f'<section class="topic-panel" data-topic-id="{t["id"]}" hidden>'
             f'<h1 id="{t["id"]}">{inline(t["title"])}</h1>{body}</section>'
         )
+        add_manifest(t["id"], None, t["title"], "topic")
+        for s in t["subs"]:
+            add_manifest(s["id"], t["id"], s["title"], "section")
+        if t["id"].startswith("27-") or "practitioner-program" in t["id"]:
+            add_manifest("registration-form", t["id"], "Ready to register?", "section")
         subs = "".join(
-            f'<li><a href="#{s["id"]}">{html.escape(s["title"])}</a></li>' for s in t["subs"]
+            f'<li><a href="#{s["id"]}" data-section-id="{s["id"]}">{html.escape(s["title"])}</a></li>'
+            for s in t["subs"]
         )
         label = t["title"]
         if len(label) > 42:
@@ -571,11 +674,16 @@ def main() -> None:
             f'<li class="toc-topic"><button type="button" class="toc-toggle" aria-expanded="false" '
             f'data-target="#{t["id"]}"><span class="toc-label">{html.escape(label)}</span>'
             f'<span class="toc-chevron" aria-hidden="true"></span></button>'
-            f'<ul class="toc-subs" hidden><li><a href="#{t["id"]}">{html.escape(t["title"])} overview</a></li>{subs}</ul></li>'
+            f'<ul class="toc-subs" hidden>'
+            f'<li><a href="#{t["id"]}" data-section-id="{t["id"]}">{html.escape(t["title"])} overview</a></li>'
+            f'{subs}</ul></li>'
         )
 
     toc_items.append(
         '<li class="toc-topic toc-contact"><a class="toc-link" href="register.html">Register · Practitioner Program</a></li>'
+    )
+    toc_items.append(
+        '<li class="toc-topic toc-admin"><a class="toc-link" href="admin.html">Admin</a></li>'
     )
     toc_items.append(
         '<li class="toc-topic toc-user">'
@@ -585,6 +693,11 @@ def main() -> None:
         '</li>'
     )
 
+    MANIFEST_PATH.write_text(
+        json.dumps({"version": 1, "sections": manifest_sections}, indent=2),
+        encoding="utf-8",
+    )
+
     doc = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -592,6 +705,8 @@ def main() -> None:
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI Ascent</title>
 <meta name="description" content="AI Ascent: foundations, generative AI, tools, automation, ethics, and practitioner program registration." />
+<script src="config.js"></script>
+<script src="api.js"></script>
 <script src="auth.js"></script>
 <script>AscentAuth.requireAuth();</script>
 <style>
@@ -612,6 +727,27 @@ def main() -> None:
 <main>{"".join(panels)}</main>
 <footer>Traininglobe · AI Ascent</footer>
 </div>
+<div id="access-modal" class="access-modal" hidden aria-hidden="true">
+<div class="access-modal-backdrop" data-close-modal></div>
+<div class="access-modal-panel" role="dialog" aria-labelledby="access-modal-title">
+<h3 id="access-modal-title">Request access</h3>
+<p class="access-modal-lead">Tell us why you need this section. An admin will review your request.</p>
+<form id="access-request-form">
+<input type="hidden" id="access-section-id" name="section_id" />
+<p class="access-modal-section"><strong>Section:</strong> <span id="access-section-title"></span></p>
+<div class="field">
+<label for="access-notes">Reason / notes</label>
+<textarea id="access-notes" name="notes" required placeholder="Why do you need access?"></textarea>
+</div>
+<div class="access-modal-actions">
+<button type="button" class="btn-secondary" data-close-modal>Cancel</button>
+<button type="submit" class="btn-primary">Submit request</button>
+</div>
+<p id="access-form-error" class="access-form-error" hidden></p>
+</form>
+</div>
+</div>
+<script src="access.js"></script>
 <script>
 {JS}
 AscentAuth.fillUserChrome();
@@ -622,7 +758,10 @@ if (logoutBtn) logoutBtn.addEventListener('click', function () {{ AscentAuth.log
 </html>
 """
     OUT_PATH.write_text(doc, encoding="utf-8")
-    print(f"Wrote {OUT_PATH} ({OUT_PATH.stat().st_size} bytes), topics={len(topics)+1}")
+    print(
+        f"Wrote {OUT_PATH} ({OUT_PATH.stat().st_size} bytes), "
+        f"topics={len(topics)+1}, sections={len(manifest_sections)}"
+    )
 
 
 if __name__ == "__main__":

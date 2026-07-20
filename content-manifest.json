@@ -1,0 +1,1734 @@
+{
+  "version": 1,
+  "sections": [
+    {
+      "id": "ai-ascent",
+      "parent_id": null,
+      "title": "AI Ascent",
+      "type": "topic",
+      "sort_order": 1
+    },
+    {
+      "id": "how-to-read-this-handbook",
+      "parent_id": "ai-ascent",
+      "title": "How to read this handbook",
+      "type": "section",
+      "sort_order": 2
+    },
+    {
+      "id": "1-industries-before-ai-vs-after-ai",
+      "parent_id": null,
+      "title": "1. Industries Before AI vs After AI",
+      "type": "topic",
+      "sort_order": 3
+    },
+    {
+      "id": "1-1-why-this-matters",
+      "parent_id": "1-industries-before-ai-vs-after-ai",
+      "title": "1.1 Why this matters",
+      "type": "section",
+      "sort_order": 4
+    },
+    {
+      "id": "1-2-core-concepts-step-by-step",
+      "parent_id": "1-industries-before-ai-vs-after-ai",
+      "title": "1.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 5
+    },
+    {
+      "id": "1-3-deep-dive-frameworks",
+      "parent_id": "1-industries-before-ai-vs-after-ai",
+      "title": "1.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 6
+    },
+    {
+      "id": "1-4-worked-examples",
+      "parent_id": "1-industries-before-ai-vs-after-ai",
+      "title": "1.4 Worked examples",
+      "type": "section",
+      "sort_order": 7
+    },
+    {
+      "id": "1-5-create-method-for-an-industry-before-after-brief",
+      "parent_id": "1-industries-before-ai-vs-after-ai",
+      "title": "1.5 CREATE method for an industry before/after brief",
+      "type": "section",
+      "sort_order": 8
+    },
+    {
+      "id": "1-6-apply-today",
+      "parent_id": "1-industries-before-ai-vs-after-ai",
+      "title": "1.6 Apply today",
+      "type": "section",
+      "sort_order": 9
+    },
+    {
+      "id": "1-7-key-takeaways",
+      "parent_id": "1-industries-before-ai-vs-after-ai",
+      "title": "1.7 Key takeaways",
+      "type": "section",
+      "sort_order": 10
+    },
+    {
+      "id": "1-8-media",
+      "parent_id": "1-industries-before-ai-vs-after-ai",
+      "title": "1.8 Media",
+      "type": "section",
+      "sort_order": 11
+    },
+    {
+      "id": "2-intelligent-ladder-in-terms-of-ai",
+      "parent_id": null,
+      "title": "2. Intelligent Ladder in terms of AI",
+      "type": "topic",
+      "sort_order": 12
+    },
+    {
+      "id": "2-1-why-this-matters",
+      "parent_id": "2-intelligent-ladder-in-terms-of-ai",
+      "title": "2.1 Why this matters",
+      "type": "section",
+      "sort_order": 13
+    },
+    {
+      "id": "2-2-core-concepts-step-by-step",
+      "parent_id": "2-intelligent-ladder-in-terms-of-ai",
+      "title": "2.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 14
+    },
+    {
+      "id": "2-3-deep-dive-frameworks",
+      "parent_id": "2-intelligent-ladder-in-terms-of-ai",
+      "title": "2.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 15
+    },
+    {
+      "id": "2-4-worked-examples",
+      "parent_id": "2-intelligent-ladder-in-terms-of-ai",
+      "title": "2.4 Worked examples",
+      "type": "section",
+      "sort_order": 16
+    },
+    {
+      "id": "2-5-star-method-for-climbing-one-rung",
+      "parent_id": "2-intelligent-ladder-in-terms-of-ai",
+      "title": "2.5 STAR method for climbing one rung",
+      "type": "section",
+      "sort_order": 17
+    },
+    {
+      "id": "2-6-apply-today",
+      "parent_id": "2-intelligent-ladder-in-terms-of-ai",
+      "title": "2.6 Apply today",
+      "type": "section",
+      "sort_order": 18
+    },
+    {
+      "id": "2-7-key-takeaways",
+      "parent_id": "2-intelligent-ladder-in-terms-of-ai",
+      "title": "2.7 Key takeaways",
+      "type": "section",
+      "sort_order": 19
+    },
+    {
+      "id": "2-8-media",
+      "parent_id": "2-intelligent-ladder-in-terms-of-ai",
+      "title": "2.8 Media",
+      "type": "section",
+      "sort_order": 20
+    },
+    {
+      "id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "parent_id": null,
+      "title": "3. Intelligent Hierarchy with reference of AI",
+      "type": "topic",
+      "sort_order": 21
+    },
+    {
+      "id": "3-1-why-this-matters",
+      "parent_id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "title": "3.1 Why this matters",
+      "type": "section",
+      "sort_order": 22
+    },
+    {
+      "id": "3-2-core-concepts-step-by-step",
+      "parent_id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "title": "3.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 23
+    },
+    {
+      "id": "3-3-deep-dive-frameworks",
+      "parent_id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "title": "3.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 24
+    },
+    {
+      "id": "3-4-worked-examples",
+      "parent_id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "title": "3.4 Worked examples",
+      "type": "section",
+      "sort_order": 25
+    },
+    {
+      "id": "3-5-create-method-for-hierarchy-design",
+      "parent_id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "title": "3.5 CREATE method for hierarchy design",
+      "type": "section",
+      "sort_order": 26
+    },
+    {
+      "id": "3-6-apply-today",
+      "parent_id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "title": "3.6 Apply today",
+      "type": "section",
+      "sort_order": 27
+    },
+    {
+      "id": "3-7-key-takeaways",
+      "parent_id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "title": "3.7 Key takeaways",
+      "type": "section",
+      "sort_order": 28
+    },
+    {
+      "id": "3-8-media",
+      "parent_id": "3-intelligent-hierarchy-with-reference-of-ai",
+      "title": "3.8 Media",
+      "type": "section",
+      "sort_order": 29
+    },
+    {
+      "id": "4-ai-vs-ml-vs-dl",
+      "parent_id": null,
+      "title": "4. AI vs ML vs DL",
+      "type": "topic",
+      "sort_order": 30
+    },
+    {
+      "id": "4-1-why-this-matters",
+      "parent_id": "4-ai-vs-ml-vs-dl",
+      "title": "4.1 Why this matters",
+      "type": "section",
+      "sort_order": 31
+    },
+    {
+      "id": "4-2-core-concepts-step-by-step",
+      "parent_id": "4-ai-vs-ml-vs-dl",
+      "title": "4.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 32
+    },
+    {
+      "id": "4-3-deep-dive-frameworks",
+      "parent_id": "4-ai-vs-ml-vs-dl",
+      "title": "4.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 33
+    },
+    {
+      "id": "4-4-worked-examples",
+      "parent_id": "4-ai-vs-ml-vs-dl",
+      "title": "4.4 Worked examples",
+      "type": "section",
+      "sort_order": 34
+    },
+    {
+      "id": "4-5-create-method-for-choosing-ai-ml-or-dl",
+      "parent_id": "4-ai-vs-ml-vs-dl",
+      "title": "4.5 CREATE method for choosing AI, ML, or DL",
+      "type": "section",
+      "sort_order": 35
+    },
+    {
+      "id": "4-6-apply-today",
+      "parent_id": "4-ai-vs-ml-vs-dl",
+      "title": "4.6 Apply today",
+      "type": "section",
+      "sort_order": 36
+    },
+    {
+      "id": "4-7-key-takeaways",
+      "parent_id": "4-ai-vs-ml-vs-dl",
+      "title": "4.7 Key takeaways",
+      "type": "section",
+      "sort_order": 37
+    },
+    {
+      "id": "4-8-media",
+      "parent_id": "4-ai-vs-ml-vs-dl",
+      "title": "4.8 Media",
+      "type": "section",
+      "sort_order": 38
+    },
+    {
+      "id": "5-ani-agi-and-asi-along-with-examples",
+      "parent_id": null,
+      "title": "5. ANI, AGI and ASI along with examples",
+      "type": "topic",
+      "sort_order": 39
+    },
+    {
+      "id": "5-1-why-this-matters",
+      "parent_id": "5-ani-agi-and-asi-along-with-examples",
+      "title": "5.1 Why this matters",
+      "type": "section",
+      "sort_order": 40
+    },
+    {
+      "id": "5-2-core-concepts-step-by-step",
+      "parent_id": "5-ani-agi-and-asi-along-with-examples",
+      "title": "5.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 41
+    },
+    {
+      "id": "5-3-deep-dive-frameworks",
+      "parent_id": "5-ani-agi-and-asi-along-with-examples",
+      "title": "5.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 42
+    },
+    {
+      "id": "5-4-worked-examples",
+      "parent_id": "5-ani-agi-and-asi-along-with-examples",
+      "title": "5.4 Worked examples",
+      "type": "section",
+      "sort_order": 43
+    },
+    {
+      "id": "5-5-create-method-for-explaining-ani-vs-agi-vs-asi",
+      "parent_id": "5-ani-agi-and-asi-along-with-examples",
+      "title": "5.5 CREATE method for explaining ANI vs AGI vs ASI",
+      "type": "section",
+      "sort_order": 44
+    },
+    {
+      "id": "5-6-apply-today",
+      "parent_id": "5-ani-agi-and-asi-along-with-examples",
+      "title": "5.6 Apply today",
+      "type": "section",
+      "sort_order": 45
+    },
+    {
+      "id": "5-7-key-takeaways",
+      "parent_id": "5-ani-agi-and-asi-along-with-examples",
+      "title": "5.7 Key takeaways",
+      "type": "section",
+      "sort_order": 46
+    },
+    {
+      "id": "5-8-media",
+      "parent_id": "5-ani-agi-and-asi-along-with-examples",
+      "title": "5.8 Media",
+      "type": "section",
+      "sort_order": 47
+    },
+    {
+      "id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "parent_id": null,
+      "title": "6. How do AI Write? Text Generation in a Nutshell",
+      "type": "topic",
+      "sort_order": 48
+    },
+    {
+      "id": "6-1-why-this-matters",
+      "parent_id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "title": "6.1 Why this matters",
+      "type": "section",
+      "sort_order": 49
+    },
+    {
+      "id": "6-2-core-concepts-step-by-step",
+      "parent_id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "title": "6.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 50
+    },
+    {
+      "id": "6-3-deep-dive-frameworks",
+      "parent_id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "title": "6.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 51
+    },
+    {
+      "id": "6-4-worked-examples",
+      "parent_id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "title": "6.4 Worked examples",
+      "type": "section",
+      "sort_order": 52
+    },
+    {
+      "id": "6-5-star-method-for-a-strong-text-generation-prompt",
+      "parent_id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "title": "6.5 STAR method for a strong text-generation prompt",
+      "type": "section",
+      "sort_order": 53
+    },
+    {
+      "id": "6-6-apply-today",
+      "parent_id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "title": "6.6 Apply today",
+      "type": "section",
+      "sort_order": 54
+    },
+    {
+      "id": "6-7-key-takeaways",
+      "parent_id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "title": "6.7 Key takeaways",
+      "type": "section",
+      "sort_order": 55
+    },
+    {
+      "id": "6-8-media",
+      "parent_id": "6-how-do-ai-write-text-generation-in-a-nutshell",
+      "title": "6.8 Media",
+      "type": "section",
+      "sort_order": 56
+    },
+    {
+      "id": "7-neural-networks-and-its-working",
+      "parent_id": null,
+      "title": "7. Neural Networks and it's working",
+      "type": "topic",
+      "sort_order": 57
+    },
+    {
+      "id": "7-1-why-this-matters",
+      "parent_id": "7-neural-networks-and-its-working",
+      "title": "7.1 Why this matters",
+      "type": "section",
+      "sort_order": 58
+    },
+    {
+      "id": "7-2-core-concepts-step-by-step",
+      "parent_id": "7-neural-networks-and-its-working",
+      "title": "7.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 59
+    },
+    {
+      "id": "7-3-deep-dive-frameworks",
+      "parent_id": "7-neural-networks-and-its-working",
+      "title": "7.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 60
+    },
+    {
+      "id": "7-4-worked-examples",
+      "parent_id": "7-neural-networks-and-its-working",
+      "title": "7.4 Worked examples",
+      "type": "section",
+      "sort_order": 61
+    },
+    {
+      "id": "7-5-create-method-for-teaching-neural-networks",
+      "parent_id": "7-neural-networks-and-its-working",
+      "title": "7.5 CREATE method for teaching neural networks",
+      "type": "section",
+      "sort_order": 62
+    },
+    {
+      "id": "7-6-apply-today",
+      "parent_id": "7-neural-networks-and-its-working",
+      "title": "7.6 Apply today",
+      "type": "section",
+      "sort_order": 63
+    },
+    {
+      "id": "7-7-key-takeaways",
+      "parent_id": "7-neural-networks-and-its-working",
+      "title": "7.7 Key takeaways",
+      "type": "section",
+      "sort_order": 64
+    },
+    {
+      "id": "7-8-media",
+      "parent_id": "7-neural-networks-and-its-working",
+      "title": "7.8 Media",
+      "type": "section",
+      "sort_order": 65
+    },
+    {
+      "id": "8-transformers-and-its-working",
+      "parent_id": null,
+      "title": "8. Transformers and it's working",
+      "type": "topic",
+      "sort_order": 66
+    },
+    {
+      "id": "8-1-why-this-matters",
+      "parent_id": "8-transformers-and-its-working",
+      "title": "8.1 Why this matters",
+      "type": "section",
+      "sort_order": 67
+    },
+    {
+      "id": "8-2-core-concepts-step-by-step",
+      "parent_id": "8-transformers-and-its-working",
+      "title": "8.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 68
+    },
+    {
+      "id": "8-3-deep-dive-frameworks",
+      "parent_id": "8-transformers-and-its-working",
+      "title": "8.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 69
+    },
+    {
+      "id": "8-4-worked-examples",
+      "parent_id": "8-transformers-and-its-working",
+      "title": "8.4 Worked examples",
+      "type": "section",
+      "sort_order": 70
+    },
+    {
+      "id": "8-5-create-method-for-explaining-transformers",
+      "parent_id": "8-transformers-and-its-working",
+      "title": "8.5 CREATE method for explaining transformers",
+      "type": "section",
+      "sort_order": 71
+    },
+    {
+      "id": "8-6-apply-today",
+      "parent_id": "8-transformers-and-its-working",
+      "title": "8.6 Apply today",
+      "type": "section",
+      "sort_order": 72
+    },
+    {
+      "id": "8-7-key-takeaways",
+      "parent_id": "8-transformers-and-its-working",
+      "title": "8.7 Key takeaways",
+      "type": "section",
+      "sort_order": 73
+    },
+    {
+      "id": "8-8-media",
+      "parent_id": "8-transformers-and-its-working",
+      "title": "8.8 Media",
+      "type": "section",
+      "sort_order": 74
+    },
+    {
+      "id": "9-stable-diffusion",
+      "parent_id": null,
+      "title": "9. Stable Diffusion",
+      "type": "topic",
+      "sort_order": 75
+    },
+    {
+      "id": "9-1-why-this-matters",
+      "parent_id": "9-stable-diffusion",
+      "title": "9.1 Why this matters",
+      "type": "section",
+      "sort_order": 76
+    },
+    {
+      "id": "9-2-core-concepts-step-by-step",
+      "parent_id": "9-stable-diffusion",
+      "title": "9.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 77
+    },
+    {
+      "id": "9-3-deep-dive-frameworks",
+      "parent_id": "9-stable-diffusion",
+      "title": "9.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 78
+    },
+    {
+      "id": "9-4-worked-examples",
+      "parent_id": "9-stable-diffusion",
+      "title": "9.4 Worked examples",
+      "type": "section",
+      "sort_order": 79
+    },
+    {
+      "id": "9-5-star-method-for-a-stable-diffusion-brief",
+      "parent_id": "9-stable-diffusion",
+      "title": "9.5 STAR method for a Stable Diffusion brief",
+      "type": "section",
+      "sort_order": 80
+    },
+    {
+      "id": "9-6-apply-today",
+      "parent_id": "9-stable-diffusion",
+      "title": "9.6 Apply today",
+      "type": "section",
+      "sort_order": 81
+    },
+    {
+      "id": "9-7-key-takeaways",
+      "parent_id": "9-stable-diffusion",
+      "title": "9.7 Key takeaways",
+      "type": "section",
+      "sort_order": 82
+    },
+    {
+      "id": "9-8-media",
+      "parent_id": "9-stable-diffusion",
+      "title": "9.8 Media",
+      "type": "section",
+      "sort_order": 83
+    },
+    {
+      "id": "10-how-an-ai-learns-to-generate-images",
+      "parent_id": null,
+      "title": "10. How an AI Learns to Generate Images",
+      "type": "topic",
+      "sort_order": 84
+    },
+    {
+      "id": "10-1-why-this-matters",
+      "parent_id": "10-how-an-ai-learns-to-generate-images",
+      "title": "10.1 Why this matters",
+      "type": "section",
+      "sort_order": 85
+    },
+    {
+      "id": "10-2-core-concepts-step-by-step",
+      "parent_id": "10-how-an-ai-learns-to-generate-images",
+      "title": "10.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 86
+    },
+    {
+      "id": "10-3-deep-dive-frameworks",
+      "parent_id": "10-how-an-ai-learns-to-generate-images",
+      "title": "10.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 87
+    },
+    {
+      "id": "10-4-worked-examples",
+      "parent_id": "10-how-an-ai-learns-to-generate-images",
+      "title": "10.4 Worked examples",
+      "type": "section",
+      "sort_order": 88
+    },
+    {
+      "id": "10-5-create-method-for-explaining-how-ai-learns-images",
+      "parent_id": "10-how-an-ai-learns-to-generate-images",
+      "title": "10.5 CREATE method for explaining how AI learns images",
+      "type": "section",
+      "sort_order": 89
+    },
+    {
+      "id": "10-6-apply-today",
+      "parent_id": "10-how-an-ai-learns-to-generate-images",
+      "title": "10.6 Apply today",
+      "type": "section",
+      "sort_order": 90
+    },
+    {
+      "id": "10-7-key-takeaways",
+      "parent_id": "10-how-an-ai-learns-to-generate-images",
+      "title": "10.7 Key takeaways",
+      "type": "section",
+      "sort_order": 91
+    },
+    {
+      "id": "10-8-media",
+      "parent_id": "10-how-an-ai-learns-to-generate-images",
+      "title": "10.8 Media",
+      "type": "section",
+      "sort_order": 92
+    },
+    {
+      "id": "11-email-generation-using-ai",
+      "parent_id": null,
+      "title": "11. Email Generation Using AI",
+      "type": "topic",
+      "sort_order": 93
+    },
+    {
+      "id": "11-1-why-this-matters",
+      "parent_id": "11-email-generation-using-ai",
+      "title": "11.1 Why this matters",
+      "type": "section",
+      "sort_order": 94
+    },
+    {
+      "id": "11-2-core-concepts-step-by-step",
+      "parent_id": "11-email-generation-using-ai",
+      "title": "11.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 95
+    },
+    {
+      "id": "11-3-deep-dive-frameworks",
+      "parent_id": "11-email-generation-using-ai",
+      "title": "11.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 96
+    },
+    {
+      "id": "11-4-worked-examples",
+      "parent_id": "11-email-generation-using-ai",
+      "title": "11.4 Worked examples",
+      "type": "section",
+      "sort_order": 97
+    },
+    {
+      "id": "11-5-star-method-for-ai-email-drafting",
+      "parent_id": "11-email-generation-using-ai",
+      "title": "11.5 STAR method for AI email drafting",
+      "type": "section",
+      "sort_order": 98
+    },
+    {
+      "id": "11-6-apply-today",
+      "parent_id": "11-email-generation-using-ai",
+      "title": "11.6 Apply today",
+      "type": "section",
+      "sort_order": 99
+    },
+    {
+      "id": "11-7-key-takeaways",
+      "parent_id": "11-email-generation-using-ai",
+      "title": "11.7 Key takeaways",
+      "type": "section",
+      "sort_order": 100
+    },
+    {
+      "id": "11-8-media",
+      "parent_id": "11-email-generation-using-ai",
+      "title": "11.8 Media",
+      "type": "section",
+      "sort_order": 101
+    },
+    {
+      "id": "12-report-generation-using-ai",
+      "parent_id": null,
+      "title": "12. Report Generation Using AI",
+      "type": "topic",
+      "sort_order": 102
+    },
+    {
+      "id": "12-1-why-this-matters",
+      "parent_id": "12-report-generation-using-ai",
+      "title": "12.1 Why this matters",
+      "type": "section",
+      "sort_order": 103
+    },
+    {
+      "id": "12-2-core-concepts-step-by-step",
+      "parent_id": "12-report-generation-using-ai",
+      "title": "12.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 104
+    },
+    {
+      "id": "12-3-deep-dive-frameworks",
+      "parent_id": "12-report-generation-using-ai",
+      "title": "12.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 105
+    },
+    {
+      "id": "12-4-worked-examples",
+      "parent_id": "12-report-generation-using-ai",
+      "title": "12.4 Worked examples",
+      "type": "section",
+      "sort_order": 106
+    },
+    {
+      "id": "12-5-star-method-for-ai-report-generation",
+      "parent_id": "12-report-generation-using-ai",
+      "title": "12.5 STAR method for AI report generation",
+      "type": "section",
+      "sort_order": 107
+    },
+    {
+      "id": "12-6-apply-today",
+      "parent_id": "12-report-generation-using-ai",
+      "title": "12.6 Apply today",
+      "type": "section",
+      "sort_order": 108
+    },
+    {
+      "id": "12-7-key-takeaways",
+      "parent_id": "12-report-generation-using-ai",
+      "title": "12.7 Key takeaways",
+      "type": "section",
+      "sort_order": 109
+    },
+    {
+      "id": "12-8-media",
+      "parent_id": "12-report-generation-using-ai",
+      "title": "12.8 Media",
+      "type": "section",
+      "sort_order": 110
+    },
+    {
+      "id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "parent_id": null,
+      "title": "13. How to Make Presentations with the Help of AI",
+      "type": "topic",
+      "sort_order": 111
+    },
+    {
+      "id": "13-1-why-this-matters",
+      "parent_id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "title": "13.1 Why this matters",
+      "type": "section",
+      "sort_order": 112
+    },
+    {
+      "id": "13-2-core-concepts-step-by-step",
+      "parent_id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "title": "13.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 113
+    },
+    {
+      "id": "13-3-deep-dive-frameworks",
+      "parent_id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "title": "13.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 114
+    },
+    {
+      "id": "13-4-worked-examples",
+      "parent_id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "title": "13.4 Worked examples",
+      "type": "section",
+      "sort_order": 115
+    },
+    {
+      "id": "13-5-star-method-for-ai-presentation-design",
+      "parent_id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "title": "13.5 STAR method for AI presentation design",
+      "type": "section",
+      "sort_order": 116
+    },
+    {
+      "id": "13-6-apply-today",
+      "parent_id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "title": "13.6 Apply today",
+      "type": "section",
+      "sort_order": 117
+    },
+    {
+      "id": "13-7-key-takeaways",
+      "parent_id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "title": "13.7 Key takeaways",
+      "type": "section",
+      "sort_order": 118
+    },
+    {
+      "id": "13-8-media",
+      "parent_id": "13-how-to-make-presentations-with-the-help-of-ai",
+      "title": "13.8 Media",
+      "type": "section",
+      "sort_order": 119
+    },
+    {
+      "id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "parent_id": null,
+      "title": "14. Deepfake vs Real Images and Steps to Identify That",
+      "type": "topic",
+      "sort_order": 120
+    },
+    {
+      "id": "14-1-why-this-matters",
+      "parent_id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "title": "14.1 Why this matters",
+      "type": "section",
+      "sort_order": 121
+    },
+    {
+      "id": "14-2-core-concepts-step-by-step",
+      "parent_id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "title": "14.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 122
+    },
+    {
+      "id": "14-3-deep-dive-frameworks",
+      "parent_id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "title": "14.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 123
+    },
+    {
+      "id": "14-4-worked-examples",
+      "parent_id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "title": "14.4 Worked examples",
+      "type": "section",
+      "sort_order": 124
+    },
+    {
+      "id": "14-5-create-method-for-deepfake-verification",
+      "parent_id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "title": "14.5 CREATE method for deepfake verification",
+      "type": "section",
+      "sort_order": 125
+    },
+    {
+      "id": "14-6-apply-today",
+      "parent_id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "title": "14.6 Apply today",
+      "type": "section",
+      "sort_order": 126
+    },
+    {
+      "id": "14-7-key-takeaways",
+      "parent_id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "title": "14.7 Key takeaways",
+      "type": "section",
+      "sort_order": 127
+    },
+    {
+      "id": "14-8-media",
+      "parent_id": "14-deepfake-vs-real-images-and-steps-to-identify-that",
+      "title": "14.8 Media",
+      "type": "section",
+      "sort_order": 128
+    },
+    {
+      "id": "15-cybersecurity-and-threats-of-ai",
+      "parent_id": null,
+      "title": "15. Cybersecurity and Threats of AI",
+      "type": "topic",
+      "sort_order": 129
+    },
+    {
+      "id": "15-1-why-this-matters",
+      "parent_id": "15-cybersecurity-and-threats-of-ai",
+      "title": "15.1 Why this matters",
+      "type": "section",
+      "sort_order": 130
+    },
+    {
+      "id": "15-2-core-concepts-step-by-step",
+      "parent_id": "15-cybersecurity-and-threats-of-ai",
+      "title": "15.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 131
+    },
+    {
+      "id": "15-3-deep-dive-frameworks",
+      "parent_id": "15-cybersecurity-and-threats-of-ai",
+      "title": "15.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 132
+    },
+    {
+      "id": "15-4-worked-examples",
+      "parent_id": "15-cybersecurity-and-threats-of-ai",
+      "title": "15.4 Worked examples",
+      "type": "section",
+      "sort_order": 133
+    },
+    {
+      "id": "15-5-star-method-for-an-ai-security-response-brief",
+      "parent_id": "15-cybersecurity-and-threats-of-ai",
+      "title": "15.5 STAR method for an AI security response brief",
+      "type": "section",
+      "sort_order": 134
+    },
+    {
+      "id": "15-6-apply-today",
+      "parent_id": "15-cybersecurity-and-threats-of-ai",
+      "title": "15.6 Apply today",
+      "type": "section",
+      "sort_order": 135
+    },
+    {
+      "id": "15-7-key-takeaways",
+      "parent_id": "15-cybersecurity-and-threats-of-ai",
+      "title": "15.7 Key takeaways",
+      "type": "section",
+      "sort_order": 136
+    },
+    {
+      "id": "15-8-media",
+      "parent_id": "15-cybersecurity-and-threats-of-ai",
+      "title": "15.8 Media",
+      "type": "section",
+      "sort_order": 137
+    },
+    {
+      "id": "16-ethics-and-governance-using-ai",
+      "parent_id": null,
+      "title": "16. Ethics and Governance Using AI",
+      "type": "topic",
+      "sort_order": 138
+    },
+    {
+      "id": "16-1-why-this-matters",
+      "parent_id": "16-ethics-and-governance-using-ai",
+      "title": "16.1 Why this matters",
+      "type": "section",
+      "sort_order": 139
+    },
+    {
+      "id": "16-2-core-concepts-step-by-step",
+      "parent_id": "16-ethics-and-governance-using-ai",
+      "title": "16.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 140
+    },
+    {
+      "id": "16-3-deep-dive-frameworks",
+      "parent_id": "16-ethics-and-governance-using-ai",
+      "title": "16.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 141
+    },
+    {
+      "id": "16-4-worked-examples",
+      "parent_id": "16-ethics-and-governance-using-ai",
+      "title": "16.4 Worked examples",
+      "type": "section",
+      "sort_order": 142
+    },
+    {
+      "id": "16-5-create-method-for-an-ai-ethics-governance-memo",
+      "parent_id": "16-ethics-and-governance-using-ai",
+      "title": "16.5 CREATE method for an AI ethics / governance memo",
+      "type": "section",
+      "sort_order": 143
+    },
+    {
+      "id": "16-6-apply-today",
+      "parent_id": "16-ethics-and-governance-using-ai",
+      "title": "16.6 Apply today",
+      "type": "section",
+      "sort_order": 144
+    },
+    {
+      "id": "16-7-key-takeaways",
+      "parent_id": "16-ethics-and-governance-using-ai",
+      "title": "16.7 Key takeaways",
+      "type": "section",
+      "sort_order": 145
+    },
+    {
+      "id": "16-8-media",
+      "parent_id": "16-ethics-and-governance-using-ai",
+      "title": "16.8 Media",
+      "type": "section",
+      "sort_order": 146
+    },
+    {
+      "id": "17-functional-ai",
+      "parent_id": null,
+      "title": "17. Functional AI",
+      "type": "topic",
+      "sort_order": 147
+    },
+    {
+      "id": "17-1-why-this-matters",
+      "parent_id": "17-functional-ai",
+      "title": "17.1 Why this matters",
+      "type": "section",
+      "sort_order": 148
+    },
+    {
+      "id": "17-2-core-concepts-step-by-step",
+      "parent_id": "17-functional-ai",
+      "title": "17.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 149
+    },
+    {
+      "id": "17-3-deep-dive-frameworks",
+      "parent_id": "17-functional-ai",
+      "title": "17.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 150
+    },
+    {
+      "id": "17-4-worked-examples",
+      "parent_id": "17-functional-ai",
+      "title": "17.4 Worked examples",
+      "type": "section",
+      "sort_order": 151
+    },
+    {
+      "id": "17-5-star-method-for-a-functional-ai-pilot",
+      "parent_id": "17-functional-ai",
+      "title": "17.5 STAR method for a functional AI pilot",
+      "type": "section",
+      "sort_order": 152
+    },
+    {
+      "id": "17-6-apply-today",
+      "parent_id": "17-functional-ai",
+      "title": "17.6 Apply today",
+      "type": "section",
+      "sort_order": 153
+    },
+    {
+      "id": "17-7-key-takeaways",
+      "parent_id": "17-functional-ai",
+      "title": "17.7 Key takeaways",
+      "type": "section",
+      "sort_order": 154
+    },
+    {
+      "id": "17-8-media",
+      "parent_id": "17-functional-ai",
+      "title": "17.8 Media",
+      "type": "section",
+      "sort_order": 155
+    },
+    {
+      "id": "18-ai-strategy",
+      "parent_id": null,
+      "title": "18. AI Strategy",
+      "type": "topic",
+      "sort_order": 156
+    },
+    {
+      "id": "18-1-why-this-matters",
+      "parent_id": "18-ai-strategy",
+      "title": "18.1 Why this matters",
+      "type": "section",
+      "sort_order": 157
+    },
+    {
+      "id": "18-2-core-concepts-step-by-step",
+      "parent_id": "18-ai-strategy",
+      "title": "18.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 158
+    },
+    {
+      "id": "18-3-deep-dive-frameworks",
+      "parent_id": "18-ai-strategy",
+      "title": "18.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 159
+    },
+    {
+      "id": "18-4-worked-examples",
+      "parent_id": "18-ai-strategy",
+      "title": "18.4 Worked examples",
+      "type": "section",
+      "sort_order": 160
+    },
+    {
+      "id": "18-5-create-method-for-ai-strategy-framing",
+      "parent_id": "18-ai-strategy",
+      "title": "18.5 CREATE method for AI strategy framing",
+      "type": "section",
+      "sort_order": 161
+    },
+    {
+      "id": "18-6-apply-today",
+      "parent_id": "18-ai-strategy",
+      "title": "18.6 Apply today",
+      "type": "section",
+      "sort_order": 162
+    },
+    {
+      "id": "18-7-key-takeaways",
+      "parent_id": "18-ai-strategy",
+      "title": "18.7 Key takeaways",
+      "type": "section",
+      "sort_order": 163
+    },
+    {
+      "id": "18-8-media",
+      "parent_id": "18-ai-strategy",
+      "title": "18.8 Media",
+      "type": "section",
+      "sort_order": 164
+    },
+    {
+      "id": "19-chatgpt-with-all-its-features",
+      "parent_id": null,
+      "title": "19. ChatGPT with all its features",
+      "type": "topic",
+      "sort_order": 165
+    },
+    {
+      "id": "19-1-why-this-matters",
+      "parent_id": "19-chatgpt-with-all-its-features",
+      "title": "19.1 Why this matters",
+      "type": "section",
+      "sort_order": 166
+    },
+    {
+      "id": "19-2-core-concepts-step-by-step",
+      "parent_id": "19-chatgpt-with-all-its-features",
+      "title": "19.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 167
+    },
+    {
+      "id": "19-3-deep-dive-frameworks",
+      "parent_id": "19-chatgpt-with-all-its-features",
+      "title": "19.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 168
+    },
+    {
+      "id": "19-4-worked-examples",
+      "parent_id": "19-chatgpt-with-all-its-features",
+      "title": "19.4 Worked examples",
+      "type": "section",
+      "sort_order": 169
+    },
+    {
+      "id": "19-5-star-method-for-a-strong-chatgpt-brief",
+      "parent_id": "19-chatgpt-with-all-its-features",
+      "title": "19.5 STAR method for a strong ChatGPT brief",
+      "type": "section",
+      "sort_order": 170
+    },
+    {
+      "id": "19-6-apply-today",
+      "parent_id": "19-chatgpt-with-all-its-features",
+      "title": "19.6 Apply today",
+      "type": "section",
+      "sort_order": 171
+    },
+    {
+      "id": "19-7-key-takeaways",
+      "parent_id": "19-chatgpt-with-all-its-features",
+      "title": "19.7 Key takeaways",
+      "type": "section",
+      "sort_order": 172
+    },
+    {
+      "id": "19-8-media",
+      "parent_id": "19-chatgpt-with-all-its-features",
+      "title": "19.8 Media",
+      "type": "section",
+      "sort_order": 173
+    },
+    {
+      "id": "20-gemini-with-all-its-features",
+      "parent_id": null,
+      "title": "20. Gemini with all its features",
+      "type": "topic",
+      "sort_order": 174
+    },
+    {
+      "id": "20-1-why-this-matters",
+      "parent_id": "20-gemini-with-all-its-features",
+      "title": "20.1 Why this matters",
+      "type": "section",
+      "sort_order": 175
+    },
+    {
+      "id": "20-2-core-concepts-step-by-step",
+      "parent_id": "20-gemini-with-all-its-features",
+      "title": "20.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 176
+    },
+    {
+      "id": "20-3-deep-dive-frameworks",
+      "parent_id": "20-gemini-with-all-its-features",
+      "title": "20.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 177
+    },
+    {
+      "id": "20-4-worked-examples",
+      "parent_id": "20-gemini-with-all-its-features",
+      "title": "20.4 Worked examples",
+      "type": "section",
+      "sort_order": 178
+    },
+    {
+      "id": "20-5-create-method-for-a-gemini-workspace-brief",
+      "parent_id": "20-gemini-with-all-its-features",
+      "title": "20.5 CREATE method for a Gemini / Workspace brief",
+      "type": "section",
+      "sort_order": 179
+    },
+    {
+      "id": "20-6-apply-today",
+      "parent_id": "20-gemini-with-all-its-features",
+      "title": "20.6 Apply today",
+      "type": "section",
+      "sort_order": 180
+    },
+    {
+      "id": "20-7-key-takeaways",
+      "parent_id": "20-gemini-with-all-its-features",
+      "title": "20.7 Key takeaways",
+      "type": "section",
+      "sort_order": 181
+    },
+    {
+      "id": "20-8-media",
+      "parent_id": "20-gemini-with-all-its-features",
+      "title": "20.8 Media",
+      "type": "section",
+      "sort_order": 182
+    },
+    {
+      "id": "21-claude-with-all-its-features",
+      "parent_id": null,
+      "title": "21. Claude with all its features",
+      "type": "topic",
+      "sort_order": 183
+    },
+    {
+      "id": "21-1-why-this-matters",
+      "parent_id": "21-claude-with-all-its-features",
+      "title": "21.1 Why this matters",
+      "type": "section",
+      "sort_order": 184
+    },
+    {
+      "id": "21-2-core-concepts-step-by-step",
+      "parent_id": "21-claude-with-all-its-features",
+      "title": "21.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 185
+    },
+    {
+      "id": "21-3-deep-dive-frameworks",
+      "parent_id": "21-claude-with-all-its-features",
+      "title": "21.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 186
+    },
+    {
+      "id": "21-4-worked-examples",
+      "parent_id": "21-claude-with-all-its-features",
+      "title": "21.4 Worked examples",
+      "type": "section",
+      "sort_order": 187
+    },
+    {
+      "id": "21-5-star-method-for-a-strong-claude-brief",
+      "parent_id": "21-claude-with-all-its-features",
+      "title": "21.5 STAR method for a strong Claude brief",
+      "type": "section",
+      "sort_order": 188
+    },
+    {
+      "id": "21-6-apply-today",
+      "parent_id": "21-claude-with-all-its-features",
+      "title": "21.6 Apply today",
+      "type": "section",
+      "sort_order": 189
+    },
+    {
+      "id": "21-7-key-takeaways",
+      "parent_id": "21-claude-with-all-its-features",
+      "title": "21.7 Key takeaways",
+      "type": "section",
+      "sort_order": 190
+    },
+    {
+      "id": "21-8-media",
+      "parent_id": "21-claude-with-all-its-features",
+      "title": "21.8 Media",
+      "type": "section",
+      "sort_order": 191
+    },
+    {
+      "id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "parent_id": null,
+      "title": "22. Which LLM should be used based on the use case?",
+      "type": "topic",
+      "sort_order": 192
+    },
+    {
+      "id": "22-1-why-this-matters",
+      "parent_id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "title": "22.1 Why this matters",
+      "type": "section",
+      "sort_order": 193
+    },
+    {
+      "id": "22-2-core-concepts-step-by-step",
+      "parent_id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "title": "22.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 194
+    },
+    {
+      "id": "22-3-deep-dive-frameworks",
+      "parent_id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "title": "22.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 195
+    },
+    {
+      "id": "22-4-worked-examples",
+      "parent_id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "title": "22.4 Worked examples",
+      "type": "section",
+      "sort_order": 196
+    },
+    {
+      "id": "22-5-create-method-for-llm-selection",
+      "parent_id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "title": "22.5 CREATE method for LLM selection",
+      "type": "section",
+      "sort_order": 197
+    },
+    {
+      "id": "22-6-apply-today",
+      "parent_id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "title": "22.6 Apply today",
+      "type": "section",
+      "sort_order": 198
+    },
+    {
+      "id": "22-7-key-takeaways",
+      "parent_id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "title": "22.7 Key takeaways",
+      "type": "section",
+      "sort_order": 199
+    },
+    {
+      "id": "22-8-media",
+      "parent_id": "22-which-llm-should-be-used-based-on-the-use-case",
+      "title": "22.8 Media",
+      "type": "section",
+      "sort_order": 200
+    },
+    {
+      "id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "parent_id": null,
+      "title": "23. How to automate tasks using AI: scenarios explained",
+      "type": "topic",
+      "sort_order": 201
+    },
+    {
+      "id": "23-1-why-this-matters",
+      "parent_id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "title": "23.1 Why this matters",
+      "type": "section",
+      "sort_order": 202
+    },
+    {
+      "id": "23-2-core-concepts-step-by-step",
+      "parent_id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "title": "23.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 203
+    },
+    {
+      "id": "23-3-deep-dive-frameworks",
+      "parent_id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "title": "23.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 204
+    },
+    {
+      "id": "23-4-worked-examples",
+      "parent_id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "title": "23.4 Worked examples",
+      "type": "section",
+      "sort_order": 205
+    },
+    {
+      "id": "23-5-star-method-for-an-ai-automation-scenario",
+      "parent_id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "title": "23.5 STAR method for an AI automation scenario",
+      "type": "section",
+      "sort_order": 206
+    },
+    {
+      "id": "23-6-apply-today",
+      "parent_id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "title": "23.6 Apply today",
+      "type": "section",
+      "sort_order": 207
+    },
+    {
+      "id": "23-7-key-takeaways",
+      "parent_id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "title": "23.7 Key takeaways",
+      "type": "section",
+      "sort_order": 208
+    },
+    {
+      "id": "23-8-media",
+      "parent_id": "23-how-to-automate-tasks-using-ai-scenarios-explained",
+      "title": "23.8 Media",
+      "type": "section",
+      "sort_order": 209
+    },
+    {
+      "id": "24-how-to-use-make-com-to-automate-tasks",
+      "parent_id": null,
+      "title": "24. How to use Make.com to automate tasks",
+      "type": "topic",
+      "sort_order": 210
+    },
+    {
+      "id": "24-1-why-this-matters",
+      "parent_id": "24-how-to-use-make-com-to-automate-tasks",
+      "title": "24.1 Why this matters",
+      "type": "section",
+      "sort_order": 211
+    },
+    {
+      "id": "24-2-core-concepts-step-by-step",
+      "parent_id": "24-how-to-use-make-com-to-automate-tasks",
+      "title": "24.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 212
+    },
+    {
+      "id": "24-3-deep-dive-frameworks",
+      "parent_id": "24-how-to-use-make-com-to-automate-tasks",
+      "title": "24.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 213
+    },
+    {
+      "id": "24-4-worked-examples",
+      "parent_id": "24-how-to-use-make-com-to-automate-tasks",
+      "title": "24.4 Worked examples",
+      "type": "section",
+      "sort_order": 214
+    },
+    {
+      "id": "24-5-star-method-for-a-make-com-scenario-design",
+      "parent_id": "24-how-to-use-make-com-to-automate-tasks",
+      "title": "24.5 STAR method for a make.com scenario design",
+      "type": "section",
+      "sort_order": 215
+    },
+    {
+      "id": "24-6-apply-today",
+      "parent_id": "24-how-to-use-make-com-to-automate-tasks",
+      "title": "24.6 Apply today",
+      "type": "section",
+      "sort_order": 216
+    },
+    {
+      "id": "24-7-key-takeaways",
+      "parent_id": "24-how-to-use-make-com-to-automate-tasks",
+      "title": "24.7 Key takeaways",
+      "type": "section",
+      "sort_order": 217
+    },
+    {
+      "id": "24-8-media",
+      "parent_id": "24-how-to-use-make-com-to-automate-tasks",
+      "title": "24.8 Media",
+      "type": "section",
+      "sort_order": 218
+    },
+    {
+      "id": "25-build-your-own-agents-using-n8n",
+      "parent_id": null,
+      "title": "25. Build your own agents using n8n",
+      "type": "topic",
+      "sort_order": 219
+    },
+    {
+      "id": "25-1-why-this-matters",
+      "parent_id": "25-build-your-own-agents-using-n8n",
+      "title": "25.1 Why this matters",
+      "type": "section",
+      "sort_order": 220
+    },
+    {
+      "id": "25-2-core-concepts-step-by-step",
+      "parent_id": "25-build-your-own-agents-using-n8n",
+      "title": "25.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 221
+    },
+    {
+      "id": "25-3-deep-dive-frameworks",
+      "parent_id": "25-build-your-own-agents-using-n8n",
+      "title": "25.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 222
+    },
+    {
+      "id": "25-4-worked-examples",
+      "parent_id": "25-build-your-own-agents-using-n8n",
+      "title": "25.4 Worked examples",
+      "type": "section",
+      "sort_order": 223
+    },
+    {
+      "id": "25-5-create-method-for-an-n8n-agent-brief",
+      "parent_id": "25-build-your-own-agents-using-n8n",
+      "title": "25.5 CREATE method for an n8n agent brief",
+      "type": "section",
+      "sort_order": 224
+    },
+    {
+      "id": "25-6-apply-today",
+      "parent_id": "25-build-your-own-agents-using-n8n",
+      "title": "25.6 Apply today",
+      "type": "section",
+      "sort_order": 225
+    },
+    {
+      "id": "25-7-key-takeaways",
+      "parent_id": "25-build-your-own-agents-using-n8n",
+      "title": "25.7 Key takeaways",
+      "type": "section",
+      "sort_order": 226
+    },
+    {
+      "id": "25-8-media",
+      "parent_id": "25-build-your-own-agents-using-n8n",
+      "title": "25.8 Media",
+      "type": "section",
+      "sort_order": 227
+    },
+    {
+      "id": "26-wrap-up-summary",
+      "parent_id": null,
+      "title": "26. Wrap up summary",
+      "type": "topic",
+      "sort_order": 228
+    },
+    {
+      "id": "26-1-why-this-matters",
+      "parent_id": "26-wrap-up-summary",
+      "title": "26.1 Why this matters",
+      "type": "section",
+      "sort_order": 229
+    },
+    {
+      "id": "26-2-core-concepts-step-by-step",
+      "parent_id": "26-wrap-up-summary",
+      "title": "26.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 230
+    },
+    {
+      "id": "26-3-deep-dive-frameworks",
+      "parent_id": "26-wrap-up-summary",
+      "title": "26.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 231
+    },
+    {
+      "id": "26-4-worked-examples",
+      "parent_id": "26-wrap-up-summary",
+      "title": "26.4 Worked examples",
+      "type": "section",
+      "sort_order": 232
+    },
+    {
+      "id": "26-5-create-method-for-a-personal-wrap-up-plan",
+      "parent_id": "26-wrap-up-summary",
+      "title": "26.5 CREATE method for a personal wrap-up plan",
+      "type": "section",
+      "sort_order": 233
+    },
+    {
+      "id": "26-6-apply-today",
+      "parent_id": "26-wrap-up-summary",
+      "title": "26.6 Apply today",
+      "type": "section",
+      "sort_order": 234
+    },
+    {
+      "id": "26-7-key-takeaways",
+      "parent_id": "26-wrap-up-summary",
+      "title": "26.7 Key takeaways",
+      "type": "section",
+      "sort_order": 235
+    },
+    {
+      "id": "26-8-media",
+      "parent_id": "26-wrap-up-summary",
+      "title": "26.8 Media",
+      "type": "section",
+      "sort_order": 236
+    },
+    {
+      "id": "27-ai-practitioner-program",
+      "parent_id": null,
+      "title": "27. AI Practitioner program",
+      "type": "topic",
+      "sort_order": 237
+    },
+    {
+      "id": "27-1-why-this-matters",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.1 Why this matters",
+      "type": "section",
+      "sort_order": 238
+    },
+    {
+      "id": "27-2-core-concepts-step-by-step",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.2 Core concepts (step by step)",
+      "type": "section",
+      "sort_order": 239
+    },
+    {
+      "id": "27-3-deep-dive-frameworks",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.3 Deep dive / frameworks",
+      "type": "section",
+      "sort_order": 240
+    },
+    {
+      "id": "27-4-worked-examples",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.4 Worked examples",
+      "type": "section",
+      "sort_order": 241
+    },
+    {
+      "id": "27-5-star-method-for-your-program-registration-note",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.5 STAR method for your program registration note",
+      "type": "section",
+      "sort_order": 242
+    },
+    {
+      "id": "27-6-apply-today",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.6 Apply today",
+      "type": "section",
+      "sort_order": 243
+    },
+    {
+      "id": "27-7-key-takeaways",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.7 Key takeaways",
+      "type": "section",
+      "sort_order": 244
+    },
+    {
+      "id": "27-8-media",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.8 Media",
+      "type": "section",
+      "sort_order": 245
+    },
+    {
+      "id": "27-9-registration",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "27.9 Registration",
+      "type": "section",
+      "sort_order": 246
+    },
+    {
+      "id": "registration-form",
+      "parent_id": "27-ai-practitioner-program",
+      "title": "Ready to register?",
+      "type": "section",
+      "sort_order": 247
+    }
+  ]
+}

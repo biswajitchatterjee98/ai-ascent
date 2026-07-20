@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Login · AI Ascent</title>
 <meta name="description" content="Sign in to access the AI Ascent learning guide." />
+<script src="config.js"></script>
+<script src="api.js"></script>
 <script src="auth.js"></script>
 <script>AscentAuth.requireGuest();</script>
 <style>
@@ -127,19 +129,21 @@ button.primary:hover{filter:brightness(1.05)}
     var err = document.getElementById("login-error");
     err.classList.remove("show");
     err.textContent = "";
-    var result = AscentAuth.login(
+    AscentAuth.login(
       document.getElementById("username").value,
       document.getElementById("password").value
-    );
-    if (!result.ok) {
-      err.textContent = result.error;
-      err.classList.add("show");
-      return;
-    }
-    var params = new URLSearchParams(location.search);
-    var next = params.get("next") || "index.html";
-    if (!/^[A-Za-z0-9._-]+\.html$/.test(next)) next = "index.html";
-    location.href = next;
+    ).then(function (result) {
+      if (!result.ok) {
+        err.textContent = result.error || "Invalid username or password.";
+        err.classList.add("show");
+        return;
+      }
+      var params = new URLSearchParams(location.search);
+      var next = params.get("next") || "index.html";
+      var page = String(next).split(/[?#]/)[0];
+      if (!/^[A-Za-z0-9._-]+\.html$/.test(page)) next = "index.html";
+      location.href = next;
+    });
   });
 })();
 </script>
