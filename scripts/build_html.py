@@ -354,7 +354,12 @@ body{
   min-height:100vh;
 }
 .wrap{max-width:calc(var(--max) + var(--sidebar) + 64px);margin:0 auto;padding:1.5rem 1.25rem 3.5rem;display:grid;grid-template-columns:var(--sidebar) 1fr;gap:1.5rem;align-items:start}
-@media(max-width:960px){.wrap{grid-template-columns:1fr}.toc{position:static!important;max-height:none}}
+@media(max-width:960px){.wrap{grid-template-columns:1fr;padding-top:4.25rem}.toc{position:static!important;max-height:none}}
+.toc-menu-btn{display:none}
+.toc-backdrop{display:none}
+.toc-close{display:none}
+.toc-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin:0 0 .35rem}
+.toc-head h2{margin:0 .35rem 0;flex:1}
 header.hero{
   grid-column:1/-1;position:relative;overflow:hidden;
   background:linear-gradient(135deg, rgba(18,50,74,.92), rgba(11,90,81,.88) 55%, rgba(15,122,108,.85)),
@@ -483,7 +488,21 @@ main ul > li::marker{color:var(--accent)}
 @keyframes sideIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
 @keyframes panelIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes subsIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-@media(max-width:960px){header.hero{flex-direction:column;align-items:flex-start;gap:1.1rem}.brand-logo{width:min(340px,100%)}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:960px){header.hero{flex-direction:column;align-items:flex-start;gap:1.1rem}.brand-logo{width:min(340px,100%)}.contact-grid{grid-template-columns:1fr}
+.toc-menu-btn{display:inline-flex;align-items:center;justify-content:center;position:fixed;top:1rem;left:1rem;z-index:70;width:2.75rem;height:2.75rem;padding:0;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:var(--shadow);cursor:pointer}
+.toc-menu-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.toc-menu-bars,.toc-menu-bars::before,.toc-menu-bars::after{display:block;width:1.15rem;height:2px;border-radius:2px;background:var(--navy)}
+.toc-menu-bars{position:relative}
+.toc-menu-bars::before,.toc-menu-bars::after{content:"";position:absolute;left:0}
+.toc-menu-bars::before{top:-6px}
+.toc-menu-bars::after{top:6px}
+.toc-backdrop{display:block;position:fixed;inset:0;z-index:55;background:rgba(18,50,74,.42);opacity:0;pointer-events:none;transition:opacity .22s ease}
+body.toc-open .toc-backdrop{opacity:1;pointer-events:auto}
+.toc{position:fixed!important;top:0;left:0;bottom:0;z-index:60;width:min(300px,88vw);max-height:none;margin:0;border-radius:0 18px 18px 0;transform:translateX(-105%);transition:transform .24s ease;animation:none}
+body.toc-open .toc{transform:none}
+.toc-close{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border:0;border-radius:8px;background:transparent;color:var(--navy);font:700 1.25rem/1 "Source Sans 3",sans-serif;cursor:pointer}
+.toc-close:hover{background:var(--navy-soft)}
+}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 """
 
@@ -554,6 +573,7 @@ JS = r"""
       }
       showTopic(topicId, topicId);
       history.replaceState(null, '', '#' + topicId);
+      if (typeof isMobileToc === 'function' && isMobileToc()) closeToc();
       return;
     }
     var subLink = e.target.closest('a');
@@ -566,6 +586,7 @@ JS = r"""
         if (topicId) {
           showTopic(topicId, targetId);
           history.replaceState(null, '', href);
+          if (typeof isMobileToc === 'function' && isMobileToc()) closeToc();
         }
         return;
       }
@@ -582,6 +603,36 @@ JS = r"""
     frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
     card.classList.add('is-playing');
   });
+  function isMobileToc() {
+    return window.matchMedia('(max-width: 960px)').matches;
+  }
+  function setTocOpen(open) {
+    document.body.classList.toggle('toc-open', open);
+    var btn = document.getElementById('toc-menu-btn');
+    var backdrop = document.getElementById('toc-backdrop');
+    var toc = document.getElementById('site-toc');
+    if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (backdrop) backdrop.hidden = !open;
+    if (toc && isMobileToc()) toc.setAttribute('aria-hidden', open ? 'false' : 'true');
+  }
+  function closeToc() { setTocOpen(false); }
+  var tocMenuBtn = document.getElementById('toc-menu-btn');
+  if (tocMenuBtn) {
+    tocMenuBtn.addEventListener('click', function () {
+      setTocOpen(!document.body.classList.contains('toc-open'));
+    });
+  }
+  var tocBackdrop = document.getElementById('toc-backdrop');
+  if (tocBackdrop) tocBackdrop.addEventListener('click', closeToc);
+  var tocClose = document.getElementById('toc-close');
+  if (tocClose) tocClose.addEventListener('click', closeToc);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeToc();
+  });
+  if (isMobileToc()) {
+    var tocEl = document.getElementById('site-toc');
+    if (tocEl) tocEl.setAttribute('aria-hidden', 'true');
+  }
   var initialTopic = topicIdFromHash(location.hash);
   if (initialTopic) showTopic(initialTopic, location.hash.replace(/^#/, ''));
   else {
@@ -708,6 +759,10 @@ def main() -> None:
 </head>
 <body>
 <div class="wrap">
+<button type="button" class="toc-menu-btn" id="toc-menu-btn" aria-controls="site-toc" aria-expanded="false" aria-label="Open contents">
+<span class="toc-menu-bars" aria-hidden="true"></span>
+</button>
+<div class="toc-backdrop" id="toc-backdrop" hidden></div>
 <header class="hero">
 <img class="brand-logo" src="images/traininglobe-logo.png" alt="Traininglobe" />
 <div class="hero-copy">
@@ -716,7 +771,7 @@ def main() -> None:
 <p>Climb from industry context and model foundations to assistants, automation, governance, and the AI Practitioner program.</p>
 </div>
 </header>
-<nav class="toc"><h2>Contents</h2><ul class="toc-topics">{"".join(toc_items)}</ul></nav>
+<nav class="toc" id="site-toc"><div class="toc-head"><h2>Contents</h2><button type="button" class="toc-close" id="toc-close" aria-label="Close contents">×</button></div><ul class="toc-topics">{"".join(toc_items)}</ul></nav>
 <main>{"".join(panels)}</main>
 <footer>Traininglobe · AI Ascent</footer>
 </div>
