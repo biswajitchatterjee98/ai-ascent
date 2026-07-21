@@ -133,11 +133,8 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:.88rem;ma
 <section class="contact" id="registration">
 <h2>Registration form</h2>
 <p class="contact-intro">Submissions are sent to <strong>atharv.kumar@webisdom.com</strong>. Do not include passwords, payment details, or confidential customer data.</p>
-<form id="reg-form" class="contact-grid" action="https://formsubmit.co/atharv.kumar@webisdom.com" method="POST">
-<input type="hidden" name="_subject" value="AI Practitioner Program Registration · AI Ascent" />
-<input type="hidden" name="_template" value="table" />
-<input type="hidden" name="_captcha" value="false" />
-<input type="hidden" name="_next" value="https://biswajitchatterjee98.github.io/ai-ascent/register.html?registered=true" />
+<form id="reg-form" class="contact-grid">
+<input type="hidden" name="source" value="AI-Ascent" />
 <div class="field">
 <label for="reg-name">Full Name</label>
 <input id="reg-name" name="full_name" type="text" autocomplete="name" required />
@@ -192,6 +189,41 @@ footer{grid-column:1/-1;text-align:center;color:var(--muted);font-size:.88rem;ma
 </div>
 <script>
 AscentAuth.fillUserChrome();
+
+document.getElementById('reg-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var status = document.getElementById('reg-status');
+  var btn = form.querySelector('.contact-submit');
+  
+  status.hidden = true;
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  
+  var data = new URLSearchParams(new FormData(form));
+  
+  fetch('https://script.google.com/macros/s/AKfycbzaJ6-1C7LhIPkBl6xpBTyeU0xys-PrqjahI1MmEtCGaEvA3WPecm7-oGvdBLhSxaA4/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: data
+  }).then(function() {
+    form.reset();
+    status.textContent = 'Thank you. Your registration was submitted. We will get back to you soon.';
+    status.style.color = '';
+    status.style.background = '';
+    status.hidden = false;
+    btn.disabled = false;
+    btn.textContent = 'Submit registration';
+  }).catch(function(error) {
+    status.textContent = 'An error occurred. Please try again.';
+    status.style.color = '#8a2f2a';
+    status.style.background = '#fdeceb';
+    status.hidden = false;
+    btn.disabled = false;
+    btn.textContent = 'Submit registration';
+  });
+});
+
 if (new URLSearchParams(window.location.search).get('registered') === 'true') {
   var status = document.getElementById('reg-status');
   if (status) status.hidden = false;
