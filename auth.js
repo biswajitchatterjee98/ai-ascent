@@ -106,35 +106,85 @@
 
   function logout() {
     clearSession();
-    location.href = 'login.html';
+    location.href = 'index.html';
+  }
+
+  function b64urlDecode(str) {
+    var b64 = String(str || '').replace(/-/g, '+').replace(/_/g, '/');
+    while (b64.length % 4) b64 += '=';
+    return decodeURIComponent(escape(atob(b64)));
+  }
+
+  function softSign(message, secret) {
+    var s = String(secret || '') + '|' + String(message || '');
+    var h = 2166136261;
+    for (var i = 0; i < s.length; i += 1) {
+      h ^= s.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return (h >>> 0).toString(16);
+  }
+
+  function verifyHubToken(token, secret) {
+    var parts = String(token || '').split('.');
+    if (parts.length !== 2) return null;
+    if (softSign(parts[0], secret) !== parts[1]) return null;
+    try {
+      var payload = JSON.parse(b64urlDecode(parts[0]));
+      if (!payload || !payload.u || !payload.exp) return null;
+      if (Number(payload.exp) <= Date.now()) return null;
+      return { username: String(payload.u), role: String(payload.role || 'learner'), exp: Number(payload.exp) };
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function consumeHubTokenFromUrl() {
+    // ponytail: soft cohort SSO from traininglobe-hub — secret lives in static config.js.
+    var params = new URLSearchParams(location.search);
+    var token = params.get('hub_token');
+    if (!token) return false;
+    var secret = (global.AscentConfig && global.AscentConfig.HUB_SSO_SECRET) || '';
+    var payload = verifyHubToken(token, secret);
+    if (!payload) return false;
+    writeSession({
+      username: payload.username,
+      name: payload.username,
+      role: payload.role === 'admin' ? 'learner' : payload.role,
+      token: 'hub-' + payload.username,
+      expires_at: new Date(payload.exp).toISOString()
+    });
+    params.delete('hub_token');
+    var qs = params.toString();
+    var clean = location.pathname + (qs ? '?' + qs : '') + location.hash;
+    if (global.history && history.replaceState) history.replaceState(null, '', clean);
+    return true;
   }
 
   function requireAuth(loginPage) {
-    if (isLoggedIn()) return true;
-    var next = location.pathname.split('/').pop() || 'index.html';
-    if (location.search) next += location.search;
-    if (location.hash) next += location.hash;
-    location.replace((loginPage || 'login.html') + '?next=' + encodeURIComponent(next));
-    return false;
+    // ponytail: hub owns login — handbooks are open after cohort entry.
+    consumeHubTokenFromUrl();
+    return true;
   }
 
   function requireGuest() {
-    if (!isLoggedIn()) return true;
-    var params = new URLSearchParams(location.search);
-    var next = params.get('next') || 'index.html';
-    if (!/^[A-Za-z0-9._-]+\.html$/.test(next)) next = 'index.html';
-    location.replace(next);
+    // Login page retired: send everyone to the handbook.
+    location.replace('index.html');
     return false;
   }
 
   function requireAdmin(loginPage) {
-    requireAuth(loginPage);
+    // Admin UI still needs a local session; without one, bounce to index (open content).
+    consumeHubTokenFromUrl();
     if (!isAdmin()) location.replace('index.html');
   }
 
   function fillUserChrome() {
     var name = currentName();
     var user = currentUser();
+    document.querySelectorAll('.toc-user').forEach(function (el) {
+      el.hidden = !user;
+    });
     if (!user) return;
     document.querySelectorAll('[data-auth-name]').forEach(function (el) {
       el.textContent = name || user;
@@ -143,6 +193,9 @@
       el.textContent = user;
     });
   }
+
+  // Consume hub SSO as soon as auth.js loads (pages no longer gate via requireAuth).
+  consumeHubTokenFromUrl();
 
   global.AscentAuth = {
     USERS: LOCAL_USERS,

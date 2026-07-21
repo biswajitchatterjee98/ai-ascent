@@ -388,11 +388,6 @@ header.hero p{margin:0;max-width:58ch;opacity:.95;font-size:1.05rem;line-height:
 .toc-user{margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--line)}
 .toc-user-label{display:block;margin:0 .35rem .35rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700}
 .toc-user-name{display:block;margin:0 .35rem .55rem;font-size:.9rem;font-weight:600;color:var(--navy)}
-.toc-logout{
-  display:block;width:100%;border:1px solid var(--line);background:#fff;color:var(--navy);
-  border-radius:11px;padding:.55rem .6rem;font:600 .88rem "Source Sans 3",sans-serif;cursor:pointer;text-align:center;
-}
-.toc-logout:hover{background:var(--navy-soft)}
 .toc-admin{display:none;margin-top:.45rem}
 .toc-admin.is-visible{display:list-item}
 .toc-admin .toc-link{font-weight:700;color:var(--navy);background:var(--navy-soft);text-align:center}
@@ -686,10 +681,9 @@ def main() -> None:
         '<li class="toc-topic toc-admin"><a class="toc-link" href="admin.html">Admin</a></li>'
     )
     toc_items.append(
-        '<li class="toc-topic toc-user">'
+        '<li class="toc-topic toc-user" hidden>'
         '<span class="toc-user-label">Signed in</span>'
-        '<span class="toc-user-name" data-auth-name>Learner</span>'
-        '<button type="button" class="toc-logout" id="logout-btn">Log out</button>'
+        '<span class="toc-user-name" data-auth-name></span>'
         '</li>'
     )
 
@@ -708,7 +702,6 @@ def main() -> None:
 <script src="config.js"></script>
 <script src="api.js"></script>
 <script src="auth.js"></script>
-<script>AscentAuth.requireAuth();</script>
 <style>
 {CSS}
 </style>
@@ -751,8 +744,6 @@ def main() -> None:
 <script>
 {JS}
 AscentAuth.fillUserChrome();
-var logoutBtn = document.getElementById('logout-btn');
-if (logoutBtn) logoutBtn.addEventListener('click', function () {{ AscentAuth.logout(); }});
 </script>
 </body>
 </html>

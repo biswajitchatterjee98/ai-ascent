@@ -7,7 +7,7 @@
 | `TOPIC-OUTLINE.md` | Topic/subtopic analysis |
 | `AI-Ascent.md` | Full source content |
 | `index.html` | Interactive handbook (open in a browser) |
-| `login.html` | Sign-in gate (required before handbook access) |
+| `login.html` | Redirect stub (login lives on traininglobe-hub) |
 | `admin.html` | Access admin (restrict sections, approve requests, grants) |
 | `content-manifest.json` | Stable section IDs for access control |
 | `config.js` / `api.js` / `auth.js` / `access.js` | Auth + section gating clients |
@@ -40,9 +40,11 @@ python3 scripts/build_html.py
 
 Open **`register.html`** (sidebar: Register · Practitioner Program). Submissions go to `atharv.kumar@webisdom.com` via FormSubmit.
 
-## Login
+## Access
 
-Open `login.html` first. Use the username and password issued to you. Session lasts until logout or the tab is closed.
+Handbook pages open without a local login. Sign in on the Traininglobe hub; opening AI Ascent from there passes a short-lived `hub_token` so the sidebar can show who you are. Direct bookmarks to `index.html` still work.
+
+`login.html` only redirects to the handbook (for old links).
 
 ## Access control
 
@@ -53,4 +55,4 @@ Same model as the AI Tools Playbook:
 3. Sign in as `admin` / `Admin@123`, open **Admin** in the sidebar.
 4. Restrict any topic or subsection, grant access manually, or approve **Get access** requests with optional expiry.
 
-Until `API_URL` is set, login still works offline and all sections stay visible (gates need the API).
+Until `API_URL` is set, all sections stay visible (gates need the API). Admin access still uses the local admin account when configured.
